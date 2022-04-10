@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ goes on the world object
+ generates the terrain of the world 
+ */
+
 public class IslandGeneration : MonoBehaviour
 {
     // size of the world
