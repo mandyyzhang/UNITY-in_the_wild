@@ -97,6 +97,8 @@ public class FirstPersonController : MonoBehaviour
     public bool enableJump = true;
     public KeyCode jumpKey = KeyCode.Space;
     public float jumpPower = 5f;
+    public int maxJumpTimes = 2; 
+    public int jumpCount = 0; 
 
     // Internal Variables
     private bool isGrounded = false;
@@ -329,9 +331,28 @@ public class FirstPersonController : MonoBehaviour
         #region Jump
 
         // Gets input and calls jump method
-        if(enableJump && Input.GetKeyDown(jumpKey) && isGrounded)
+        if(enableJump && Input.GetKeyDown(jumpKey))
         {
-            Jump();
+            if (isGrounded)
+            {
+                //Debug.Log("About to jump from the ground.");
+                jumpCount = 0; 
+                Jump(jumpPower);
+            }
+            else
+            {
+                
+                if (jumpCount > 0 && jumpCount < maxJumpTimes)
+                {
+                    //Debug.Log("About to jump from midair.");
+                    Jump(jumpPower / (1.5f * jumpCount));
+                }
+                else
+                {
+                    Debug.Log("Jump Count < 0 or jump Count >= max jump times."); 
+                }
+            }
+            
         }
 
         #endregion
@@ -464,20 +485,30 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private void Jump()
+    private void Jump(float jpower)
     {
+        /*
         // Adds force to the player rigidbody to jump
         if (isGrounded)
         {
-            rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
+            rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse); 
             isGrounded = false;
+        }
+        */ 
+        if (jumpCount < maxJumpTimes)
+        {
+            Debug.Log("Jump Count = " + jumpCount + " Jump Power = " + jpower); 
+            rb.AddForce(0f, jpower, 0f, ForceMode.Impulse);
+            isGrounded = false;
+            jumpCount++;
         }
 
         // When crouched and using toggle system, will uncrouch for a jump
-        if(isCrouched && !holdToCrouch)
+        if (isCrouched && !holdToCrouch)
         {
             Crouch();
         }
+
     }
 
     private void Crouch()
