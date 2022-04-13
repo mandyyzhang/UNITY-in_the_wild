@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -383,6 +383,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   grassTile: {fileID: 3462116018741417442, guid: 085df6206c558274eabb5a4cc8f8fd13, type: 3}
   port: {fileID: 4961385242022434706, guid: e62c9956ba9698f47af9fcf0c7b98636, type: 3}
+  gem: {fileID: 1869537145241908, guid: 12891e3279dbe45de869bdf87901fa4b, type: 3}
   player: {fileID: 903827084}
   scale: 0.1
   terDetail: 10

@@ -18,6 +18,7 @@ public class IslandGeneration : MonoBehaviour
     // tiles/items that will be used spawned 
     public GameObject grassTile;
     public GameObject port;
+    public GameObject gem;
 
     public GameObject player;
 
@@ -46,6 +47,7 @@ public class IslandGeneration : MonoBehaviour
         GenerateTerrain();
         SpawnPort();
         SpawnPlayer();
+        SpawnGem();
     }
 
     void SetSeedAndOffsets()
@@ -136,6 +138,14 @@ public class IslandGeneration : MonoBehaviour
             player.transform.position = new Vector3(0, 0, 0);
         }
         player.SetActive(true);
+    }
+
+    void SpawnGem()
+    {
+        Vector3 playerPos = player.transform.position;
+        Vector3 gemSpawnPos = new Vector3(playerPos.x+8, 3.3f, playerPos.z);
+
+        Instantiate(gem, gemSpawnPos, Quaternion.identity);
     }
 
     // Update is called once per frame
