@@ -141,6 +141,6 @@ public class IslandGeneration : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(GameObject.FindGameObjectsWithTag("Player")[0].transform.position);
+        // Debug.Log(GameObject.FindGameObjectsWithTag("Player")[0].transform.position);
     }
 }

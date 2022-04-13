@@ -202,6 +202,9 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+        cameraCanMove = playerCamera.enabled; 
+        enableJump = playerCamera.enabled; 
+
         #region Camera
 
         // Control camera movement
@@ -366,6 +369,8 @@ public class FirstPersonController : MonoBehaviour
 
     void FixedUpdate()
     {
+        playerCanMove = playerCamera.enabled; 
+
         #region Movement
 
         if (playerCanMove)
