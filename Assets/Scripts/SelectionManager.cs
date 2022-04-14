@@ -29,8 +29,12 @@ public class SelectionManager : MonoBehaviour
                 var selectionRenderer = selection.GetComponent<Renderer>();
                 if (selectionRenderer != null)
                 {
-                    Debug.Log("yes diamond");
                     selectionRenderer.material = highlightMaterial;
+                    if (Input.GetMouseButtonDown(0))
+                    {
+                        Debug.Log("diamond clicked");
+                        selection.gameObject.SetActive(false);
+                    }
                 }
 
                 _selection = selection;
