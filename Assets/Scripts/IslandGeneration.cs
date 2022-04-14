@@ -17,6 +17,7 @@ public class IslandGeneration : MonoBehaviour
 
     // tiles/items that will be used spawned
     public GameObject grassTile;
+    public GameObject dirtTile; 
     public GameObject port;
     public GameObject gem;
 
@@ -109,6 +110,10 @@ public class IslandGeneration : MonoBehaviour
                     cell.isWater = false;
                     cell.height = z;
                     grassTile = Instantiate(grassTile, new Vector3(x, z, y), Quaternion.identity);
+                    // fill in tiles below grass with dirt tiles 
+                    for (int h = z-1; h > 0; h--) {
+                        dirtTile = Instantiate(dirtTile, new Vector3(x, h, y), Quaternion.identity); 
+                    }
                 }
                 grid[x, y] = cell;
             }

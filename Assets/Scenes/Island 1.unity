@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -379,31 +379,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!21 &625556461
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Custom_GrassComputeHLSL(Clone)
-  m_Shader: {fileID: 4800000, guid: 722049358ec0c184e884eaea8893c573, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - _AmbientAdjustment: 0
-    - _BlendFloor: 0
-    - _Fade: 0
-    m_Colors: []
-  m_BuildTextureStacks: []
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -667,6 +642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grassTile: {fileID: 3462116018741417442, guid: 085df6206c558274eabb5a4cc8f8fd13, type: 3}
+  dirtTile: {fileID: 2244259126299080006, guid: 91295d460b9bd4441b6a994981559c5f, type: 3}
   port: {fileID: 4961385242022434706, guid: e62c9956ba9698f47af9fcf0c7b98636, type: 3}
   gem: {fileID: 1771963305165758434, guid: 6d16ce108c7544e9daaf88504b3ea319, type: 3}
   player: {fileID: 903827084}
@@ -890,6 +866,31 @@ Transform:
   m_Father: {fileID: 396060537}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!21 &1904699576
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Custom_GrassComputeHLSL(Clone)
+  m_Shader: {fileID: 4800000, guid: 722049358ec0c184e884eaea8893c573, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Floats:
+    - _AmbientAdjustment: 0
+    - _BlendFloor: 0
+    - _Fade: 0
+    m_Colors: []
+  m_BuildTextureStacks: []
 --- !u!114 &4051194387176487226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1179,4 +1180,4 @@ MonoBehaviour:
   topTint: {r: 0.2004678, g: 0.9056604, b: 0.08885722, a: 1}
   bottomTint: {r: 0, g: 0, b: 1, a: 1}
   castShadow: 0
-  m_InstantiatedMaterial: {fileID: 625556461}
+  m_InstantiatedMaterial: {fileID: 1904699576}
