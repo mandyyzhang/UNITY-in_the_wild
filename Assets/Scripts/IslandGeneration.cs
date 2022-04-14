@@ -34,8 +34,8 @@ public class IslandGeneration : MonoBehaviour
     public int waterHeight; // this is the highest level of water
     public float waterLevel = 0.4f; // any noise value over this number is not water and any noise value under this is water
 
-    public float treeNoiseScale = .1f;  //TRYINGOUTTTTTT PUT TREEESSS INNNN
-    public float treeDensity = .001f;   //TRYINGOUTTTTTT PUT TREEESSS INNNN
+    public float treeNoiseScale = .4f;  //TRYINGOUTTTTTT PUT TREEESSS INNNN
+    public float treeDensity = .4f;   //TRYINGOUTTTTTT PUT TREEESSS INNNN
 
     int sceneNumber;
 
@@ -125,20 +125,13 @@ public class IslandGeneration : MonoBehaviour
                         GameObject tree = Instantiate(prefab, transform);
                         tree.transform.position = new Vector3(x, cell.height+1, y);
                         tree.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
-                        tree.transform.localScale = Vector3.one * Random.Range(.2f, 1f);
+                        tree.transform.localScale = Vector3.one * Random.Range(.2f, 1.0f);
                     }
                 }
             }
         }
 //TRYINGOUTTTTTT PUT TREEESSS INNNN
-
     }
-
-
-
-
-
-
 
 
     void SpawnPort()
