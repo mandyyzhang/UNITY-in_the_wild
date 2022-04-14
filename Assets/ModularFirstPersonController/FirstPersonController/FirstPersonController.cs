@@ -16,6 +16,7 @@ using UnityEngine.UI;
 
 public class FirstPersonController : MonoBehaviour
 {
+    public AudioSource movementSound;
     private Rigidbody rb;
 
     #region Camera Movement Variables
@@ -130,7 +131,8 @@ public class FirstPersonController : MonoBehaviour
     // Internal Variables
     private Vector3 jointOriginalPos;
     private float timer = 0;
-
+    private float _timeSinceLastStepPlayed;
+    
     #endregion
 
     private void Awake()
@@ -404,6 +406,11 @@ public class FirstPersonController : MonoBehaviour
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
                 isWalking = true;
+                _timeSinceLastStepPlayed += Time.deltaTime;
+                if (_timeSinceLastStepPlayed > 0.5) {
+                    _timeSinceLastStepPlayed = 0;
+                    movementSound.Play();
+                }
             }
             else
             {
@@ -652,6 +659,8 @@ public class FirstPersonController : MonoBehaviour
 
         fpc.playerCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Player Movement", "Determines if the player is allowed to move."), fpc.playerCanMove);
 
+        // movement sound audio thing
+        fpc.movementSound = (AudioSource)EditorGUILayout.ObjectField(new GUIContent("Walk SFX", "Sound effect that plays when walking."), fpc.movementSound, typeof(AudioSource), true);
         GUI.enabled = fpc.playerCanMove;
         fpc.walkSpeed = EditorGUILayout.Slider(new GUIContent("Walk Speed", "Determines how fast the player will move while walking."), fpc.walkSpeed, .1f, fpc.sprintSpeed);
         GUI.enabled = true;
