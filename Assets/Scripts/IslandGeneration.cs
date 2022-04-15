@@ -17,13 +17,14 @@ public class IslandGeneration : MonoBehaviour
 
     // tiles/items that will be used spawned
     public GameObject grassTile;
-    public GameObject dirtTile; 
+    public GameObject dirtTile;
     public GameObject port;
     public GameObject gem;
 
     public GameObject player;
 
     public GameObject[] treePrefabs; //TRYINGOUTTTTTT PUT TREEESSS INNNN
+    public GameObject[] naturePrefabs;
 
     int seed;
     float xOffSet;
@@ -38,6 +39,9 @@ public class IslandGeneration : MonoBehaviour
     public float treeNoiseScale = .4f;  //TRYINGOUTTTTTT PUT TREEESSS INNNN
     public float treeDensity = .4f;   //TRYINGOUTTTTTT PUT TREEESSS INNNN
 
+    public float natureNoiseScale = .8f;
+    public float natureDensity = .3f;
+
     int sceneNumber;
 
     void Awake()
@@ -51,6 +55,10 @@ public class IslandGeneration : MonoBehaviour
         player.SetActive(false);
         SetSeedAndOffsets(); // set the seeds and offsets for each island (so we can get the same map each time for each island)
         GenerateTerrain();
+
+        GenerateTrees(); ////////////
+        GenerateNature(); ///////////
+
         SpawnPort();
         SpawnPlayer();
         SpawnGem();
@@ -110,33 +118,70 @@ public class IslandGeneration : MonoBehaviour
                     cell.isWater = false;
                     cell.height = z;
                     grassTile = Instantiate(grassTile, new Vector3(x, z, y), Quaternion.identity);
-                    // fill in tiles below grass with dirt tiles 
+                    // fill in tiles below grass with dirt tiles
                     for (int h = z-1; h > 0; h--) {
-                        dirtTile = Instantiate(dirtTile, new Vector3(x, h, y), Quaternion.identity); 
+                        dirtTile = Instantiate(dirtTile, new Vector3(x, h, y), Quaternion.identity);
                     }
                 }
                 grid[x, y] = cell;
             }
         }
+    }
 
-//TRYINGOUTTTTTT PUT TREEESSS INNNN
+/////////TRYINGOUTTTTTT PUT TREEESSS INNNN
+    void GenerateTrees() {
+            float[,] noiseMap = new float[sizeX, sizeY];
+            (float xOffset, float yOffset) = (Random.Range(-10000f, 10000f), Random.Range(-10000f, 10000f));
+            for(int y = 0; y < sizeY; y++) {
+                for(int x = 0; x < sizeX; x++) {
+                    float noiseValue = Mathf.PerlinNoise(x * treeNoiseScale + xOffset, y * treeNoiseScale + yOffset);
+                    noiseMap[x, y] = noiseValue;
+                }
+            }
+            for(int y = 0; y < sizeY; y++) {
+                for(int x = 0; x < sizeX; x++) {
+                    Cell cell = grid[x, y];
+                    if(!cell.isWater) {
+                        float v = Random.Range(0f, treeDensity);
+                        if(noiseMap[x, y] < v) {
+                            GameObject prefab = treePrefabs[Random.Range(0, treePrefabs.Length)];
+                            GameObject tree = Instantiate(prefab, transform);
+                            tree.transform.position = new Vector3(x, cell.height+1, y);
+                            tree.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
+                            tree.transform.localScale = Vector3.one * Random.Range(.2f, 1.0f);
+                        }
+                    }
+                }
+            }
+      }
+
+    void GenerateNature() {
+        float[,] noiseMap = new float[sizeX, sizeY];
+            (float xOffset, float yOffset) = (Random.Range(-10000f, 10000f), Random.Range(-10000f, 10000f));
+                for(int y = 0; y < sizeY; y++) {
+                    for(int x = 0; x < sizeX; x++) {
+                        float noiseValue = Mathf.PerlinNoise(x * natureNoiseScale + xOffset, y * natureNoiseScale + yOffset);
+                        noiseMap[x, y] = noiseValue;
+                    }
+                  }
         for(int y = 0; y < sizeY; y++) {
             for(int x = 0; x < sizeX; x++) {
                 Cell cell = grid[x, y];
                 if(!cell.isWater) {
-                    float v = Random.Range(0f, treeDensity);
+                    float v = Random.Range(0f, natureDensity);
                     if(noiseMap[x, y] < v) {
-                        GameObject prefab = treePrefabs[Random.Range(0, treePrefabs.Length)];
-                        GameObject tree = Instantiate(prefab, transform);
-                        tree.transform.position = new Vector3(x, cell.height+1, y);
-                        tree.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
-                        tree.transform.localScale = Vector3.one * Random.Range(.2f, 1.0f);
+                        GameObject prefab = naturePrefabs[Random.Range(0, naturePrefabs.Length)];
+                        GameObject nature = Instantiate(prefab, transform);
+                        nature.transform.position = new Vector3(x, cell.height+1, y);
+                        nature.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
+                        nature.transform.localScale = Vector3.one * Random.Range(.5f, 1.1f);
                     }
                 }
             }
         }
-//TRYINGOUTTTTTT PUT TREEESSS INNNN
     }
+///////////// end TRYINGOUTTTTTT PUT TREEESSS INNNN
+    //}
 
 
     void SpawnPort()

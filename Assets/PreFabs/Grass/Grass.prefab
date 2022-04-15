@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3343915355327808445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5093748647475006134}
+  - component: {fileID: 1028529976277135426}
+  - component: {fileID: 8924567009821312076}
+  - component: {fileID: 323558908146366257}
+  m_Layer: 0
+  m_Name: Grass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5093748647475006134
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3343915355327808445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -29.02, y: 123.4, z: 143.47}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1028529976277135426
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3343915355327808445}
+  m_Mesh: {fileID: 0}
+--- !u!114 &8924567009821312076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3343915355327808445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4faea97a6e4e55042ad806f6dfbb589e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mesh: {fileID: 0}
+  grassLimit: 50000
+  toolbarInt: 0
+  toolbarIntEdit: 0
+  positions:
+  - {x: 15.606325, y: -120.683945, z: -34.837036}
+  - {x: 15.612541, y: -120.683945, z: -33.927364}
+  - {x: 16.177418, y: -120.683945, z: -34.79431}
+  - {x: 16.0732, y: -120.683945, z: -33.873913}
+  - {x: 16.064953, y: -120.683945, z: -33.729095}
+  - {x: 16.245003, y: -120.683945, z: -34.630375}
+  - {x: 15.38763, y: -120.683945, z: -34.94746}
+  - {x: 15.357065, y: -120.683945, z: -33.94512}
+  - {x: 16.252462, y: -120.683945, z: -33.827637}
+  - {x: 16.32747, y: -120.683945, z: -33.306297}
+  - {x: 15.549802, y: -120.683945, z: -33.84265}
+  - {x: 16.49121, y: -120.683945, z: -33.68352}
+  - {x: 15.6301, y: -120.683945, z: -33.97651}
+  - {x: 15.767199, y: -120.683945, z: -35.124138}
+  - {x: 16.20957, y: -120.683945, z: -33.438427}
+  - {x: 15.171043, y: -120.683945, z: -34.32469}
+  - {x: 15.826195, y: -120.683945, z: -33.68769}
+  - {x: 16.51681, y: -120.683945, z: -34.58062}
+  - {x: 17.041656, y: -120.683945, z: -33.718513}
+  - {x: 16.68927, y: -120.683945, z: -34.62067}
+  - {x: 15.947481, y: -120.683945, z: -34.111004}
+  - {x: 16.83808, y: -120.683945, z: -34.720795}
+  - {x: 16.994535, y: -120.683945, z: -33.80417}
+  - {x: 16.570492, y: -120.683945, z: -34.717678}
+  colors:
+  - {r: 0.12061229, g: 0.92105025, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8462792, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8863917, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8338532, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8480078, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.90569085, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.92987347, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8872138, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.859261, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.90230435, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.93603593, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.89839476, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8715536, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8789046, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.85117406, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.9283263, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8384091, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.9245683, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8913956, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.85157, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.88579315, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.9306425, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8758815, b: 0.48799634, a: 1}
+  - {r: 0.12061229, g: 0.8722018, b: 0.48799634, a: 1}
+  indicies: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014000000150000001600000017000000
+  normals:
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0, y: 1, z: 0}
+  length:
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  - {x: 0.12, y: 0.15}
+  i: 24
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 1
+  paintMask:
+    serializedVersion: 2
+    m_Bits: 1
+  brushSize: 0.9
+  brushFalloffSize: 0.01
+  Flow: 0.1
+  density: 0.1
+  normalLimit: 1
+  sizeWidth: 0.12
+  sizeLength: 0.15
+  reprojectOffset: 1
+  rangeR: 0
+  rangeG: 0.11
+  rangeB: 0
+  AdjustedColor: {r: 0.12061229, g: 0.8301887, b: 0.48799634, a: 0}
+  hitPosGizmo: {x: -5.330368, y: 1.3, z: 108.045425}
+  hitNormal: {x: 0, y: 0, z: -1}
+--- !u!114 &323558908146366257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3343915355327808445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d425c8e32857fcd4e843132bccc5622f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grassPainter: {fileID: 8924567009821312076}
+  sourceMesh: {fileID: 0}
+  material: {fileID: 2100000, guid: 250b1fb4c36b2b74bbfa135f3e6fd0d8, type: 2}
+  computeShader: {fileID: 7200000, guid: eca80f7936d5c604ba7447df53b5adcd, type: 3}
+  allowedBladesPerVertex: 4
+  allowedSegmentsPerBlade: 5
+  grassRandomHeight: 0.76
+  bladeRadius: 0.24
+  bladeForwardAmount: 0.38
+  bladeCurveAmount: 2
+  bottomWidth: 0.1
+  windSpeed: 10
+  windStrength: 0.05
+  affectRadius: 1.5
+  affectStrength: 1
+  minFadeDistance: 40
+  maxFadeDistance: 60
+  FadeInEditor: 0
+  topTint: {r: 0.2004678, g: 0.9056604, b: 0.08885722, a: 1}
+  bottomTint: {r: 0, g: 0, b: 1, a: 1}
+  castShadow: 0
+  m_InstantiatedMaterial: {fileID: 0}
