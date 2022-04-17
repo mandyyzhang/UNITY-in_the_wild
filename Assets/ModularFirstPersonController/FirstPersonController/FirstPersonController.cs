@@ -33,6 +33,7 @@ public class FirstPersonController : MonoBehaviour
 
     // Crosshair
     public bool lockCursor = true;
+    public KeyCode cursorControl = KeyCode.Escape; 
     public bool crosshair = true;
     public Sprite crosshairImage;
     public Color crosshairColor = Color.white;
@@ -209,6 +210,22 @@ public class FirstPersonController : MonoBehaviour
     {
         cameraCanMove = playerCamera.enabled; 
         enableJump = playerCamera.enabled; 
+
+        #region cursor 
+
+        if (Input.GetKeyDown(cursorControl)) {
+            if (Cursor.lockState == CursorLockMode.Locked) {
+                Cursor.lockState = CursorLockMode.None; 
+                Debug.Log("Cursor is locked in game. Unlocking cursor now."); 
+
+            }
+            else if (Cursor.lockState == CursorLockMode.None) {
+                Cursor.lockState = CursorLockMode.Locked; 
+                Debug.Log("Cursor is unlocked. Locking cursor now."); 
+            }
+        }
+
+        #endregion     
 
         #region Camera
 
