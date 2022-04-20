@@ -216,12 +216,12 @@ public class FirstPersonController : MonoBehaviour
         if (Input.GetKeyDown(cursorControl)) {
             if (Cursor.lockState == CursorLockMode.Locked) {
                 Cursor.lockState = CursorLockMode.None; 
-                Debug.Log("Cursor is locked in game. Unlocking cursor now."); 
+                //Debug.Log("Cursor is locked in game. Unlocking cursor now."); 
 
             }
             else if (Cursor.lockState == CursorLockMode.None) {
                 Cursor.lockState = CursorLockMode.Locked; 
-                Debug.Log("Cursor is unlocked. Locking cursor now."); 
+                //Debug.Log("Cursor is unlocked. Locking cursor now."); 
             }
         }
 
