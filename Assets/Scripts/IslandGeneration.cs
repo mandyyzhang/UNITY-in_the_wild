@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 /*
  goes on the world object
  generates the terrain of the world
- */
+*/
 
 public class IslandGeneration : MonoBehaviour
 {
@@ -24,7 +24,8 @@ public class IslandGeneration : MonoBehaviour
     public GameObject player;
 
     public GameObject[] treePrefabs; //TRYINGOUTTTTTT PUT TREEESSS INNNN
-    public GameObject[] naturePrefabs;
+    public GameObject[] naturePrefabs;  ///////
+    public GameObject[] grassPrefabs;   ///////
 
     int seed;
     float xOffSet;
@@ -39,8 +40,11 @@ public class IslandGeneration : MonoBehaviour
     public float treeNoiseScale = .4f;  //TRYINGOUTTTTTT PUT TREEESSS INNNN
     public float treeDensity = .4f;   //TRYINGOUTTTTTT PUT TREEESSS INNNN
 
-    public float natureNoiseScale = .8f;
-    public float natureDensity = .3f;
+    public float natureNoiseScale = .8f;  ///////
+    public float natureDensity = .3f;     ///////
+
+    public float grassNoiseScale = .3f;   //////
+    public float grassDensity = .3f;      /////
 
     int sceneNumber;
 
@@ -58,6 +62,7 @@ public class IslandGeneration : MonoBehaviour
 
         GenerateTrees(); ////////////
         GenerateNature(); ///////////
+        GenerateGrass(); ////////////
 
         SpawnPort();
         SpawnPlayer();
@@ -180,6 +185,32 @@ public class IslandGeneration : MonoBehaviour
             }
         }
     }
+
+    void GenerateGrass() {
+            float[,] noiseMap = new float[sizeX, sizeY];
+            (float xOffset, float yOffset) = (Random.Range(-10000f, 10000f), Random.Range(-10000f, 10000f));
+            for(int y = 0; y < sizeY; y++) {
+                for(int x = 0; x < sizeX; x++) {
+                    float noiseValue = Mathf.PerlinNoise(x * grassNoiseScale + xOffset, y * grassNoiseScale + yOffset);
+                    noiseMap[x, y] = noiseValue;
+                }
+            }
+            for(int y = 0; y < sizeY; y++) {
+                for(int x = 0; x < sizeX; x++) {
+                    Cell cell = grid[x, y];
+                    if(!cell.isWater) {
+                        float v = Random.Range(0f, grassDensity);
+                        if(noiseMap[x, y] < v) {
+                            GameObject prefab = grassPrefabs[Random.Range(0, grassPrefabs.Length)];
+                            GameObject grass = Instantiate(prefab, transform);
+                            grass.transform.position = new Vector3(x, cell.height+1, y);
+                            //grass.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
+                            //grass.transform.localScale = Vector3.one * Random.Range(.9f, 1.0f);
+                        }
+                    }
+                }
+            }
+      }
 ///////////// end TRYINGOUTTTTTT PUT TREEESSS INNNN
     //}
 
