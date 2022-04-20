@@ -247,8 +247,10 @@ public class IslandGeneration : MonoBehaviour
     {
         Vector3 playerPos = player.transform.position;
         Vector3 gemSpawnPos = new Vector3(playerPos.x+8, 3.3f, playerPos.z);
+        Vector3 gemSpawnPos2 = new Vector3(playerPos.x+3, 3.3f, playerPos.z);
 
         Instantiate(gem, gemSpawnPos, Quaternion.Euler(0,90,0));
+        Instantiate(gem, gemSpawnPos2, Quaternion.Euler(0,90,0));
     }
 
     // Update is called once per frame

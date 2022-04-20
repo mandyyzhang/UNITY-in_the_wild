@@ -8,8 +8,18 @@ public class SelectionManager : MonoBehaviour
     // [SerializeField] private Material highlightMaterial;
     // [SerializeField] private Material defaultMaterial;
 
+    // Inventory
+    private Inventory inventory;
+    [SerializeField] private UI_Inventory uiInventory;
+
 
     public TMPro.TextMeshProUGUI interactionText;
+
+    private void Start()
+    {
+        inventory = new Inventory();
+        uiInventory.SetInventory(inventory);
+    }
     
     private void Update()
     {
@@ -32,6 +42,8 @@ public class SelectionManager : MonoBehaviour
                     {
                         Debug.Log("diamond clicked");
                         selection.gameObject.SetActive(false);
+                        // hardcoded for now
+                        inventory.AddItem(new Item { itemType = Item.ItemType.GlassShards, amount = 1});
                     }
                     succesfulHit = true;
                 }

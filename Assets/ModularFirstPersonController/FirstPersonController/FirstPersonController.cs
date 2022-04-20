@@ -18,6 +18,7 @@ public class FirstPersonController : MonoBehaviour
 {
     public AudioSource movementSound;
     private float _timeSinceLastStepPlayed;
+
  
     private Rigidbody rb;
 
@@ -153,6 +154,8 @@ public class FirstPersonController : MonoBehaviour
             sprintRemaining = sprintDuration;
             sprintCooldownReset = sprintCooldown;
         }
+
+        
     }
 
     void Start()
