@@ -718,8 +718,8 @@ MonoBehaviour:
   treeDensity: 0.25
   natureNoiseScale: 0.6
   natureDensity: 0.5
-  grassNoiseScale: 0.9
-  grassDensity: 0.3
+  grassNoiseScale: 0.99
+  grassDensity: 0.7
 --- !u!4 &1410042629
 Transform:
   m_ObjectHideFlags: 0
