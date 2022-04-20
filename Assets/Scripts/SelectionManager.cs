@@ -5,21 +5,19 @@ using UnityEngine;
 public class SelectionManager : MonoBehaviour
 {
     [SerializeField] private string selectableTag = "Selectable";
-    [SerializeField] private Material highlightMaterial;
-    [SerializeField] private Material defaultMaterial;
+    // [SerializeField] private Material highlightMaterial;
+    // [SerializeField] private Material defaultMaterial;
 
-    private Transform _selection;
+
+    public TMPro.TextMeshProUGUI interactionText;
     
     private void Update()
     {
-        if (_selection != null)
-        {
-            var selectionRenderer = _selection.GetComponent<Renderer>();
-            selectionRenderer.material = defaultMaterial;
-            _selection = null;
-        }
+        
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
+
+        bool succesfulHit = false;
         
         if (Physics.Raycast(ray, out hit))
         {
@@ -29,18 +27,17 @@ public class SelectionManager : MonoBehaviour
                 var selectionRenderer = selection.GetComponent<Renderer>();
                 if (selectionRenderer != null)
                 {
-                    selectionRenderer.material = highlightMaterial;
+                    interactionText.text = "Pick up";
                     if (Input.GetMouseButtonDown(0))
                     {
                         Debug.Log("diamond clicked");
                         selection.gameObject.SetActive(false);
                     }
+                    succesfulHit = true;
                 }
-
-                _selection = selection;
-
             }
-            
-        }       
+        }
+        if (!succesfulHit) interactionText.text = "";
+
     }
 }
