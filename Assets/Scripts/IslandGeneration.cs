@@ -122,10 +122,10 @@ public class IslandGeneration : MonoBehaviour
                 {
                     cell.isWater = false;
                     cell.height = z;
-                    grassTile = Instantiate(grassTile, new Vector3(x, z, y), Quaternion.identity);
+                    Instantiate(grassTile, new Vector3(x, z, y), Quaternion.identity);
                     // fill in tiles below grass with dirt tiles
                     for (int h = z-1; h > 0; h--) {
-                        dirtTile = Instantiate(dirtTile, new Vector3(x, h, y), Quaternion.identity);
+                        Instantiate(dirtTile, new Vector3(x, h, y), Quaternion.identity);
                     }
                 }
                 grid[x, y] = cell;
@@ -219,14 +219,14 @@ public class IslandGeneration : MonoBehaviour
     {
         if(sceneNumber == 0) // Island 1
         {
-            port = Instantiate(port, new Vector3(10, 2, 99), Quaternion.identity);
-            port = Instantiate(port, new Vector3(12, 2, 99), Quaternion.identity);
-            port = Instantiate(port, new Vector3(14, 2, 99), Quaternion.identity);
-            port = Instantiate(port, new Vector3(16, 2, 99), Quaternion.identity);
+            Instantiate(port, new Vector3(10, 2, 99), Quaternion.identity);
+            Instantiate(port, new Vector3(12, 2, 99), Quaternion.identity);
+            Instantiate(port, new Vector3(14, 2, 99), Quaternion.identity);
+            Instantiate(port, new Vector3(16, 2, 99), Quaternion.identity);
         }
         else
         {
-            port = Instantiate(port, new Vector3(10, 10, 100), Quaternion.identity);
+            Instantiate(port, new Vector3(10, 10, 100), Quaternion.identity);
         }
     }
 
