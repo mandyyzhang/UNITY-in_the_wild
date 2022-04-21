@@ -27,6 +27,12 @@ public class IslandGeneration : MonoBehaviour
     public GameObject[] naturePrefabs;  ///////
     public GameObject[] grassPrefabs;   ///////
 
+    // animal game objects 
+    public GameObject chicken; 
+
+    // list of positions where land is empty (no trees, no gems)
+    // List<Vector3> emptyLand = new List<Vector3>();
+
     int seed;
     float xOffSet;
     float yOffSet;
@@ -67,6 +73,9 @@ public class IslandGeneration : MonoBehaviour
         SpawnPort();
         SpawnPlayer();
         SpawnGem();
+
+        // spawn animals here? 
+        // SpawnAnimal() 
     }
 
     void SetSeedAndOffsets()
@@ -128,6 +137,8 @@ public class IslandGeneration : MonoBehaviour
                         Instantiate(dirtTile, new Vector3(x, h, y), Quaternion.identity);
                     }
                 }
+                cell.posX = x; 
+                cell.posY = y; 
                 grid[x, y] = cell;
             }
         }
@@ -246,7 +257,8 @@ public class IslandGeneration : MonoBehaviour
 
     Vector3 landRegion(Cell[,] grid) // get random land position
     {
-        List<Vector3> land = new List<Vector3>(); // store xy position of land cell
+        
+        List<Vector3> land = new List<Vector3>(); // store xy position of land cell 
         for (int y = 0; y < sizeX; y++)
         {
             for (int x = 0; x < sizeY; x++)
@@ -259,9 +271,15 @@ public class IslandGeneration : MonoBehaviour
                 }
             }
         }
+
         int randomLand = Random.Range(0, land.Count);
         return land[randomLand];
 
+    }
+
+    // not done :p
+    bool checkHasObstacle() {
+        return false; 
     }
 
     void SpawnGem()
@@ -275,6 +293,16 @@ public class IslandGeneration : MonoBehaviour
         {
             GameObject gemToPlace = Instantiate(gem, landRegion(grid), Quaternion.identity);
         }
+    }
+
+    // specify what kind of animal to spawn here 
+    void SpawnAnimal(GameObject animal) 
+    {
+        int randX = Random.Range(0, sizeX-1); 
+        int randY = Random.Range(0, sizeY-1); 
+
+
+
     }
 
     // Update is called once per frame
