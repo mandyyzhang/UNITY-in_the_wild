@@ -27,8 +27,8 @@ public class IslandGeneration : MonoBehaviour
     public GameObject[] naturePrefabs;  ///////
     public GameObject[] grassPrefabs;   ///////
 
-    // animal game objects 
-    public GameObject chicken; 
+    // animal game objects
+    public GameObject chicken;
 
     // list of positions where land is empty (no trees, no gems)
     // List<Vector3> emptyLand = new List<Vector3>();
@@ -74,8 +74,8 @@ public class IslandGeneration : MonoBehaviour
         SpawnPlayer();
         SpawnGem();
 
-        // spawn animals here? 
-        // SpawnAnimal() 
+        // spawn animals here?
+        // SpawnAnimal()
     }
 
     void SetSeedAndOffsets()
@@ -137,8 +137,8 @@ public class IslandGeneration : MonoBehaviour
                         Instantiate(dirtTile, new Vector3(x, h, y), Quaternion.identity);
                     }
                 }
-                cell.posX = x; 
-                cell.posY = y; 
+                cell.posX = x;
+                cell.posY = y;
                 grid[x, y] = cell;
             }
         }
@@ -257,8 +257,8 @@ public class IslandGeneration : MonoBehaviour
 
     Vector3 landRegion(Cell[,] grid) // get random land position
     {
-        
-        List<Vector3> land = new List<Vector3>(); // store xy position of land cell 
+
+        List<Vector3> land = new List<Vector3>(); // store xy position of land cell
         for (int y = 0; y < sizeX; y++)
         {
             for (int x = 0; x < sizeY; x++)
@@ -279,7 +279,7 @@ public class IslandGeneration : MonoBehaviour
 
     // not done :p
     bool checkHasObstacle() {
-        return false; 
+        return false;
     }
 
     void SpawnGem()
@@ -289,17 +289,17 @@ public class IslandGeneration : MonoBehaviour
         // Vector3 gemSpawnPos2 = new Vector3(playerPos.x+3, 3.3f, playerPos.z);
 
         Instantiate(gem, gemSpawnPos, Quaternion.Euler(0,90,0));
-        for (int c = 0; c < 6; c++)
+        for (int c = 0; c < 5; c++)
         {
             GameObject gemToPlace = Instantiate(gem, landRegion(grid), Quaternion.identity);
         }
     }
 
-    // specify what kind of animal to spawn here 
-    void SpawnAnimal(GameObject animal) 
+    // specify what kind of animal to spawn here
+    void SpawnAnimal(GameObject animal)
     {
-        int randX = Random.Range(0, sizeX-1); 
-        int randY = Random.Range(0, sizeY-1); 
+        int randX = Random.Range(0, sizeX-1);
+        int randY = Random.Range(0, sizeY-1);
 
 
 
