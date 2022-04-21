@@ -154,6 +154,7 @@ public class IslandGeneration : MonoBehaviour
                             tree.transform.position = new Vector3(x, cell.height+1, y);
                             tree.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
                             tree.transform.localScale = Vector3.one * Random.Range(.2f, 1.0f);
+                            cell.isObstacle = true;
                         }
                     }
                 }
@@ -243,14 +244,37 @@ public class IslandGeneration : MonoBehaviour
         player.SetActive(true);
     }
 
+    Vector3 landRegion(Cell[,] grid) // get random land position
+    {
+        List<Vector3> land = new List<Vector3>(); // store xy position of land cell
+        for (int y = 0; y < sizeX; y++)
+        {
+            for (int x = 0; x < sizeY; x++)
+            {
+                Cell cell = grid[x, y];
+                if (!cell.isWater && !cell.isObstacle)
+                {
+                    Vector3 noWater = new Vector3(x, cell.height+1.5f, y);
+                    land.Add(noWater);
+                }
+            }
+        }
+        int randomLand = Random.Range(0, land.Count);
+        return land[randomLand];
+
+    }
+
     void SpawnGem()
     {
         Vector3 playerPos = player.transform.position;
         Vector3 gemSpawnPos = new Vector3(playerPos.x+8, 3.3f, playerPos.z);
-        Vector3 gemSpawnPos2 = new Vector3(playerPos.x+3, 3.3f, playerPos.z);
+        // Vector3 gemSpawnPos2 = new Vector3(playerPos.x+3, 3.3f, playerPos.z);
 
         Instantiate(gem, gemSpawnPos, Quaternion.Euler(0,90,0));
-        Instantiate(gem, gemSpawnPos2, Quaternion.Euler(0,90,0));
+        for (int c = 0; c < 6; c++)
+        {
+            GameObject gemToPlace = Instantiate(gem, landRegion(grid), Quaternion.identity);
+        }
     }
 
     // Update is called once per frame
