@@ -16,10 +16,12 @@ using UnityEngine.UI;
 
 public class FirstPersonController : MonoBehaviour
 {
+    // Audio ---------------------------------------
     public AudioSource movementSound;
+    public AudioSource jumpSound;
     private float _timeSinceLastStepPlayed;
 
- 
+    // ---------------------------------------------
     private Rigidbody rb;
 
     #region Camera Movement Variables
@@ -356,6 +358,7 @@ public class FirstPersonController : MonoBehaviour
         // Gets input and calls jump method
         if(enableJump && Input.GetKeyDown(jumpKey))
         {
+            jumpSound.Play();
             if (isGrounded)
             {
                 //Debug.Log("About to jump from the ground.");
@@ -682,6 +685,7 @@ public class FirstPersonController : MonoBehaviour
 
         //SFX movement
         fpc.movementSound = (AudioSource)EditorGUILayout.ObjectField(new GUIContent("Walk SFX", "Sound effect that plays when walking."), fpc.movementSound, typeof(AudioSource), true);
+        fpc.jumpSound = (AudioSource)EditorGUILayout.ObjectField(new GUIContent("Jump SFX", "Sound effect that plays when jumping/flying."), fpc.jumpSound, typeof(AudioSource), true);
 
         GUI.enabled = fpc.playerCanMove;
         fpc.walkSpeed = EditorGUILayout.Slider(new GUIContent("Walk Speed", "Determines how fast the player will move while walking."), fpc.walkSpeed, .1f, fpc.sprintSpeed);
@@ -777,7 +781,7 @@ public class FirstPersonController : MonoBehaviour
 
         #endregion
 
-        #region Head Bob
+        #region Head Bobf
 
         EditorGUILayout.Space();
         EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
