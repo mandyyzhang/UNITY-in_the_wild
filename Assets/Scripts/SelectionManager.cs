@@ -12,7 +12,7 @@ public class SelectionManager : MonoBehaviour
     private Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
 
-
+    public AudioSource collectGlassSound;
     public TMPro.TextMeshProUGUI interactionText;
 
     private void Start()
@@ -40,6 +40,7 @@ public class SelectionManager : MonoBehaviour
                     interactionText.text = "Pick up";
                     if (Input.GetMouseButtonDown(0))
                     {
+                        collectGlassSound.Play();
                         Debug.Log("diamond clicked");
                         selection.gameObject.SetActive(false);
                         // hardcoded for now
@@ -52,4 +53,5 @@ public class SelectionManager : MonoBehaviour
         if (!succesfulHit) interactionText.text = "";
 
     }
+
 }
