@@ -419,7 +419,7 @@ public class FirstPersonController : MonoBehaviour
         }
 
         #region Audio 
-        if (isWalking)
+        if (isWalking && isGrounded)
         {
             _timeSinceLastStepPlayed += Time.deltaTime;
             if (isSprinting) { // if sprinting speed up walking 
