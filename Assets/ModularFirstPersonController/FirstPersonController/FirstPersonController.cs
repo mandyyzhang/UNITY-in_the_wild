@@ -16,6 +16,8 @@ using UnityEngine.UI;
 
 public class FirstPersonController : MonoBehaviour
 {
+
+    #region Sound & Audio
     // Audio ---------------------------------------
     public AudioSource movementSound;
     public AudioSource jumpSound;
@@ -23,6 +25,8 @@ public class FirstPersonController : MonoBehaviour
 
     // ---------------------------------------------
     private Rigidbody rb;
+
+    #endregion 
 
     #region Camera Movement Variables
 
@@ -412,6 +416,27 @@ public class FirstPersonController : MonoBehaviour
         {
             HeadBob();
         }
+
+        #region Audio 
+        if (isWalking)
+        {
+            _timeSinceLastStepPlayed += Time.deltaTime;
+            if (isSprinting) { // if sprinting speed up walking 
+                if (_timeSinceLastStepPlayed > 0.2) {
+                    _timeSinceLastStepPlayed = 0; 
+                    movementSound.Play(); 
+                }
+            } 
+            else {
+                
+                if (_timeSinceLastStepPlayed > 0.4) {
+                    _timeSinceLastStepPlayed = 0;
+                    movementSound.Play();
+                }
+            }
+        }
+
+        #endregion 
     }
 
     void FixedUpdate()
@@ -430,11 +455,13 @@ public class FirstPersonController : MonoBehaviour
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
                 isWalking = true;
+                /*
                 _timeSinceLastStepPlayed += Time.deltaTime;
                 if (_timeSinceLastStepPlayed > 0.4) {
                     _timeSinceLastStepPlayed = 0;
                     movementSound.Play();
                 }
+                */
             }
             else
             {
