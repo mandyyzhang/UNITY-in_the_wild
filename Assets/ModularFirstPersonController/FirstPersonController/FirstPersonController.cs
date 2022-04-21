@@ -362,12 +362,12 @@ public class FirstPersonController : MonoBehaviour
         // Gets input and calls jump method
         if(enableJump && Input.GetKeyDown(jumpKey))
         {
-            jumpSound.Play();
             if (isGrounded)
             {
                 //Debug.Log("About to jump from the ground.");
                 jumpCount = 0; 
                 Jump(jumpPower);
+                jumpSound.Play();
             }
             else
             {
@@ -376,6 +376,7 @@ public class FirstPersonController : MonoBehaviour
                 {
                     //Debug.Log("About to jump from midair.");
                     Jump(jumpPower / (1.5f * jumpCount));
+                    jumpSound.Play();
                 }
                 else
                 {
@@ -454,8 +455,8 @@ public class FirstPersonController : MonoBehaviour
             // Will allow head bob
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
-                isWalking = true;
-                /*
+                isWalking = true; 
+                /* // see audio region in update() 
                 _timeSinceLastStepPlayed += Time.deltaTime;
                 if (_timeSinceLastStepPlayed > 0.4) {
                     _timeSinceLastStepPlayed = 0;
