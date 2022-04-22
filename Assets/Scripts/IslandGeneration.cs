@@ -11,8 +11,8 @@ using UnityEngine.SceneManagement;
 public class IslandGeneration : MonoBehaviour
 {
     // the world
-    int sizeX = 100;
-    int sizeY = 100;
+    int sizeX = 55;
+    int sizeY = 55;
     Cell[,] grid; // array of cells will make up this grid (the world is represented by this grid)
 
     // tiles/items that will be used spawned
@@ -131,10 +131,10 @@ public class IslandGeneration : MonoBehaviour
                 {
                     cell.isWater = false;
                     cell.height = z;
-                    Instantiate(grassTile, new Vector3(x, z, y), Quaternion.identity);
+                    Instantiate(grassTile, new Vector3(x*2, z, y*2), Quaternion.identity);
                     // fill in tiles below grass with dirt tiles
                     for (int h = z-1; h > 0; h--) {
-                        Instantiate(dirtTile, new Vector3(x, h, y), Quaternion.identity);
+                        Instantiate(dirtTile, new Vector3(x*2, h, y*2), Quaternion.identity);
                     }
                 }
                 cell.posX = x;
@@ -162,7 +162,7 @@ public class IslandGeneration : MonoBehaviour
                         if(noiseMap[x, y] < v) {
                             GameObject prefab = treePrefabs[Random.Range(0, treePrefabs.Length)];
                             GameObject tree = Instantiate(prefab, transform);
-                            tree.transform.position = new Vector3(x, cell.height+1, y);
+                            tree.transform.position = new Vector3(x*2-1, cell.height+1, y*2+1); ////////////////////////
                             tree.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
                             tree.transform.localScale = Vector3.one * Random.Range(.2f, 1.0f);
                             cell.isObstacle = true;
@@ -189,7 +189,7 @@ public class IslandGeneration : MonoBehaviour
                     if(noiseMap[x, y] < v) {
                         GameObject prefab = naturePrefabs[Random.Range(0, naturePrefabs.Length)];
                         GameObject nature = Instantiate(prefab, transform);
-                        nature.transform.position = new Vector3(x, cell.height+1, y);
+                        nature.transform.position = new Vector3(x*2-1, cell.height+1, y*2+1); //////////////////////
                         nature.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
                         nature.transform.localScale = Vector3.one * Random.Range(.5f, 1.1f);
                     }
@@ -215,9 +215,7 @@ public class IslandGeneration : MonoBehaviour
                         if(noiseMap[x, y] < v) {
                             GameObject prefab = grassPrefabs[Random.Range(0, grassPrefabs.Length)];
                             GameObject grass = Instantiate(prefab, transform);
-                            grass.transform.position = new Vector3(x, cell.height+1, y);
-                            //grass.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
-                            //grass.transform.localScale = Vector3.one * Random.Range(.9f, 1.0f);
+                            grass.transform.position = new Vector3(x*2-1, cell.height+1, y*2+1);  //////////////////////
                         }
                     }
                 }
@@ -246,7 +244,7 @@ public class IslandGeneration : MonoBehaviour
     {
         if(sceneNumber == 0)
         {
-            player.transform.position = new Vector3(10, 4, 99);
+            player.transform.position = new Vector3(30, 20, 99); //(10, 4, 99)
         }
         else
         {
@@ -285,7 +283,7 @@ public class IslandGeneration : MonoBehaviour
     void SpawnGem()
     {
         Vector3 playerPos = player.transform.position;
-        Vector3 gemSpawnPos = new Vector3(playerPos.x+8, 3.3f, playerPos.z);
+        Vector3 gemSpawnPos = new Vector3(playerPos.x+8, 10f, playerPos.z);
         // Vector3 gemSpawnPos2 = new Vector3(playerPos.x+3, 3.3f, playerPos.z);
 
         Instantiate(gem, gemSpawnPos, Quaternion.Euler(0,90,0));

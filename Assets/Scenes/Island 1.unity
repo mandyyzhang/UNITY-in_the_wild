@@ -176,7 +176,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1508dbcea9838694ab02a5606e399a35, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.55
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -185,9 +185,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 10
+  MaxDistance: 150
   Pan2D: 0
-  rolloffMode: 2
+  rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -262,7 +262,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -393,7 +393,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ca211d553d0c93d47a7323c9033120c8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.9
+  m_Volume: 0.273
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -719,7 +719,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 049310fbc1e0a2647ba18edda1ed20e8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.04
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1247,12 +1247,12 @@ MonoBehaviour:
   terHeight: 10
   waterHeight: 5
   waterLevel: 0.4
-  treeNoiseScale: 0.8
-  treeDensity: 0.25
-  natureNoiseScale: 0.6
-  natureDensity: 0.5
+  treeNoiseScale: 0.9
+  treeDensity: 0.5
+  natureNoiseScale: 0.5
+  natureDensity: 0.9
   grassNoiseScale: 0.99
-  grassDensity: 0.7
+  grassDensity: 0.99
 --- !u!4 &1410042629
 Transform:
   m_ObjectHideFlags: 0
@@ -1519,7 +1519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2333152634366561086, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2333152634366561086, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
       propertyPath: m_LocalPosition.z
