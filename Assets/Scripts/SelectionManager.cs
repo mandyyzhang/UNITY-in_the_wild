@@ -15,6 +15,8 @@ public class SelectionManager : MonoBehaviour
     public AudioSource collectGlassSound;
     public TMPro.TextMeshProUGUI interactionText;
 
+    public Camera firstPersonCamera;
+
     private void Start()
     {
         inventory = new Inventory();
@@ -23,35 +25,35 @@ public class SelectionManager : MonoBehaviour
     
     private void Update()
     {
-        
-        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
+        if (firstPersonCamera.enabled == true) {
+            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
 
-        bool succesfulHit = false;
+            bool succesfulHit = false;
         
-        if (Physics.Raycast(ray, out hit))
-        {
-            var selection = hit.transform;
-            if (selection.CompareTag(selectableTag))
+            if (Physics.Raycast(ray, out hit))
             {
-                var selectionRenderer = selection.GetComponent<Renderer>();
-                if (selectionRenderer != null)
+                var selection = hit.transform;
+                if (selection.CompareTag(selectableTag))
                 {
-                    interactionText.text = "Pick up";
-                    if (Input.GetMouseButtonDown(0))
+                    var selectionRenderer = selection.GetComponent<Renderer>();
+                    if (selectionRenderer != null)
                     {
-                        collectGlassSound.Play();
-                        Debug.Log("diamond clicked");
-                        selection.gameObject.SetActive(false);
-                        // hardcoded for now
-                        inventory.AddItem(new Item { itemType = Item.ItemType.GlassShards, amount = 1});
+                        interactionText.text = "Pick up";
+                        if (Input.GetMouseButtonDown(0))
+                        {
+                            collectGlassSound.Play();
+                                Debug.Log("diamond clicked");
+                            selection.gameObject.SetActive(false);
+                            // hardcoded for now
+                            inventory.AddItem(new Item { itemType = Item.ItemType.GlassShards, amount = 1});
+                        }
+                        succesfulHit = true;
                     }
-                    succesfulHit = true;
                 }
             }
+            if (!succesfulHit) interactionText.text = "";
         }
-        if (!succesfulHit) interactionText.text = "";
-
     }
 
 }
