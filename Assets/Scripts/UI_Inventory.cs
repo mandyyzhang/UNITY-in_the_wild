@@ -9,12 +9,29 @@ public class UI_Inventory : MonoBehaviour
     private Inventory inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
+    public GameObject inventoryUI1;
+    public GameObject inventoryUI2;
 
     private void Awake() 
     {
+        // hide inventory when game start
+        inventoryUI1.SetActive(false);
+        inventoryUI2.SetActive(false);
+        
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
 
+    }
+
+    void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.I))
+		{
+			inventoryUI1.SetActive(!inventoryUI1.activeSelf);
+            inventoryUI2.SetActive(!inventoryUI2.activeSelf);
+		}
+        
     }
 
     public void SetInventory(Inventory inventory) {
