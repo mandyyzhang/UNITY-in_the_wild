@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7196912292531665256}
   - component: {fileID: 4901155340339187106}
   - component: {fileID: 6846767348704259192}
+  - component: {fileID: 7607693782904733718}
   m_Layer: 0
   m_Name: PP_Tree_10
   m_TagString: Untagged
@@ -91,8 +92,21 @@ MeshCollider:
   m_GameObject: {fileID: 6846767348704259191}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5006698605598939749, guid: a3ccb41ae53c6bf4bb0a5bfc470bf069, type: 3}
+--- !u!65 &7607693782904733718
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6846767348704259191}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9768715, y: 6.214542, z: 0.988088}
+  m_Center: {x: 0.15851068, y: 3.0053284, z: 0.09657979}
