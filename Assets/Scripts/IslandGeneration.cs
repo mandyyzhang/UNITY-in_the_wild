@@ -253,7 +253,9 @@ public class IslandGeneration : MonoBehaviour
     {
         if(sceneNumber == 0)
         {
-            player.transform.position = new Vector3(30, 20, 99); //(10, 4, 99)
+            Vector3 spawnPos = landRegion(grid);
+            player.transform.position = spawnPos;
+            // new Vector3(30, 20, 99); //(10, 4, 99)
         }
         else
         {
