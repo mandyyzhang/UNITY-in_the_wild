@@ -14,6 +14,8 @@ public class IslandGeneration : MonoBehaviour
     int sizeX = 55;
     int sizeY = 55;
     Cell[,] grid; // array of cells will make up this grid (the world is represented by this grid)
+    Vector3[,] blockGrid; // this will store position of the grass block
+    // may need to change blockGrid to be array of cells so can set if grass block is occupied by trees or not
 
     // tiles/items that will be used spawned
     public GameObject grassTile;
@@ -113,8 +115,10 @@ public class IslandGeneration : MonoBehaviour
             }
         }
 
+        blockGrid = new Vector3[sizeX, sizeY];
+
         // initialize a grid with cells
-        grid = new Cell[sizeX, sizeY];
+        grid = new Cell[sizeX, sizeY]; // fill by row first
         for (int y = 0; y < sizeY; y++)
         {
             for (int x = 0; x < sizeX; x++)
@@ -131,7 +135,11 @@ public class IslandGeneration : MonoBehaviour
                 {
                     cell.isWater = false;
                     cell.height = z;
-                    Instantiate(grassTile, new Vector3(x*2, z, y*2), Quaternion.identity);
+                    GameObject grassBlock = Instantiate(grassTile, new Vector3(x*2, z, y*2), Quaternion.identity) as GameObject;
+
+                    // buggy if cell is water, blockGrid[x,y] will be 0
+                    blockGrid[x,y] = new Vector3((x*2)-0.5f, z+1.25f, (y*2)+1f);
+
                     // fill in tiles below grass with dirt tiles
                     for (int h = z-1; h > 0; h--) {
                         Instantiate(dirtTile, new Vector3(x*2, h, y*2), Quaternion.identity);
@@ -142,6 +150,7 @@ public class IslandGeneration : MonoBehaviour
                 grid[x, y] = cell;
             }
         }
+        
     }
 
 /////////TRYINGOUTTTTTT PUT TREEESSS INNNN
@@ -257,16 +266,17 @@ public class IslandGeneration : MonoBehaviour
     {
 
         List<Vector3> land = new List<Vector3>(); // store xy position of land cell
-        for (int y = 0; y < sizeX; y++)
+        
+        for (int y = 0; y < sizeY; y++)
         {
-            for (int x = 0; x < sizeY; x++)
+            for (int x = 0; x < sizeX; x++)
             {
-                Cell cell = grid[x, y];
-                if (!cell.isWater && !cell.isObstacle)
+                Vector3 blockPos = blockGrid[x, y];
+                if (blockPos != Vector3.zero ) // 0 means water
                 {
-                    Vector3 noWater = new Vector3(x, cell.height+1.5f, y);
-                    land.Add(noWater);
+                    land.Add(blockPos);
                 }
+                
             }
         }
 
@@ -283,13 +293,14 @@ public class IslandGeneration : MonoBehaviour
     void SpawnGem()
     {
         Vector3 playerPos = player.transform.position;
-        Vector3 gemSpawnPos = new Vector3(playerPos.x+8, 10f, playerPos.z);
-        // Vector3 gemSpawnPos2 = new Vector3(playerPos.x+3, 3.3f, playerPos.z);
 
-        Instantiate(gem, gemSpawnPos, Quaternion.Euler(0,90,0));
+        // TO DO: spawn first gem near player
         for (int c = 0; c < 5; c++)
         {
-            GameObject gemToPlace = Instantiate(gem, landRegion(grid), Quaternion.identity);
+            Vector3 spawnPos = landRegion(grid);
+            GameObject gemToPlace = Instantiate(gem, spawnPos, Quaternion.identity);
+            Debug.Log(spawnPos);
+            //Debug.Log(grid[(int)spawnPos.x, (int)spawnPos.z].grassPos);
         }
     }
 
@@ -300,6 +311,21 @@ public class IslandGeneration : MonoBehaviour
         int randY = Random.Range(0, sizeY-1);
 
 
+
+    }
+
+    void checkGrid() // FOR DEBUGGING BLOCK GRID ONLY
+    {
+
+        for (int y = 0; y < sizeY; y++)
+        {
+            for (int x = 0; x < sizeX; x++)
+            {
+                Vector3 block = blockGrid[x, y];
+                Debug.Log("x: " + block.x + " y: " + block.y + " z: " + block.z );
+                //Debug.Log(cell.)
+            }
+        }
 
     }
 
