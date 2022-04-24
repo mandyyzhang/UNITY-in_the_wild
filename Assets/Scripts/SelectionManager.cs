@@ -31,7 +31,7 @@ public class SelectionManager : MonoBehaviour
 
             bool succesfulHit = false;
         
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, 3))
             {
                 var selection = hit.transform;
                 if (selection.CompareTag(selectableTag))
@@ -39,6 +39,7 @@ public class SelectionManager : MonoBehaviour
                     var selectionRenderer = selection.GetComponent<Renderer>();
                     if (selectionRenderer != null)
                     {
+                        Debug.Log("Hit something at " + hit.distance + " meters");
                         interactionText.text = "Pick up";
                         if (Input.GetMouseButtonDown(0))
                         {
