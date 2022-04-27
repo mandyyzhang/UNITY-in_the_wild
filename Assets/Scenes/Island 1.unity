@@ -860,7 +860,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
+  m_Color: {r: 0.6792453, g: 0.61196154, b: 0.61196154, a: 0.49803922}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1277,7 +1277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36bed35dcc0b4432e8a3d4fd15557d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glassSprite: {fileID: 21300000, guid: d5f56e2b1e3e14414a57605de388b215, type: 3}
+  glassSprite: {fileID: 21300000, guid: cabdc8b0121dc4559aa1a6da3bf55ad7, type: 3}
   appleSprite: {fileID: 21300000, guid: 82e92131e49d04677b33d0c380e699c8, type: 3}
 --- !u!4 &1558686415
 Transform:
@@ -1539,7 +1539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 125, y: -46}
+  m_AnchoredPosition: {x: 127, y: -64}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1661263107
@@ -1562,10 +1562,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '
-
-
-'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
