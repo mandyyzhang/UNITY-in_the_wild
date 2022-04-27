@@ -1223,12 +1223,13 @@ MonoBehaviour:
   dirtTile: {fileID: 2244259126299080006, guid: 91295d460b9bd4441b6a994981559c5f, type: 3}
   port: {fileID: 4961385242022434706, guid: e62c9956ba9698f47af9fcf0c7b98636, type: 3}
   gem: {fileID: 1771963305165758434, guid: 6d16ce108c7544e9daaf88504b3ea319, type: 3}
+  apple: {fileID: 0}
   player: {fileID: 903827084}
   treePrefabs:
-  - {fileID: 6612398351084567038, guid: e34d4383d943a9943b28ab6d9471a267, type: 3}
   - {fileID: 1250690161900600, guid: d4baf8c48c5af9e43a8ed620ef2b58f3, type: 3}
-  - {fileID: 2636820298107493410, guid: a2bd798ea40c7e341aa61ad124d95342, type: 3}
-  - {fileID: 9154215057541871321, guid: 2554008d6447a2540b44e55f0c0b576e, type: 3}
+  - {fileID: 1377331622712542, guid: db1c8285b5c1d374f81f8504e95d185c, type: 3}
+  - {fileID: 1335726306580732, guid: fa2f92fd5c20a9e4ab11b445f6c683d2, type: 3}
+  - {fileID: 6612398351084567038, guid: e34d4383d943a9943b28ab6d9471a267, type: 3}
   naturePrefabs:
   - {fileID: 1439904337943108576, guid: ef62619642b0df743b22dd5120c6ac4d, type: 3}
   - {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4, type: 3}
@@ -1352,6 +1353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glassSprite: {fileID: 21300000, guid: d5f56e2b1e3e14414a57605de388b215, type: 3}
+  appleSprite: {fileID: 0}
 --- !u!4 &1558686415
 Transform:
   m_ObjectHideFlags: 0
