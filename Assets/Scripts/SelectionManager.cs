@@ -31,7 +31,7 @@ public class SelectionManager : MonoBehaviour
 
             bool succesfulHit = false;
         
-            if (Physics.Raycast(ray, out hit))
+            if (Physics.Raycast(ray, out hit, 3))
             {
                 var selection = hit.transform;
 
