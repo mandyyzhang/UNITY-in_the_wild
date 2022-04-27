@@ -6,6 +6,7 @@ public class Item
 {
     public enum ItemType {
         GlassShards,
+        Apple,
     }
 
     public ItemType itemType;
@@ -17,6 +18,8 @@ public class Item
             default:
             case ItemType.GlassShards:  
                 return ItemAssets.Instance.glassSprite;
+            case ItemType.Apple:  
+                return ItemAssets.Instance.appleSprite;
         }
     }
 
