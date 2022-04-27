@@ -636,6 +636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 732116049}
   - component: {fileID: 732116050}
+  - component: {fileID: 732116051}
   m_Layer: 0
   m_Name: UI_Inventory
   m_TagString: Untagged
@@ -678,6 +679,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inventoryUI1: {fileID: 978780166}
   inventoryUI2: {fileID: 124003685}
+--- !u!223 &732116051
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 732116048}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &835913409
 GameObject:
   m_ObjectHideFlags: 0

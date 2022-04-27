@@ -9,14 +9,17 @@ public class UI_Inventory : MonoBehaviour
     private Inventory inventory;
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
+    private Canvas canvas;
     public GameObject inventoryUI1;
     public GameObject inventoryUI2;
 
     private void Awake() 
     {
+        canvas = GetComponent<Canvas>();
+
         // hide inventory when game start
-        inventoryUI1.SetActive(false);
-        inventoryUI2.SetActive(false);
+        //inventoryUI1.SetActive(false);
+        //inventoryUI2.SetActive(false);
         
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
@@ -26,11 +29,13 @@ public class UI_Inventory : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) && !canvas.enabled)
 		{
-			inventoryUI1.SetActive(!inventoryUI1.activeSelf);
-            inventoryUI2.SetActive(!inventoryUI2.activeSelf);
-		}
+			canvas.enabled = true;
+		} else if (Input.GetKeyDown(KeyCode.I) && canvas.enabled)
+        {
+            canvas.enabled = false;
+        }
         
     }
 
