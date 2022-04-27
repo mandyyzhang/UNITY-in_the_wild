@@ -1223,7 +1223,7 @@ MonoBehaviour:
   dirtTile: {fileID: 2244259126299080006, guid: 91295d460b9bd4441b6a994981559c5f, type: 3}
   port: {fileID: 4961385242022434706, guid: e62c9956ba9698f47af9fcf0c7b98636, type: 3}
   gem: {fileID: 1771963305165758434, guid: 6d16ce108c7544e9daaf88504b3ea319, type: 3}
-  apple: {fileID: 0}
+  apple: {fileID: 6957269528956609991, guid: a617a394afe824fa0bea6302b3a083a0, type: 3}
   player: {fileID: 903827084}
   treePrefabs:
   - {fileID: 1250690161900600, guid: d4baf8c48c5af9e43a8ed620ef2b58f3, type: 3}

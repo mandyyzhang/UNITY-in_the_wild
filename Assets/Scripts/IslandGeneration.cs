@@ -89,6 +89,12 @@ public class IslandGeneration : MonoBehaviour
             yOffSet = (float) 9689.953;
             seed = 15;
         }
+        else if (sceneNumber == 1) // Island 2
+        {
+            xOffSet = (float) -7100.375;
+            yOffSet = (float) 9689.953;
+            seed = 15;
+        }
         else {
             //random offsets
             //by adding random offsets to the noise map, we will generate a new map every time
@@ -252,7 +258,8 @@ public class IslandGeneration : MonoBehaviour
 
     void SpawnPlayer()
     {
-        if(sceneNumber == 0)
+        // if(sceneNumber == 0)
+        if(sceneNumber >= 0)
         {
             Vector3 spawnPos = landRegion(grid);
             player.transform.position = spawnPos;
