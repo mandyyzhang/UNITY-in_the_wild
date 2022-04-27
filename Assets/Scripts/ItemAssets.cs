@@ -12,4 +12,5 @@ public class ItemAssets : MonoBehaviour
     }
 
     public Sprite glassSprite;
+    public Sprite appleSprite;
 }

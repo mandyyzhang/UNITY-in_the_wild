@@ -22,6 +22,7 @@ public class IslandGeneration : MonoBehaviour
     public GameObject dirtTile;
     public GameObject port;
     public GameObject gem;
+    public GameObject apple;
 
     public GameObject player;
 
@@ -296,13 +297,22 @@ public class IslandGeneration : MonoBehaviour
     {
         Vector3 playerPos = player.transform.position;
 
+        Vector3 gemSpawnPos = new Vector3(playerPos.x+8, playerPos.y, playerPos.z);
+
+        GameObject appleToPlace = Instantiate(apple, gemSpawnPos, Quaternion.identity);
+
+        // this sets the itemType
+        // can also set from the inspector
+        appleToPlace.GetComponent<ItemType>().itemType = "apple";
+
         // TO DO: spawn first gem near player
         for (int c = 0; c < 5; c++)
         {
             Vector3 spawnPos = landRegion(grid);
             GameObject gemToPlace = Instantiate(gem, spawnPos, Quaternion.identity);
+            // this sets the itemType
+            gemToPlace.GetComponent<ItemType>().itemType = "glass shard";
             Debug.Log(spawnPos);
-            //Debug.Log(grid[(int)spawnPos.x, (int)spawnPos.z].grassPos);
         }
     }
 

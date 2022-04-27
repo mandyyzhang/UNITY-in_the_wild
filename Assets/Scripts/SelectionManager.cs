@@ -31,27 +31,35 @@ public class SelectionManager : MonoBehaviour
 
             bool succesfulHit = false;
         
-            if (Physics.Raycast(ray, out hit, 3))
+            if (Physics.Raycast(ray, out hit))
             {
                 var selection = hit.transform;
+
+                
                 if (selection.CompareTag(selectableTag))
                 {
                     var selectionRenderer = selection.GetComponent<Renderer>();
                     if (selectionRenderer != null)
                     {
-                        Debug.Log("Hit something at " + hit.distance + " meters");
                         interactionText.text = "Pick up";
                         if (Input.GetMouseButtonDown(0))
                         {
                             collectGlassSound.Play();
-                                Debug.Log("diamond clicked");
                             selection.gameObject.SetActive(false);
-                            // hardcoded for now
-                            inventory.AddItem(new Item { itemType = Item.ItemType.GlassShards, amount = 1});
+                            // maybe set itemtype to variable
+                            if (selection.gameObject.GetComponent<ItemType>().itemType == "glass shard")
+                            {
+                                inventory.AddItem(new Item { itemType = Item.ItemType.GlassShards, amount = 1});
+                            } else if (selection.gameObject.GetComponent<ItemType>().itemType == "apple")
+                            {
+                                inventory.AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1});
+                            }
+                            
                         }
                         succesfulHit = true;
                     }
                 }
+        
             }
             if (!succesfulHit) interactionText.text = "";
         }
