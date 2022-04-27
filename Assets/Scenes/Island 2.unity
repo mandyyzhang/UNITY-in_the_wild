@@ -1225,8 +1225,8 @@ MonoBehaviour:
   gem: {fileID: 1771963305165758434, guid: 6d16ce108c7544e9daaf88504b3ea319, type: 3}
   player: {fileID: 903827084}
   treePrefabs:
-  - {fileID: 100000, guid: 5bc5cbd2067e372409c260b3be2aba72, type: 3}
-  - {fileID: 6846767348704259191, guid: 273b8f4150121d249ac7e2fd11da7005, type: 3}
+  - {fileID: 6612398351084567038, guid: e34d4383d943a9943b28ab6d9471a267, type: 3}
+  - {fileID: 1250690161900600, guid: d4baf8c48c5af9e43a8ed620ef2b58f3, type: 3}
   - {fileID: 2636820298107493410, guid: a2bd798ea40c7e341aa61ad124d95342, type: 3}
   - {fileID: 9154215057541871321, guid: 2554008d6447a2540b44e55f0c0b576e, type: 3}
   naturePrefabs:
