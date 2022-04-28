@@ -1436,7 +1436,6 @@ MonoBehaviour:
   dirtTile: {fileID: 2244259126299080006, guid: 91295d460b9bd4441b6a994981559c5f, type: 3}
   port: {fileID: 4961385242022434706, guid: e62c9956ba9698f47af9fcf0c7b98636, type: 3}
   gem: {fileID: 1771963305165758434, guid: 6d16ce108c7544e9daaf88504b3ea319, type: 3}
-  apple: {fileID: 6957269528956609991, guid: a617a394afe824fa0bea6302b3a083a0, type: 3}
   player: {fileID: 903827084}
   treePrefabs:
   - {fileID: 4032642331417584291, guid: e133dac167ef59c40b7678ba58107c6a, type: 3}
@@ -2093,7 +2092,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
