@@ -501,8 +501,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restart: 114
-  island1: 49
-  island2: 50
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0

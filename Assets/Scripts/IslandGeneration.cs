@@ -333,7 +333,7 @@ public class IslandGeneration : MonoBehaviour
             GameObject gemToPlace = Instantiate(gem, spawnPos, Quaternion.identity);
             // this sets the itemType
             gemToPlace.GetComponent<ItemType>().itemType = "glass shard";
-            //Debug.Log(spawnPos);
+            Debug.Log(spawnPos);
         }
     }
 
