@@ -11,8 +11,8 @@ public class SelectionManager : MonoBehaviour
     // Inventory
     private Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
-
-    public AudioSource collectGlassSound;
+    public bool obtainedItem = false; 
+    
     public TMPro.TextMeshProUGUI interactionText;
 
     public Camera firstPersonCamera;
@@ -44,7 +44,7 @@ public class SelectionManager : MonoBehaviour
                         interactionText.text = "Pick up";
                         if (Input.GetMouseButtonDown(0))
                         {
-                            collectGlassSound.Play();
+                            obtainedItem = true; 
                             selection.gameObject.SetActive(false);
                             // maybe set itemtype to variable
                             if (selection.gameObject.GetComponent<ItemType>().itemType == "glass shard")

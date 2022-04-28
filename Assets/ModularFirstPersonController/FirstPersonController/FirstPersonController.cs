@@ -17,11 +17,12 @@ using UnityEngine.UI;
 public class FirstPersonController : MonoBehaviour
 {
 
-    #region Sound & Audio
+    #region For Sound & Audio
     // Audio ---------------------------------------
-    public AudioSource movementSound;
-    public AudioSource jumpSound;
-    private float _timeSinceLastStepPlayed;
+    public bool walking = false; 
+    public bool jumping = false; 
+    public bool sprinting = false; 
+    public bool grounded = false; 
 
     // ---------------------------------------------
     private Rigidbody rb;
@@ -72,7 +73,6 @@ public class FirstPersonController : MonoBehaviour
 
     // Internal Variables (not internal no more)
     private bool isWalking = false;
-
 
     #region Sprint
 
@@ -323,6 +323,7 @@ public class FirstPersonController : MonoBehaviour
                     if (sprintRemaining <= 0)
                     {
                         isSprinting = false;
+                        sprinting = false; 
                         isSprintCooldown = true;
                     }
                 }
@@ -368,7 +369,8 @@ public class FirstPersonController : MonoBehaviour
                 //Debug.Log("About to jump from the ground.");
                 jumpCount = 0; 
                 Jump(jumpPower);
-                jumpSound.Play();
+                // jumpSound.Play();
+                jumping = true; 
             }
             else
             {
@@ -377,7 +379,8 @@ public class FirstPersonController : MonoBehaviour
                 {
                     //Debug.Log("About to jump from midair.");
                     Jump(jumpPower / (1.5f * jumpCount));
-                    jumpSound.Play();
+                    // jumpSound.Play();
+                    jumping = true; 
                 }
                 else
                 {
@@ -420,6 +423,7 @@ public class FirstPersonController : MonoBehaviour
         }
 
         #region Audio 
+        /*
         if (isWalking && isGrounded)
         {
             _timeSinceLastStepPlayed += Time.deltaTime;
@@ -437,7 +441,7 @@ public class FirstPersonController : MonoBehaviour
                 }
             }
         }
-
+        */ 
         #endregion 
     }
 
@@ -457,17 +461,12 @@ public class FirstPersonController : MonoBehaviour
             if (targetVelocity.x != 0 || targetVelocity.z != 0 && isGrounded)
             {
                 isWalking = true; 
-                /* // see audio region in update() 
-                _timeSinceLastStepPlayed += Time.deltaTime;
-                if (_timeSinceLastStepPlayed > 0.4) {
-                    _timeSinceLastStepPlayed = 0;
-                    movementSound.Play();
-                }
-                */
+                walking = true; 
             }
             else
             {
                 isWalking = false;
+                walking = false; 
             }
 
             // All movement calculations shile sprint is active
@@ -487,6 +486,7 @@ public class FirstPersonController : MonoBehaviour
                 if (velocityChange.x != 0 || velocityChange.z != 0)
                 {
                     isSprinting = true;
+                    sprinting = true; 
 
                     if (isCrouched)
                     {
@@ -505,6 +505,7 @@ public class FirstPersonController : MonoBehaviour
             else
             {
                 isSprinting = false;
+                sprinting = false; 
 
                 if (hideBarWhenFull && sprintRemaining == sprintDuration)
                 {
@@ -538,10 +539,12 @@ public class FirstPersonController : MonoBehaviour
         {
             Debug.DrawRay(origin, direction * distance, Color.red);
             isGrounded = true;
+            grounded = true; 
         }
         else
         {
             isGrounded = false;
+            grounded = false; 
         }
     }
 
@@ -560,6 +563,7 @@ public class FirstPersonController : MonoBehaviour
             Debug.Log("Jump Count = " + jumpCount + " Jump Power = " + jpower); 
             rb.AddForce(0f, jpower, 0f, ForceMode.Impulse);
             isGrounded = false;
+            grounded = false; 
             jumpCount++;
         }
 
@@ -713,8 +717,8 @@ public class FirstPersonController : MonoBehaviour
         fpc.playerCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Player Movement", "Determines if the player is allowed to move."), fpc.playerCanMove);
 
         //SFX movement
-        fpc.movementSound = (AudioSource)EditorGUILayout.ObjectField(new GUIContent("Walk SFX", "Sound effect that plays when walking."), fpc.movementSound, typeof(AudioSource), true);
-        fpc.jumpSound = (AudioSource)EditorGUILayout.ObjectField(new GUIContent("Jump SFX", "Sound effect that plays when jumping/flying."), fpc.jumpSound, typeof(AudioSource), true);
+        //fpc.movementSound = (AudioSource)EditorGUILayout.ObjectField(new GUIContent("Walk SFX", "Sound effect that plays when walking."), fpc.movementSound, typeof(AudioSource), true);
+        //fpc.jumpSound = (AudioSource)EditorGUILayout.ObjectField(new GUIContent("Jump SFX", "Sound effect that plays when jumping/flying."), fpc.jumpSound, typeof(AudioSource), true);
 
         GUI.enabled = fpc.playerCanMove;
         fpc.walkSpeed = EditorGUILayout.Slider(new GUIContent("Walk Speed", "Determines how fast the player will move while walking."), fpc.walkSpeed, .1f, fpc.sprintSpeed);
