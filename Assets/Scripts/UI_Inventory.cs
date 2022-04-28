@@ -10,21 +10,16 @@ public class UI_Inventory : MonoBehaviour
     private Transform itemSlotContainer;
     private Transform itemSlotTemplate;
     private Canvas canvas;
-    public GameObject inventoryUI1;
-    public GameObject inventoryUI2;
 
     private void Awake() 
     {
         canvas = GetComponent<Canvas>();
-
-        // hide inventory when game start
-        //inventoryUI1.SetActive(false);
-        //inventoryUI2.SetActive(false);
         
         itemSlotContainer = transform.Find("itemSlotContainer");
         itemSlotTemplate = itemSlotContainer.Find("itemSlotTemplate");
 
     }
+    
 
     void Update()
     {
@@ -68,9 +63,11 @@ public class UI_Inventory : MonoBehaviour
             RectTransform itemSlotRectTransform = Instantiate(itemSlotTemplate, itemSlotContainer).GetComponent<RectTransform>();
             itemSlotRectTransform.gameObject.SetActive(true);
 
+
             itemSlotRectTransform.anchoredPosition = new Vector3(x * itemSlotCellSize, y * itemSlotCellSize, 0);
             Image image = itemSlotRectTransform.Find("Image").GetComponent<Image>();
             image.sprite = item.GetSprite();
+
             TextMeshProUGUI uiText = itemSlotRectTransform.Find("amountText").GetComponent<TextMeshProUGUI>();
             if (item.amount > 1)
             {
