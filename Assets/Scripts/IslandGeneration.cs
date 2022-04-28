@@ -322,17 +322,11 @@ public class IslandGeneration : MonoBehaviour
 
         GameObject appleToPlace = Instantiate(apple, gemSpawnPos, Quaternion.identity);
 
-        // this sets the itemType
-        // can also set from the inspector
-        appleToPlace.GetComponent<ItemType>().itemType = "apple";
-
         // TO DO: spawn first gem near player
         for (int c = 0; c < 5; c++)
         {
             Vector3 spawnPos = landRegion(grid);
             GameObject gemToPlace = Instantiate(gem, spawnPos, Quaternion.identity);
-            // this sets the itemType
-            gemToPlace.GetComponent<ItemType>().itemType = "glass shard";
             Debug.Log(spawnPos);
         }
     }
