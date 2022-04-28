@@ -72,10 +72,10 @@ public class IslandGeneration : MonoBehaviour
         if (sceneNumber == 0) {  // Island 1
             GenerateTrees(.2f, 1.0f); ////////////
         }
-        else if (sceneNumber == 1) {  // Island 2 
-            GenerateTrees(.2f, 1.0f); ////////////
+        else if (sceneNumber == 1) {  // Island 2
+            GenerateTrees(.9f, 1.4f); ////////////
         }
-        
+
         GenerateNature(); ///////////
         GenerateGrass(); ////////////
 
@@ -163,7 +163,7 @@ public class IslandGeneration : MonoBehaviour
                 grid[x, y] = cell;
             }
         }
-        
+
     }
 
 /////////TRYINGOUTTTTTT PUT TREEESSS INNNN
@@ -283,7 +283,7 @@ public class IslandGeneration : MonoBehaviour
     {
 
         List<Vector3> land = new List<Vector3>(); // store xy position of land cell
-        
+
         for (int y = 0; y < sizeY; y++)
         {
             for (int x = 0; x < sizeX; x++)
@@ -293,7 +293,7 @@ public class IslandGeneration : MonoBehaviour
                 {
                     land.Add(blockPos);
                 }
-                
+
             }
         }
 
