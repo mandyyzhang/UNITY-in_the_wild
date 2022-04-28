@@ -37,8 +37,7 @@ public class SelectionManager : MonoBehaviour
 
                 if (interactable != null)
                 {
-                    Debug.Log("detect collectible");
-                    //Debug.Log(interactable.GetDescription());
+                    Debug.Log(interactable.GetDescription());
                     interactionText.text = interactable.GetDescription();
 
                     if (Input.GetMouseButtonDown(0))
@@ -47,33 +46,6 @@ public class SelectionManager : MonoBehaviour
                     }
                     succesfulHit = true;
                 }
-
-                /*
-                if (selection.CompareTag(selectableTag))
-                {
-                    var selectionRenderer = selection.GetComponent<Renderer>();
-
-                    if (selectionRenderer != null)
-                    {
-                        interactionText.text = "Pick up";
-                        if (Input.GetMouseButtonDown(0))
-                        {
-                            obtainedItem = true; 
-                            selection.gameObject.SetActive(false);
-                            // maybe set itemtype to variable
-                            if (selection.gameObject.GetComponent<WorldItem>().itemType == "glass shard")
-                            {
-                                inventory.AddItem(new Item { itemType = Item.ItemType.GlassShards, amount = 1});
-                            } else if (selection.gameObject.GetComponent<WorldItem>().itemType == "apple")
-                            {
-                                inventory.AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1});
-                            } 
-                            
-                        }
-                        succesfulHit = true;
-                    }
-                }
-                */
         
             }
             if (!succesfulHit) interactionText.text = "";
@@ -95,6 +67,10 @@ public class SelectionManager : MonoBehaviour
                 interactable.gameObject.SetActive(false);
                 break;
                 // helpful error for us in the future
+            case Interactable.InteractionType.Harvest:
+                // for future, drop the apple only, dont add to inventory directly
+                inventory.AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1});
+                break;
             default:
                 throw new System.Exception("Unsupported type of interactable.");
         }

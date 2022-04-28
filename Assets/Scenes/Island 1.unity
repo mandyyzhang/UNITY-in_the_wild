@@ -501,6 +501,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restart: 114
+  island1: 49
+  island2: 50
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0
@@ -1960,7 +1962,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1985,7 +1987,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2014,7 +2016,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -38.579773, y: 0, z: 143.72621, w: 21.920416}
+  m_margin: {x: 0.25941467, y: 0, z: 0.44728085, w: -0.1101122}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2044,8 +2046,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 96.2, y: 24.6}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -4.6483, y: 28.1988}
+  m_SizeDelta: {x: 156.9807, y: 43.6024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1813566491
 GameObject:
