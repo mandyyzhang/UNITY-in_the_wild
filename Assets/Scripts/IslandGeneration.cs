@@ -69,7 +69,13 @@ public class IslandGeneration : MonoBehaviour
         SetSeedAndOffsets(); // set the seeds and offsets for each island (so we can get the same map each time for each island)
         GenerateTerrain();
 
-        GenerateTrees(); ////////////
+        if (sceneNumber == 0) {  // Island 1
+            GenerateTrees(.2f, 1.0f); ////////////
+        }
+        else if (sceneNumber == 1) {  // Island 2 
+            GenerateTrees(.2f, 1.0f); ////////////
+        }
+        
         GenerateNature(); ///////////
         GenerateGrass(); ////////////
 
@@ -161,7 +167,7 @@ public class IslandGeneration : MonoBehaviour
     }
 
 /////////TRYINGOUTTTTTT PUT TREEESSS INNNN
-    void GenerateTrees() {
+    void GenerateTrees(float minScale, float maxScale) {
             float[,] noiseMap = new float[sizeX, sizeY];
             (float xOffset, float yOffset) = (Random.Range(-10000f, 10000f), Random.Range(-10000f, 10000f));
             for(int y = 0; y < sizeY; y++) {
@@ -180,7 +186,8 @@ public class IslandGeneration : MonoBehaviour
                             GameObject tree = Instantiate(prefab, transform);
                             tree.transform.position = new Vector3(x*2-1, cell.height+1, y*2+1); ////////////////////////
                             tree.transform.rotation = Quaternion.Euler(0, Random.Range(0, 360f), 0);
-                            tree.transform.localScale = Vector3.one * Random.Range(.2f, 1.0f);
+                            // tree.transform.localScale = Vector3.one * Random.Range(.2f, 1.0f);
+                            tree.transform.localScale = Vector3.one * Random.Range(minScale, maxScale);
                             cell.isObstacle = true;
                         }
                     }
