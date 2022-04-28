@@ -79,7 +79,7 @@ public class IslandGeneration : MonoBehaviour
         GenerateNature(); ///////////
         GenerateGrass(); ////////////
 
-        SpawnPort();
+        //SpawnPort();
         SpawnPlayer();
         SpawnGem();
 
