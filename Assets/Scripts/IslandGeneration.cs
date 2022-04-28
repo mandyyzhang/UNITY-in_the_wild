@@ -73,7 +73,7 @@ public class IslandGeneration : MonoBehaviour
             GenerateTrees(.2f, 1.0f); ////////////
         }
         else if (sceneNumber == 1) {  // Island 2
-            GenerateTrees(.9f, 1.4f); ////////////
+            GenerateTrees(1.0f, 1.3f); ////////////
         }
 
         GenerateNature(); ///////////
