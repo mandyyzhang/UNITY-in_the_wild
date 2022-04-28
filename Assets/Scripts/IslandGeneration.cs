@@ -22,7 +22,6 @@ public class IslandGeneration : MonoBehaviour
     public GameObject dirtTile;
     public GameObject port;
     public GameObject gem;
-    public GameObject apple;
 
     public GameObject player;
 
@@ -319,8 +318,6 @@ public class IslandGeneration : MonoBehaviour
         Vector3 playerPos = player.transform.position;
 
         Vector3 gemSpawnPos = new Vector3(playerPos.x+8, playerPos.y, playerPos.z);
-
-        GameObject appleToPlace = Instantiate(apple, gemSpawnPos, Quaternion.identity);
 
         // TO DO: spawn first gem near player
         for (int c = 0; c < 5; c++)

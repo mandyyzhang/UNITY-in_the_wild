@@ -9,7 +9,8 @@ public class SelectionManager : MonoBehaviour
     // Inventory
     private Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
-    public bool obtainedItem = false; 
+    public bool obtainedItem = false;
+    public bool treeShake = false; 
     
     public TMPro.TextMeshProUGUI interactionText;
 
@@ -69,6 +70,7 @@ public class SelectionManager : MonoBehaviour
                 // helpful error for us in the future
             case Interactable.InteractionType.Harvest:
                 // for future, drop the apple only, dont add to inventory directly
+                treeShake = true;
                 inventory.AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1});
                 break;
             default:

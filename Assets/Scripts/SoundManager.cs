@@ -16,6 +16,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource movementSound;
     public AudioSource jumpSound;
     public AudioSource collectGlassSound;
+    public AudioSource treeShakeSound;
     private float _timeSinceLastStepPlayed;
 
     // Start is called before the first frame update
@@ -62,6 +63,9 @@ public class SoundManager : MonoBehaviour
         if (selectScript.obtainedItem) {
             collectGlassSound.Play();
             selectScript.obtainedItem = false; 
+        } else if (selectScript.treeShake) {
+            treeShakeSound.Play();
+            selectScript.treeShake = false;
         }
             
 
