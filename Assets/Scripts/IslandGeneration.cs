@@ -257,6 +257,13 @@ public class IslandGeneration : MonoBehaviour
             Instantiate(port, new Vector3(14, 2, 99), Quaternion.identity);
             Instantiate(port, new Vector3(16, 2, 99), Quaternion.identity);
         }
+        if(sceneNumber == 1) // Island 2 (needs some changes)
+        {
+            Instantiate(port, new Vector3(10, 2, 99), Quaternion.identity);
+            Instantiate(port, new Vector3(12, 2, 99), Quaternion.identity);
+            Instantiate(port, new Vector3(14, 2, 99), Quaternion.identity);
+            Instantiate(port, new Vector3(16, 2, 99), Quaternion.identity);
+        }
         else
         {
             Instantiate(port, new Vector3(10, 10, 100), Quaternion.identity);

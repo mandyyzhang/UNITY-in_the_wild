@@ -889,6 +889,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978780166}
   m_CullTransparentMesh: 1
+--- !u!1 &1019147086
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1019147088}
+  - component: {fileID: 1019147087}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1019147087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019147086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e591abd0b1d7d904dba461b34a7fc47d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 903827084}
+  selectionManager: {fileID: 1416456631}
+  movementSound: {fileID: 418956101}
+  jumpSound: {fileID: 1564648972}
+  collectGlassSound: {fileID: 835913411}
+--- !u!4 &1019147088
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1019147086}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 49.125084, y: -11.176957, z: 9.282271}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1379559023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1155,10 +1203,10 @@ MonoBehaviour:
   apple: {fileID: 6957269528956609991, guid: a617a394afe824fa0bea6302b3a083a0, type: 3}
   player: {fileID: 903827084}
   treePrefabs:
+  - {fileID: 6612398351084567038, guid: e34d4383d943a9943b28ab6d9471a267, type: 3}
   - {fileID: 1250690161900600, guid: d4baf8c48c5af9e43a8ed620ef2b58f3, type: 3}
   - {fileID: 1377331622712542, guid: db1c8285b5c1d374f81f8504e95d185c, type: 3}
   - {fileID: 1335726306580732, guid: fa2f92fd5c20a9e4ab11b445f6c683d2, type: 3}
-  - {fileID: 6612398351084567038, guid: e34d4383d943a9943b28ab6d9471a267, type: 3}
   naturePrefabs:
   - {fileID: 1439904337943108576, guid: ef62619642b0df743b22dd5120c6ac4d, type: 3}
   - {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4, type: 3}
@@ -1168,10 +1216,10 @@ MonoBehaviour:
   - {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1, type: 3}
   - {fileID: 3318689441606926373, guid: d3ee913ed32937344b0587e70dc777a2, type: 3}
   - {fileID: 4400482160171448048, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
-  - {fileID: 8386341279695790499, guid: 0d6a3b732cfd1ce428452a5aea0137ec, type: 3}
   grassPrefabs:
   - {fileID: 5690739679907192635, guid: 941d8f23193f6c441918ff17e0ffe886, type: 3}
   - {fileID: 5838902624641161372, guid: 2bd9d901bf3d25d459e45ebfc60f180e, type: 3}
+  - {fileID: 8386341279695790499, guid: 0d6a3b732cfd1ce428452a5aea0137ec, type: 3}
   - {fileID: 2850601745711547609, guid: 10f020e2d02ba894c91ebde8cf3ebbb6, type: 3}
   chicken: {fileID: 0}
   scale: 0.1
@@ -1179,8 +1227,8 @@ MonoBehaviour:
   terHeight: 10
   waterHeight: 5
   waterLevel: 0.4
-  treeNoiseScale: 0.7
-  treeDensity: 0.3
+  treeNoiseScale: 0.9
+  treeDensity: 0.5
   natureNoiseScale: 0.5
   natureDensity: 0.9
   grassNoiseScale: 0.99
@@ -1230,7 +1278,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectableTag: Selectable
   uiInventory: {fileID: 732116050}
-  collectGlassSound: {fileID: 835913411}
+  obtainedItem: 0
   interactionText: {fileID: 1772908285}
   firstPersonCamera: {fileID: 1379559024}
 --- !u!4 &1416456633
