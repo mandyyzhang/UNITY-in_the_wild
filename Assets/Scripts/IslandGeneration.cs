@@ -27,13 +27,13 @@ public class IslandGeneration : MonoBehaviour
     public GameObject gem;
 
     public GameObject player;
-    public GameObject goat;
 
     public GameObject[] treePrefabs; //TRYINGOUTTTTTT PUT TREEESSS INNNN
     public GameObject[] naturePrefabs;  ///////
     public GameObject[] grassPrefabs;   ///////
 
     // animal game objects
+    public GameObject goat;
     public GameObject alpaca;
     public GameObject chicken;
 
@@ -88,7 +88,7 @@ public class IslandGeneration : MonoBehaviour
         SpawnGem();
 
         // spawn animals here?
-        SpawnAnimal()
+        SpawnAnimal();
         surface.BuildNavMesh();
     }
 
