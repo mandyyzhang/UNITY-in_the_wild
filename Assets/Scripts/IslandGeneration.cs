@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 
 /*
  goes on the world object
@@ -10,6 +11,8 @@ using UnityEngine.SceneManagement;
 
 public class IslandGeneration : MonoBehaviour
 {
+    public NavMeshSurface surface;
+
     // the world
     int sizeX = 55;
     int sizeY = 55;
@@ -84,6 +87,7 @@ public class IslandGeneration : MonoBehaviour
 
         // spawn animals here?
         // SpawnAnimal()
+        surface.BuildNavMesh();
     }
 
     void SetSeedAndOffsets()
@@ -324,7 +328,7 @@ public class IslandGeneration : MonoBehaviour
         {
             Vector3 spawnPos = landRegion(grid);
             GameObject gemToPlace = Instantiate(gem, spawnPos, Quaternion.identity);
-            Debug.Log(spawnPos);
+
         }
     }
 
