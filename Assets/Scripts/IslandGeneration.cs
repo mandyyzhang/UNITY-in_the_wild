@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 
 /*
  goes on the world object
@@ -10,6 +11,8 @@ using UnityEngine.SceneManagement;
 
 public class IslandGeneration : MonoBehaviour
 {
+    public NavMeshSurface surface;
+
     // the world
     int sizeX = 55;
     int sizeY = 55;
@@ -24,13 +27,14 @@ public class IslandGeneration : MonoBehaviour
     public GameObject gem;
 
     public GameObject player;
+    public GameObject goat;
 
     public GameObject[] treePrefabs; //TRYINGOUTTTTTT PUT TREEESSS INNNN
     public GameObject[] naturePrefabs;  ///////
     public GameObject[] grassPrefabs;   ///////
 
     // animal game objects
-    public GameObject alpaca;    
+    public GameObject alpaca;
     public GameObject chicken;
 
     // list of positions where land is empty (no trees, no gems)
@@ -84,7 +88,8 @@ public class IslandGeneration : MonoBehaviour
         SpawnGem();
 
         // spawn animals here?
-        SpawnAnimal();
+        SpawnAnimal()
+        surface.BuildNavMesh();
     }
 
     void SetSeedAndOffsets()
@@ -278,6 +283,10 @@ public class IslandGeneration : MonoBehaviour
             Vector3 spawnPos = landRegion(grid);
             player.transform.position = spawnPos;
             // new Vector3(30, 20, 99); //(10, 4, 99)
+
+            Vector3 goatPos = landRegion(grid);
+            //goat.transform.position = goatPos;
+            goat.GetComponent<NavMeshAgent>().Warp(goatPos);
         }
         else
         {
@@ -324,7 +333,7 @@ public class IslandGeneration : MonoBehaviour
         {
             Vector3 spawnPos = landRegion(grid);
             GameObject gemToPlace = Instantiate(gem, spawnPos, Quaternion.identity);
-            Debug.Log(spawnPos);
+
         }
     }
 
@@ -340,14 +349,14 @@ public class IslandGeneration : MonoBehaviour
             GameObject animalToPlace = Instantiate(alpaca, spawnPos, Quaternion.identity);
             animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
         }
-                
+
         for (int c = 0; c < 3; c++){
             Vector3 spawnPos = landRegion(grid);
             GameObject animalToPlace = Instantiate(chicken, spawnPos, Quaternion.identity);
             animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
         }
     }
-    
+
 
     void checkGrid() // FOR DEBUGGING BLOCK GRID ONLY
     {
