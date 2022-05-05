@@ -1706,7 +1706,7 @@ MonoBehaviour:
   - {fileID: 5838902624641161372, guid: 2bd9d901bf3d25d459e45ebfc60f180e, type: 3}
   - {fileID: 8386341279695790499, guid: 0d6a3b732cfd1ce428452a5aea0137ec, type: 3}
   - {fileID: 2850601745711547609, guid: 10f020e2d02ba894c91ebde8cf3ebbb6, type: 3}
-  chicken: {fileID: 0}
+  alpaca: {fileID: 1244936432145580, guid: 17f32705f0b5c064d9d66ebca912989d, type: 3}
   scale: 0.1
   terDetail: 10
   terHeight: 10

@@ -30,6 +30,7 @@ public class IslandGeneration : MonoBehaviour
     public GameObject[] grassPrefabs;   ///////
 
     // animal game objects
+    public GameObject alpaca;    
     public GameObject chicken;
 
     // list of positions where land is empty (no trees, no gems)
@@ -83,7 +84,7 @@ public class IslandGeneration : MonoBehaviour
         SpawnGem();
 
         // spawn animals here?
-        // SpawnAnimal()
+        SpawnAnimal();
     }
 
     void SetSeedAndOffsets()
@@ -305,7 +306,6 @@ public class IslandGeneration : MonoBehaviour
 
         int randomLand = Random.Range(0, land.Count);
         return land[randomLand];
-
     }
 
     // not done :p
@@ -329,14 +329,25 @@ public class IslandGeneration : MonoBehaviour
     }
 
     // specify what kind of animal to spawn here
-    void SpawnAnimal(GameObject animal)
-    {
-        int randX = Random.Range(0, sizeX-1);
-        int randY = Random.Range(0, sizeY-1);
+    void SpawnAnimal(){
+        // int randX = Random.Range(0, sizeX-1);
+        // int randY = Random.Range(0, sizeY-1);
+        Vector3 playerPos = player.transform.position;
+        Vector3 animalSpawnPos = new Vector3(playerPos.x+8, playerPos.y + 50, playerPos.z);
 
-
-
+        for (int c = 0; c < 3; c++){
+            Vector3 spawnPos = landRegion(grid);
+            GameObject animalToPlace = Instantiate(alpaca, spawnPos, Quaternion.identity);
+            animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
+        }
+                
+        for (int c = 0; c < 3; c++){
+            Vector3 spawnPos = landRegion(grid);
+            GameObject animalToPlace = Instantiate(chicken, spawnPos, Quaternion.identity);
+            animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
+        }
     }
+    
 
     void checkGrid() // FOR DEBUGGING BLOCK GRID ONLY
     {

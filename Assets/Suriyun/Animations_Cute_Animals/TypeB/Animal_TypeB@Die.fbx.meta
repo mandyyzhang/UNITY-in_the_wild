@@ -1,83 +1,227 @@
 fileFormatVersion: 2
 guid: ad5f48cae603a3e4c8aca4ec399b45db
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: backAnkle_L
-    100004: backAnkle_R
-    100006: backHip_L
-    100008: backHip_R
-    100010: backKnee_L
-    100012: backKnee_R
-    100014: backRump_L
-    100016: backRump_R
-    100018: backToes_L
-    100020: backToes_R
-    100022: backToesEnd_L
-    100024: backToesEnd_R
-    100026: Chest
-    100028: frontAnkle_L
-    100030: frontAnkle_R
-    100032: frontHip_L
-    100034: frontHip_R
-    100036: frontKnee_L
-    100038: frontKnee_R
-    100040: frontRump_L
-    100042: frontRump_R
-    100044: frontToes_L
-    100046: frontToes_R
-    100048: frontToesEnd_L
-    100050: frontToesEnd_R
-    100052: Head
-    100054: HeadEnd
-    100056: Neck
-    100058: Root
-    100060: Spine1
-    100062: Tail0
-    100064: Tail1
-    100066: Tail2
-    100068: Tail3
-    400000: //RootNode
-    400002: backAnkle_L
-    400004: backAnkle_R
-    400006: backHip_L
-    400008: backHip_R
-    400010: backKnee_L
-    400012: backKnee_R
-    400014: backRump_L
-    400016: backRump_R
-    400018: backToes_L
-    400020: backToes_R
-    400022: backToesEnd_L
-    400024: backToesEnd_R
-    400026: Chest
-    400028: frontAnkle_L
-    400030: frontAnkle_R
-    400032: frontHip_L
-    400034: frontHip_R
-    400036: frontKnee_L
-    400038: frontKnee_R
-    400040: frontRump_L
-    400042: frontRump_R
-    400044: frontToes_L
-    400046: frontToes_R
-    400048: frontToesEnd_L
-    400050: frontToesEnd_R
-    400052: Head
-    400054: HeadEnd
-    400056: Neck
-    400058: Root
-    400060: Spine1
-    400062: Tail0
-    400064: Tail1
-    400066: Tail2
-    400068: Tail3
-    7400000: Animal_TypeB@Die
-    9500000: //RootNode
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: backAnkle_L
+  - first:
+      1: 100004
+    second: backAnkle_R
+  - first:
+      1: 100006
+    second: backHip_L
+  - first:
+      1: 100008
+    second: backHip_R
+  - first:
+      1: 100010
+    second: backKnee_L
+  - first:
+      1: 100012
+    second: backKnee_R
+  - first:
+      1: 100014
+    second: backRump_L
+  - first:
+      1: 100016
+    second: backRump_R
+  - first:
+      1: 100018
+    second: backToes_L
+  - first:
+      1: 100020
+    second: backToes_R
+  - first:
+      1: 100022
+    second: backToesEnd_L
+  - first:
+      1: 100024
+    second: backToesEnd_R
+  - first:
+      1: 100026
+    second: Chest
+  - first:
+      1: 100028
+    second: frontAnkle_L
+  - first:
+      1: 100030
+    second: frontAnkle_R
+  - first:
+      1: 100032
+    second: frontHip_L
+  - first:
+      1: 100034
+    second: frontHip_R
+  - first:
+      1: 100036
+    second: frontKnee_L
+  - first:
+      1: 100038
+    second: frontKnee_R
+  - first:
+      1: 100040
+    second: frontRump_L
+  - first:
+      1: 100042
+    second: frontRump_R
+  - first:
+      1: 100044
+    second: frontToes_L
+  - first:
+      1: 100046
+    second: frontToes_R
+  - first:
+      1: 100048
+    second: frontToesEnd_L
+  - first:
+      1: 100050
+    second: frontToesEnd_R
+  - first:
+      1: 100052
+    second: Head
+  - first:
+      1: 100054
+    second: HeadEnd
+  - first:
+      1: 100056
+    second: Neck
+  - first:
+      1: 100058
+    second: Root
+  - first:
+      1: 100060
+    second: Spine1
+  - first:
+      1: 100062
+    second: Tail0
+  - first:
+      1: 100064
+    second: Tail1
+  - first:
+      1: 100066
+    second: Tail2
+  - first:
+      1: 100068
+    second: Tail3
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: backAnkle_L
+  - first:
+      4: 400004
+    second: backAnkle_R
+  - first:
+      4: 400006
+    second: backHip_L
+  - first:
+      4: 400008
+    second: backHip_R
+  - first:
+      4: 400010
+    second: backKnee_L
+  - first:
+      4: 400012
+    second: backKnee_R
+  - first:
+      4: 400014
+    second: backRump_L
+  - first:
+      4: 400016
+    second: backRump_R
+  - first:
+      4: 400018
+    second: backToes_L
+  - first:
+      4: 400020
+    second: backToes_R
+  - first:
+      4: 400022
+    second: backToesEnd_L
+  - first:
+      4: 400024
+    second: backToesEnd_R
+  - first:
+      4: 400026
+    second: Chest
+  - first:
+      4: 400028
+    second: frontAnkle_L
+  - first:
+      4: 400030
+    second: frontAnkle_R
+  - first:
+      4: 400032
+    second: frontHip_L
+  - first:
+      4: 400034
+    second: frontHip_R
+  - first:
+      4: 400036
+    second: frontKnee_L
+  - first:
+      4: 400038
+    second: frontKnee_R
+  - first:
+      4: 400040
+    second: frontRump_L
+  - first:
+      4: 400042
+    second: frontRump_R
+  - first:
+      4: 400044
+    second: frontToes_L
+  - first:
+      4: 400046
+    second: frontToes_R
+  - first:
+      4: 400048
+    second: frontToesEnd_L
+  - first:
+      4: 400050
+    second: frontToesEnd_R
+  - first:
+      4: 400052
+    second: Head
+  - first:
+      4: 400054
+    second: HeadEnd
+  - first:
+      4: 400056
+    second: Neck
+  - first:
+      4: 400058
+    second: Root
+  - first:
+      4: 400060
+    second: Spine1
+  - first:
+      4: 400062
+    second: Tail0
+  - first:
+      4: 400064
+    second: Tail1
+  - first:
+      4: 400066
+    second: Tail2
+  - first:
+      4: 400068
+    second: Tail3
+  - first:
+      74: 7400000
+    second: Animal_TypeB@Die
+  - first:
+      95: 9500000
+    second: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -106,29 +250,36 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 100
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -137,10 +288,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -150,13 +301,17 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
