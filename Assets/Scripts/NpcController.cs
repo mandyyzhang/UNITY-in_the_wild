@@ -3,6 +3,7 @@ using UnityEngine.AI;
 
 public class NpcController : MonoBehaviour
 {
+    private Animator anim;
 
     public NavMeshAgent agent;
 
@@ -12,11 +13,15 @@ public class NpcController : MonoBehaviour
     public void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
+
         if(agent != null)
         {
             agent.speed = speed;
             agent.SetDestination(RandomNavMeshLocation());
         }
+        
+        
     }
 
     public void Update()
@@ -24,6 +29,12 @@ public class NpcController : MonoBehaviour
         if(agent!= null && agent.remainingDistance <= agent.stoppingDistance)
         {
             agent.SetDestination(RandomNavMeshLocation());
+        }
+        Debug.Log(agent.velocity);
+        
+        if(agent.velocity != Vector3.zero)
+        {
+            anim.SetInteger("animation", 1);
         }
     }
 
