@@ -1835,7 +1835,8 @@ MonoBehaviour:
   player: {fileID: 903827084}
   treePrefabs:
   - {fileID: 1250690161900600, guid: a499f507419b80f43864d96435724ddc, type: 3}
-  - {fileID: 1377331622712542, guid: 6dfe739f0fb643d4a842467c1af204a6, type: 3}
+  - {fileID: 1250690161900600, guid: a499f507419b80f43864d96435724ddc, type: 3}
+  - {fileID: 1335726306580732, guid: 2020361864ee256409991e1c31c217ac, type: 3}
   - {fileID: 1335726306580732, guid: 2020361864ee256409991e1c31c217ac, type: 3}
   - {fileID: 4032642331417584291, guid: e133dac167ef59c40b7678ba58107c6a, type: 3}
   naturePrefabs:
