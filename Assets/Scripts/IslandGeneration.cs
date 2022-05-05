@@ -59,7 +59,8 @@ public class IslandGeneration : MonoBehaviour
     public float grassNoiseScale = .3f;   //////
     public float grassDensity = .3f;      /////
 
-    int sceneNumber;
+    private int sceneNumber;
+    private int gemsToSpawn = 5; 
 
     void Awake()
     {
@@ -329,7 +330,7 @@ public class IslandGeneration : MonoBehaviour
         Vector3 gemSpawnPos = new Vector3(playerPos.x+8, playerPos.y, playerPos.z);
 
         // TO DO: spawn first gem near player
-        for (int c = 0; c < 5; c++)
+        for (int c = 0; c < gemsToSpawn; c++)
         {
             Vector3 spawnPos = landRegion(grid);
             GameObject gemToPlace = Instantiate(gem, spawnPos, Quaternion.identity);
