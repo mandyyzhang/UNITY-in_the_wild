@@ -501,6 +501,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   restart: 114
+  island1: 49
+  island2: 50
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0
@@ -659,8 +661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702a2079d938e496aa46eeb4ea1afd9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryUI1: {fileID: 978780166}
-  inventoryUI2: {fileID: 124003685}
 --- !u!223 &732116051
 Canvas:
   m_ObjectHideFlags: 0
@@ -923,6 +923,7 @@ MonoBehaviour:
   movementSound: {fileID: 418956101}
   jumpSound: {fileID: 1564648972}
   collectGlassSound: {fileID: 835913411}
+  treeShakeSound: {fileID: 0}
 --- !u!4 &1019147088
 Transform:
   m_ObjectHideFlags: 0
@@ -1196,11 +1197,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d5da20697bf274fa79f77fed029276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surface: {fileID: 0}
   grassTile: {fileID: 3462116018741417442, guid: bae64b407c79e4f1797a504ef119a208, type: 3}
   dirtTile: {fileID: 2244259126299080006, guid: 91295d460b9bd4441b6a994981559c5f, type: 3}
   port: {fileID: 4961385242022434706, guid: e62c9956ba9698f47af9fcf0c7b98636, type: 3}
   gem: {fileID: 1771963305165758434, guid: 6d16ce108c7544e9daaf88504b3ea319, type: 3}
-  apple: {fileID: 6957269528956609991, guid: a617a394afe824fa0bea6302b3a083a0, type: 3}
   player: {fileID: 903827084}
   treePrefabs:
   - {fileID: 1335726306580732, guid: fa2f92fd5c20a9e4ab11b445f6c683d2, type: 3}
@@ -1224,7 +1225,9 @@ MonoBehaviour:
   grassPrefabs:
   - {fileID: 2850601745711547609, guid: 943f90320596f42e4afda10c773eae9c, type: 3}
   - {fileID: 5690739679907192635, guid: c71b27bf650604dff811e169983e1eeb, type: 3}
-  chicken: {fileID: 0}
+  goat: {fileID: 5861032336561583884, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
+  alpaca: {fileID: 1244936432145580, guid: 17f32705f0b5c064d9d66ebca912989d, type: 3}
+  chicken: {fileID: 1225105858667644, guid: 22ebc3f42e2c70d4caf06a1d1e892649, type: 3}
   scale: 0.1
   terDetail: 10
   terHeight: 10
@@ -1282,6 +1285,7 @@ MonoBehaviour:
   selectableTag: Selectable
   uiInventory: {fileID: 732116050}
   obtainedItem: 0
+  treeShake: 0
   interactionText: {fileID: 1772908285}
   firstPersonCamera: {fileID: 1379559024}
 --- !u!4 &1416456633
