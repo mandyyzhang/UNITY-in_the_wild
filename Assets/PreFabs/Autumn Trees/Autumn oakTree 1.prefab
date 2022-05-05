@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 33989385991057262}
   - component: {fileID: 23890990353640460}
   - component: {fileID: 64004332394335928}
+  - component: {fileID: -2121747906303492518}
+  - component: {fileID: 3239079182473992618}
   m_Layer: 0
   m_Name: Autumn oakTree 1
   m_TagString: Untagged
@@ -97,3 +99,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: ccafc2ea8bec52841ac2b9fd34238310, type: 3}
+--- !u!45 &-2121747906303492518
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377331622712542}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
+--- !u!45 &3239079182473992618
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377331622712542}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
