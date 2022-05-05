@@ -27,6 +27,7 @@ public class IslandGeneration : MonoBehaviour
     public GameObject gem;
 
     public GameObject player;
+    public GameObject goat;
 
     public GameObject[] treePrefabs; //TRYINGOUTTTTTT PUT TREEESSS INNNN
     public GameObject[] naturePrefabs;  ///////
@@ -281,6 +282,10 @@ public class IslandGeneration : MonoBehaviour
             Vector3 spawnPos = landRegion(grid);
             player.transform.position = spawnPos;
             // new Vector3(30, 20, 99); //(10, 4, 99)
+
+            Vector3 goatPos = landRegion(grid);
+            //goat.transform.position = goatPos;
+            goat.GetComponent<NavMeshAgent>().Warp(goatPos);
         }
         else
         {
