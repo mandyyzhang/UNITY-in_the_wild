@@ -38,11 +38,12 @@ Material:
     m_Floats:
     - _Emission: 0
     - _Emissive: 0
-    - _EnvironmentLight: 1.5
+    - _EnvironmentLight: 2
     - _IndexOfRefraction: 2.14
     - _ReflectionStrength: 1.75
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1002 &2100001
 EditorExtensionImpl:
   serializedVersion: 6
