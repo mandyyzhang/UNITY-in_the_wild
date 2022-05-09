@@ -30,7 +30,7 @@ public class NpcController : MonoBehaviour
         {
             agent.SetDestination(RandomNavMeshLocation());
         }
-        Debug.Log(agent.velocity);
+        //Debug.Log(agent.velocity);
         
         if(agent.velocity != Vector3.zero)
         {
