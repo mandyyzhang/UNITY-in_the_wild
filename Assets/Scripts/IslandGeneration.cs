@@ -94,6 +94,8 @@ public class IslandGeneration : MonoBehaviour
         SpawnPlayer();
         SpawnGem();
 
+        checkGrid();
+
         // spawn animals here?
         SpawnAnimal();
         surface.BuildNavMesh();
@@ -176,6 +178,7 @@ public class IslandGeneration : MonoBehaviour
 
                     // buggy if cell is water, blockGrid[x,y] will be 0
                     blockGrid[x,y] = new Vector3((x*2)-0.5f, z+1.25f, (y*2)+1f);
+                    cell.pos = new Vector3((x*2)-0.5f, z+1.25f, (y*2)+1f);
 
                     // fill in tiles below grass with dirt tiles
                     for (int h = z-1; h > 0; h--) {
@@ -299,10 +302,14 @@ public class IslandGeneration : MonoBehaviour
         // if(sceneNumber == 0)
         if(sceneNumber >= 0)
         {
-            Vector3 spawnPos = landRegion(grid);
+            Vector3 spawnPos = landRegion();
             player.transform.position = spawnPos;
+            //player.transform.position = new Vector3(30, 20, 99);
             // new Vector3(30, 20, 99); //(10, 4, 99)
 
+            Vector3 goatPos = landRegion();
+            //goat.transform.position = goatPos;
+            //goat.GetComponent<NavMeshAgent>().Warp(goatPos);
         }
         else
         {
@@ -311,7 +318,7 @@ public class IslandGeneration : MonoBehaviour
         player.SetActive(true);
     }
 
-    Vector3 landRegion(Cell[,] grid) // get random land position
+    Vector3 landRegion() // get random land position
     {
 
         List<Vector3> land = new List<Vector3>(); // store xy position of land cell
@@ -321,9 +328,17 @@ public class IslandGeneration : MonoBehaviour
             for (int x = 0; x < sizeX; x++)
             {
                 Vector3 blockPos = blockGrid[x, y];
-                if (blockPos != Vector3.zero ) // 0 means water
+                // trying to use grid
+                Cell freeCell = grid[x,y];
+
+                // if (blockPos != Vector3.zero ) // 0 means water
+                // {
+                //     land.Add(blockPos);
+                // }
+
+                if (!freeCell.isObstacle && !freeCell.isWater)
                 {
-                    land.Add(blockPos);
+                    land.Add(freeCell.pos);
                 }
 
             }
@@ -347,7 +362,8 @@ public class IslandGeneration : MonoBehaviour
         // TO DO: spawn first gem near player
         for (int c = 0; c < gemsToSpawn; c++)
         {
-            Vector3 spawnPos = landRegion(grid);
+            Vector3 spawnPos = landRegion();
+            //Debug.Log(spawnPos);
             GameObject gemToPlace = Instantiate(gem, spawnPos, Quaternion.identity);
 
         }
@@ -361,13 +377,13 @@ public class IslandGeneration : MonoBehaviour
         Vector3 animalSpawnPos = new Vector3(playerPos.x+8, playerPos.y + 50, playerPos.z);
 
         for (int c = 0; c < 3; c++){
-            Vector3 spawnPos = landRegion(grid);
+            Vector3 spawnPos = landRegion();
             GameObject animalToPlace = Instantiate(alpaca, spawnPos, Quaternion.identity);
             animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
         }
 
         for (int c = 0; c < 3; c++){
-            Vector3 spawnPos = landRegion(grid);
+            Vector3 spawnPos = landRegion();
             GameObject animalToPlace = Instantiate(chicken, spawnPos, Quaternion.identity);
             animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
         }
@@ -381,8 +397,9 @@ public class IslandGeneration : MonoBehaviour
         {
             for (int x = 0; x < sizeX; x++)
             {
-                Vector3 block = blockGrid[x, y];
-                Debug.Log("x: " + block.x + " y: " + block.y + " z: " + block.z );
+                Cell cell_test = grid[x, y];
+                Vector3 cell_pos = cell_test.pos;
+                //Debug.Log("x: " + cell_pos.x + " y: " + cell_pos.y + " z: " + cell_pos.z );
                 //Debug.Log(cell.)
             }
         }
