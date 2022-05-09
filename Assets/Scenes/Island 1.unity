@@ -539,63 +539,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1001 &590700245
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5861032336561583884, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_Name
-      value: Goat
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 89
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5863117172258352500, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
 --- !u!1 &653608802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,7 +1465,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.1
+  m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: b0179a6b3b99f4fdfa1ff5fb5336bf49, type: 2}
 --- !u!4 &1065433863
@@ -1825,8 +1768,8 @@ MonoBehaviour:
   - {fileID: 8386341279695790499, guid: 0d6a3b732cfd1ce428452a5aea0137ec, type: 3}
   - {fileID: 2850601745711547609, guid: 10f020e2d02ba894c91ebde8cf3ebbb6, type: 3}
   goat: {fileID: 5861032336561583884, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
-  alpaca: {fileID: 1244936432145580, guid: 17f32705f0b5c064d9d66ebca912989d, type: 3}
-  chicken: {fileID: 1225105858667644, guid: 22ebc3f42e2c70d4caf06a1d1e892649, type: 3}
+  alpaca: {fileID: 5074931800539251259, guid: 4037cb3fe77b44294b59fcf31ba018d0, type: 3}
+  chicken: {fileID: 7064117607052890067, guid: df077bb98dc6f451fad0bee2b5a610b9, type: 3}
   scale: 0.1
   terDetail: 10
   terHeight: 10

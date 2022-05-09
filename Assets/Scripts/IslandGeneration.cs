@@ -379,18 +379,18 @@ public class IslandGeneration : MonoBehaviour
         for (int c = 0; c < 3; c++){
             Vector3 spawnPos = landRegion();
             GameObject animalToPlace = Instantiate(alpaca, spawnPos, Quaternion.identity);
-            animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
+            //animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
         }
 
         for (int c = 0; c < 3; c++){
             Vector3 spawnPos = landRegion();
             GameObject animalToPlace = Instantiate(chicken, spawnPos, Quaternion.identity);
-            animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
+            //animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
         }
     }
 
 
-    void checkGrid() // FOR DEBUGGING BLOCK GRID ONLY
+    void checkGrid() // FOR DEBUGGING GRID ONLY
     {
 
         for (int y = 0; y < sizeY; y++)
