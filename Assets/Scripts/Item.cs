@@ -9,7 +9,7 @@ public class Item
         Apple,
     }
 
-    public ItemType itemType;
+    public ItemType itemType; // count category only
     public int amount;
 
     public Sprite GetSprite() {
@@ -29,6 +29,10 @@ public class Item
         default:
         case ItemType.GlassShards:
             return true;
+        // case ItemType.Apple:
+        //     return false;
         }
+        
+        
     }
 }

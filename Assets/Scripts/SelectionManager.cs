@@ -38,12 +38,15 @@ public class SelectionManager : MonoBehaviour
 
                 if (interactable != null)
                 {
-                    Debug.Log(interactable.GetDescription());
                     interactionText.text = interactable.GetDescription();
 
                     if (Input.GetMouseButtonDown(0))
                     {
-                        HandleInteraction(interactable);
+                        if (inventory.itemCount >= 5) {
+                            Debug.Log("inventory full!");
+                        } else {
+                            HandleInteraction(interactable);
+                        }
                     }
                     succesfulHit = true;
                 }

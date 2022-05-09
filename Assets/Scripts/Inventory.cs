@@ -9,6 +9,8 @@ public class Inventory
 
     private List<Item> itemList;
 
+    public int itemCount = 0;
+
     public Inventory()
     {
         itemList = new List<Item>();
@@ -16,24 +18,31 @@ public class Inventory
 
     public void AddItem(Item item)
     {
-       if (item.isStackable())
+       if (itemCount < 5)
        {
-           bool itemAlreadyInInventory = false;
-           foreach (Item inventoryItem in itemList)
+           if (item.isStackable())
            {
-               if (inventoryItem.itemType == item.itemType)
+               bool itemAlreadyInInventory = false;
+               foreach (Item inventoryItem in itemList)
                {
-                   inventoryItem.amount += item.amount;
-                   itemAlreadyInInventory = true;
+                   if (inventoryItem.itemType == item.itemType)
+                   {
+                       inventoryItem.amount += item.amount;
+                       itemAlreadyInInventory = true;
+                   }
                }
-           }
-           if (!itemAlreadyInInventory) {
+               if (!itemAlreadyInInventory)
+               {
+                   itemList.Add(item);
+                   itemCount++;
+               }
+           } else {
                itemList.Add(item);
+               itemCount++;
            }
-       } else {
-           itemList.Add(item);
+           Debug.Log(itemCount);
+           OnItemListChanged?.Invoke(this, EventArgs.Empty);
        }
-       OnItemListChanged?.Invoke(this, EventArgs.Empty);
     }
 
     public void RemoveItem(Item item)
@@ -51,9 +60,11 @@ public class Inventory
            }
            if (itemInInventory != null && itemInInventory.amount <= 0) {
                itemList.Remove(itemInInventory);
+               itemCount--;
            }
        } else {
            itemList.Remove(item);
+           itemCount--;
        }
        OnItemListChanged?.Invoke(this, EventArgs.Empty);
 
