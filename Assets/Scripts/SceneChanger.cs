@@ -15,12 +15,24 @@ public class SceneChanger : MonoBehaviour
     // Note: Check build settings to see which index the scene is at. 
 
     // Referencing other scripts: 
-    SelectionManager selectScript; 
-    [SerializeField] GameObject selectionManager; 
+    private SelectionManager selectScript; 
+    private IslandGeneration island; 
+    [SerializeField] private GameObject canvasPopUp; 
+    [SerializeField] private GameObject selectionManager; 
+    [SerializeField] private GameObject islandGeneration; 
+
+    //private variables 
+    private int gemCount; 
+
+    private Canvas nextIslandPic; 
+    private bool displayedNextIsland = false; 
 
     void Awake() {
         curr_scene = SceneManager.GetActiveScene(); 
         selectScript = selectionManager.GetComponent<SelectionManager>(); 
+        island = islandGeneration.GetComponent<IslandGeneration>(); 
+        nextIslandPic = canvasPopUp.GetComponent<Canvas>();
+        nextIslandPic.enabled = false; 
     }
 
     // Update is called once per frame
@@ -43,11 +55,25 @@ public class SceneChanger : MonoBehaviour
 
         #region Island 1 to Island 2 Transition 
 
+        // for debugging only 
         if (Input.GetKeyDown(KeyCode.T)) {
             int gemCount = selectScript.inventory.GetNumberOfGems(); 
             Debug.Log("Number of Gems in the Inventory = " + gemCount);
         }
+        // for debugging only ^ 
+        if (selectScript.obtainedItem) {
+            gemCount = selectScript.inventory.GetNumberOfGems(); 
+        }
         
+        if (gemCount == island.gemsToSpawn && !displayedNextIsland) {
+            nextIslandPic.enabled = true; 
+            displayedNextIsland = true;
+            Debug.Log("Collected all " + gemCount + " gems");
+        }
+        
+        if (nextIslandPic.enabled && Input.GetMouseButtonDown(0)) {
+            nextIslandPic.enabled = false; 
+        }
 
         #endregion 
 

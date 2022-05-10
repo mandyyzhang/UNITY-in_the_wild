@@ -59,9 +59,10 @@ public class IslandGeneration : MonoBehaviour
     public float grassNoiseScale = .3f;   //////
     public float grassDensity = .3f;      /////
 
-    private int sceneNumber;
-    private int gemsToSpawn = 5;
+    public int gemsToSpawn = 5;
 
+    private int sceneNumber;
+    
     void Awake()
     {
         sceneNumber = SceneManager.GetActiveScene().buildIndex;
