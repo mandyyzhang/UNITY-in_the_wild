@@ -7,7 +7,7 @@ public class SelectionManager : MonoBehaviour
     [SerializeField] private string selectableTag = "Selectable";
 
     // Inventory
-    private Inventory inventory;
+    public Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
     public bool obtainedItem = false;
     public bool treeShake = false; 

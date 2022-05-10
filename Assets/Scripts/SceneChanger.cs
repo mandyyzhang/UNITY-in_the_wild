@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
+    // Shortcut keys for changing islands 
     public KeyCode restart = KeyCode.R; 
     public KeyCode island1 = KeyCode.Alpha1; 
     public KeyCode island2 = KeyCode.Alpha2; 
@@ -13,13 +14,19 @@ public class SceneChanger : MonoBehaviour
 
     // Note: Check build settings to see which index the scene is at. 
 
+    // Referencing other scripts: 
+    SelectionManager selectScript; 
+    [SerializeField] GameObject selectionManager; 
+
     void Awake() {
         curr_scene = SceneManager.GetActiveScene(); 
+        selectScript = selectionManager.GetComponent<SelectionManager>(); 
     }
 
     // Update is called once per frame
     void Update()
     {
+        // scene changes for debugging only
         if (Input.GetKeyDown(restart))
         {
             Debug.Log("Pressed R key to restart.");
@@ -33,5 +40,16 @@ public class SceneChanger : MonoBehaviour
             Debug.Log("Pressed 2 to go island 2."); 
             SceneManager.LoadScene(1);
         }
+
+        #region Island 1 to Island 2 Transition 
+
+        if (Input.GetKeyDown(KeyCode.T)) {
+            int gemCount = selectScript.inventory.GetNumberOfGems(); 
+            Debug.Log("Number of Gems in the Inventory = " + gemCount);
+        }
+        
+
+        #endregion 
+
     }
 }

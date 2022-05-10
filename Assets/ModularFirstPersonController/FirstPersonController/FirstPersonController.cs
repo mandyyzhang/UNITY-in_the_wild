@@ -560,7 +560,7 @@ public class FirstPersonController : MonoBehaviour
         */ 
         if (jumpCount < maxJumpTimes)
         {
-            Debug.Log("Jump Count = " + jumpCount + " Jump Power = " + jpower); 
+            // Debug.Log("Jump Count = " + jumpCount + " Jump Power = " + jpower); 
             rb.AddForce(0f, jpower, 0f, ForceMode.Impulse);
             isGrounded = false;
             grounded = false; 

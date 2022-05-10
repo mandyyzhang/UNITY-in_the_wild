@@ -74,4 +74,17 @@ public class Inventory
     {
        return itemList;
     }
+
+    public int GetNumberOfGems()
+    { 
+        foreach (Item inventoryItem in itemList) {
+            if (inventoryItem.itemType == Item.ItemType.GlassShards) {
+                return inventoryItem.amount;
+            }
+        }
+
+        Debug.Log("Unable to find the number of shards in the inventory.");
+        return -1; 
+    }
+    
 }

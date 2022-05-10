@@ -19,7 +19,6 @@ public class SoundManager : MonoBehaviour
     public AudioSource treeShakeSound;
     private float _timeSinceLastStepPlayed;
 
-    // Start is called before the first frame update
     void Awake()
     {
         fpc = player.GetComponent<FirstPersonController>(); 
