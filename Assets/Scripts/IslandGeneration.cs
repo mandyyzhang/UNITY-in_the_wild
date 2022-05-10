@@ -40,9 +40,9 @@ public class IslandGeneration : MonoBehaviour
     // list of positions where land is empty (no trees, no gems)
     // List<Vector3> emptyLand = new List<Vector3>();
 
-    int seed;
-    float xOffSet;
-    float yOffSet;
+    public int seed;
+    public float xOffSet;
+    public float yOffSet;
 
     public float scale = 0.1f; // scale for the perlin noise
     public float terDetail;
