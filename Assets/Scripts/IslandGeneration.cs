@@ -86,6 +86,9 @@ public class IslandGeneration : MonoBehaviour
         }
         else if (sceneNumber == 4) {  // Island 4
             GenerateTrees(1.7f, 1.9f); ////////////
+        } 
+        else {
+            Debug.Log("Scene Number not accounted for, will not generate trees here."); 
         }
 
         GenerateNature(); ///////////

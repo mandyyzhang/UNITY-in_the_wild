@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI; 
 using UnityEngine.SceneManagement; 
 
 public class SceneChanger : MonoBehaviour
@@ -21,19 +22,26 @@ public class SceneChanger : MonoBehaviour
     private IslandGeneration island; 
     [SerializeField] private GameObject canvasPopUp; 
     [SerializeField] private GameObject selectionManager; 
-    [SerializeField] private GameObject islandGeneration; 
+    [SerializeField] private GameObject islandGeneration;  
 
     //private variables 
     private int gemCount; 
 
     private Canvas nextIslandPic; 
+    private CanvasGroup nextIslandPreview;
     private bool displayedNextIsland = false; 
+
+    private bool CanvasFadeIn = false; 
+    private bool CanvasFadeOut = false; 
+    
 
     void Awake() {
         curr_scene = SceneManager.GetActiveScene(); 
         selectScript = selectionManager.GetComponent<SelectionManager>(); 
-        island = islandGeneration.GetComponent<IslandGeneration>(); 
+        island = islandGeneration.GetComponent<IslandGeneration>();  
         nextIslandPic = canvasPopUp.GetComponent<Canvas>();
+        nextIslandPreview = canvasPopUp.GetComponent<CanvasGroup>(); 
+        nextIslandPreview.alpha = 0; 
         nextIslandPic.enabled = false; 
     }
 
@@ -76,16 +84,33 @@ public class SceneChanger : MonoBehaviour
         }
         
         if (gemCount == island.gemsToSpawn && !displayedNextIsland) {
-            nextIslandPic.enabled = true; 
+            nextIslandPic.enabled = true;
+            CanvasFadeIn = true; 
             displayedNextIsland = true;
             Debug.Log("Collected all " + gemCount + " gems");
         }
         
         if (nextIslandPic.enabled && Input.GetMouseButtonDown(0)) {
-            nextIslandPic.enabled = false; 
+            CanvasFadeOut = true; 
+        }
+
+        if (CanvasFadeIn) {
+            if (nextIslandPreview.alpha >= 1) {
+                CanvasFadeIn = false; 
+            }
+            nextIslandPreview.alpha += Time.deltaTime;  
+        }
+
+        if (CanvasFadeOut) {
+            if (nextIslandPreview.alpha <= 0) {
+                CanvasFadeOut = false; 
+                nextIslandPic.enabled = false;  
+            }
+            nextIslandPreview.alpha -= Time.deltaTime; 
         }
 
         #endregion 
 
     }
+
 }

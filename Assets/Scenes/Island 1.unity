@@ -503,9 +503,12 @@ MonoBehaviour:
   restart: 114
   island1: 49
   island2: 50
+  island3: 51
+  island4: 52
   canvasPopUp: {fileID: 698947813}
   selectionManager: {fileID: 1416456631}
   islandGeneration: {fileID: 1410042627}
+  nextIslandPic: {fileID: 698947816}
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0
@@ -682,6 +685,7 @@ GameObject:
   - component: {fileID: 698947815}
   - component: {fileID: 698947814}
   - component: {fileID: 698947818}
+  - component: {fileID: 698947819}
   m_Layer: 5
   m_Name: Mission Popup
   m_TagString: Untagged
@@ -785,6 +789,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7374b299a704d8cc86b16cf22ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &698947819
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698947813}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -931,6 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702a2079d938e496aa46eeb4ea1afd9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SceneManager: {fileID: 441509286}
 --- !u!223 &732116051
 Canvas:
   m_ObjectHideFlags: 0
