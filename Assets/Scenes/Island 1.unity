@@ -2071,6 +2071,7 @@ MonoBehaviour:
   treeShake: 0
   interactionText: {fileID: 1772908285}
   firstPersonCamera: {fileID: 1379559024}
+  apple: {fileID: 6957269528956609991, guid: a617a394afe824fa0bea6302b3a083a0, type: 3}
 --- !u!4 &1416456633
 Transform:
   m_ObjectHideFlags: 0

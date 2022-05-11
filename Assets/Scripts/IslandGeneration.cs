@@ -322,7 +322,7 @@ public class IslandGeneration : MonoBehaviour
         player.SetActive(true);
     }
 
-    Vector3 landRegion() // get random land position
+    Vector3 landRegion() // get random land position // maybe return cell instead
     {
 
         List<Vector3> land = new List<Vector3>(); // store xy position of land cell

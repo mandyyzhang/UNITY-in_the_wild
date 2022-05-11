@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
-    [SerializeField] private string selectableTag = "Selectable";
 
     // Inventory
     public Inventory inventory;
@@ -15,6 +14,9 @@ public class SelectionManager : MonoBehaviour
     public TMPro.TextMeshProUGUI interactionText;
 
     public Camera firstPersonCamera;
+
+    private Vector3 treePos;
+    public GameObject apple;
 
     private void Start()
     {
@@ -33,6 +35,8 @@ public class SelectionManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit, 3))
             {
                 var selection = hit.transform;
+
+                treePos = selection.transform.position;
 
                 Interactable interactable = selection.GetComponent<Interactable>();
 
@@ -56,6 +60,14 @@ public class SelectionManager : MonoBehaviour
         }
     }
 
+    private void DropItem()
+    {
+        Vector3 randomDir = Random.insideUnitCircle.normalized;
+        Vector3 spawnPos = new Vector3(treePos.x, treePos.y + 1.5f, treePos.z);
+        GameObject appleSpawn = Instantiate(apple, spawnPos + randomDir, Quaternion.identity);
+        appleSpawn.GetComponent<Rigidbody>().AddForce(randomDir *5f, ForceMode.Impulse);
+    }
+
     private void HandleInteraction(Interactable interactable)
     {
         switch (interactable.interactionType) {
@@ -72,9 +84,9 @@ public class SelectionManager : MonoBehaviour
                 break;
                 // helpful error for us in the future
             case Interactable.InteractionType.Harvest:
-                // for future, drop the apple only, dont add to inventory directly
                 treeShake = true;
-                inventory.AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1});
+                DropItem();
+                //inventory.AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1});
                 break;
             default:
                 throw new System.Exception("Unsupported type of interactable.");
