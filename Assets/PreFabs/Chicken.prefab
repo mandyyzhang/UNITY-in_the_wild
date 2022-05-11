@@ -152,7 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   speed: 1
-  walkRadius: 25
+  walkRadius: 15
 --- !u!1 &7064179500890805271
 GameObject:
   m_ObjectHideFlags: 0

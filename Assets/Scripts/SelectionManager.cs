@@ -92,8 +92,9 @@ public class SelectionManager : MonoBehaviour
                 } else if (interactable.gameObject.GetComponent<WorldItem>().itemType == "apple")
                 {
                     inventory.AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1});
-                } 
-                interactable.gameObject.SetActive(false);
+                }
+                Destroy(interactable.gameObject);
+                //interactable.gameObject.SetActive(false);
                 break;
                 // helpful error for us in the future
             case Interactable.InteractionType.Harvest:
