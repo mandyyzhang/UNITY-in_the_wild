@@ -1877,7 +1877,7 @@ MonoBehaviour:
   waterLevel: 0.4
   treeNoiseScale: 0.8
   treeDensity: 0.35
-  natureNoiseScale: 0.5
+  natureNoiseScale: 0.6
   natureDensity: 0.9
   grassNoiseScale: 0.99
   grassDensity: 0.99
@@ -1979,7 +1979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36bed35dcc0b4432e8a3d4fd15557d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glassSprite: {fileID: 21300000, guid: cabdc8b0121dc4559aa1a6da3bf55ad7, type: 3}
+  glassSprite: {fileID: 21300000, guid: 7c668efe38c0d49c081be2833934b83d, type: 3}
   appleSprite: {fileID: 21300000, guid: 82e92131e49d04677b33d0c380e699c8, type: 3}
 --- !u!4 &1558686415
 Transform:
