@@ -1885,8 +1885,8 @@ MonoBehaviour:
   xOffSet: 0
   yOffSet: 0
   scale: 0.1
-  terDetail: 10
-  terHeight: 10
+  terDetail: 14
+  terHeight: 12
   waterHeight: 5
   waterLevel: 0.4
   treeNoiseScale: 0.9

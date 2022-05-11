@@ -123,13 +123,13 @@ public class IslandGeneration : MonoBehaviour
         {
             xOffSet = (float) -7100.375;
             yOffSet = (float) 9689.953;
-            seed = 15;
+            seed = 34;
         }
         else if (sceneNumber == 4) // Island 4
         {
             xOffSet = (float) -7100.375;
             yOffSet = (float) 9689.953;
-            seed = 15;
+            seed = 10;
         }
         else {
             //random offsets

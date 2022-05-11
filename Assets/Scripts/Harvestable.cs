@@ -7,7 +7,7 @@ public class Harvestable : Interactable
 
     public override string GetDescription()
     {
-        return "Shake tree";
+        return "Shake";
     }
 
     public override void Interact()
