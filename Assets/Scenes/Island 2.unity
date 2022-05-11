@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.1
+  m_VoxelSize: 0.06666667
   m_BuildHeightMesh: 0
   m_NavMeshData: {fileID: 23800000, guid: b0179a6b3b99f4fdfa1ff5fb5336bf49, type: 2}
 --- !u!4 &182357717
@@ -638,6 +638,9 @@ MonoBehaviour:
   restart: 114
   island1: 49
   island2: 50
+  canvasPopUp: {fileID: 625135403}
+  selectionManager: {fileID: 1416456631}
+  islandGeneration: {fileID: 1410042627}
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0
@@ -1859,6 +1862,9 @@ MonoBehaviour:
   goat: {fileID: 5861032336561583884, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
   alpaca: {fileID: 1244936432145580, guid: 17f32705f0b5c064d9d66ebca912989d, type: 3}
   chicken: {fileID: 1225105858667644, guid: 22ebc3f42e2c70d4caf06a1d1e892649, type: 3}
+  seed: 0
+  xOffSet: 0
+  yOffSet: 0
   scale: 0.1
   terDetail: 10
   terHeight: 10
@@ -1870,6 +1876,7 @@ MonoBehaviour:
   natureDensity: 0.9
   grassNoiseScale: 0.99
   grassDensity: 0.99
+  gemsToSpawn: 5
 --- !u!4 &1410042629
 Transform:
   m_ObjectHideFlags: 0
