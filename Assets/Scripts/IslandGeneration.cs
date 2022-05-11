@@ -75,17 +75,17 @@ public class IslandGeneration : MonoBehaviour
         SetSeedAndOffsets(); // set the seeds and offsets for each island (so we can get the same map each time for each island)
         GenerateTerrain();
 
-        if (sceneNumber == 0) {  // Island 1
+        if (sceneNumber == 1) {  // Island 1
             GenerateTrees(.2f, 1.0f); ////////////
         }
-        else if (sceneNumber == 1) {  // Island 2
+        else if (sceneNumber == 2) {  // Island 2
             GenerateTrees(1.0f, 1.3f); ////////////
         }
-        else if (sceneNumber == 2) {  // Island 3
+        else if (sceneNumber == 3) {  // Island 3
             GenerateTrees(.8f, 1.0f); ////////////
         }
-        else if (sceneNumber == 3) {  // Island 4
-            GenerateTrees(1.5f, 1.9f); ////////////
+        else if (sceneNumber == 4) {  // Island 4
+            GenerateTrees(1.7f, 1.9f); ////////////
         }
 
         GenerateNature(); ///////////

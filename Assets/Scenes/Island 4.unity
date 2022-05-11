@@ -1859,8 +1859,8 @@ MonoBehaviour:
   terHeight: 10
   waterHeight: 5
   waterLevel: 0.4
-  treeNoiseScale: 0.8
-  treeDensity: 0.35
+  treeNoiseScale: 0.75
+  treeDensity: 0.3
   natureNoiseScale: 0.4
   natureDensity: 0.3
   grassNoiseScale: 0.99
