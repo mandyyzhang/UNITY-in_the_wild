@@ -715,7 +715,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click here to continue ...
+  m_text: Click to continue ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -1970,6 +1970,7 @@ MonoBehaviour:
   - {fileID: 1335726306580732, guid: fa2f92fd5c20a9e4ab11b445f6c683d2, type: 3}
   - {fileID: 1377331622712542, guid: db1c8285b5c1d374f81f8504e95d185c, type: 3}
   - {fileID: 1377331622712542, guid: db1c8285b5c1d374f81f8504e95d185c, type: 3}
+  - {fileID: 1377331622712542, guid: db1c8285b5c1d374f81f8504e95d185c, type: 3}
   - {fileID: 1250690161900600, guid: d4baf8c48c5af9e43a8ed620ef2b58f3, type: 3}
   - {fileID: 1250690161900600, guid: d4baf8c48c5af9e43a8ed620ef2b58f3, type: 3}
   - {fileID: 1250690161900600, guid: a770e02d99ec54eb48408b2030ce8473, type: 3}
@@ -2000,12 +2001,12 @@ MonoBehaviour:
   xOffSet: 0
   yOffSet: 0
   scale: 0.1
-  terDetail: 10
-  terHeight: 10
+  terDetail: 26
+  terHeight: 12
   waterHeight: 5
   waterLevel: 0.4
-  treeNoiseScale: 0.8
-  treeDensity: 0.35
+  treeNoiseScale: 0.78
+  treeDensity: 0.28
   natureNoiseScale: 0.6
   natureDensity: 0.9
   grassNoiseScale: 0.99
