@@ -79,7 +79,7 @@ public class IslandGeneration : MonoBehaviour
             GenerateTrees(.2f, 1.0f); ////////////
         }
         else if (sceneNumber == 2) {  // Island 2
-            GenerateTrees(1.3f, 1.7f); ////////////
+            GenerateTrees(1.5f, 1.6f); ////////////
         }
         else if (sceneNumber == 3) {  // Island 3
             GenerateTrees(.8f, 1.0f); ////////////
@@ -107,25 +107,25 @@ public class IslandGeneration : MonoBehaviour
 
     void SetSeedAndOffsets()
     {
-        if(sceneNumber == 0) // Island 1
+        if(sceneNumber == 1) // Island 1
         {
             xOffSet = (float) -7100.375;
             yOffSet = (float) 9689.953;
             seed = 15;
         }
-        else if (sceneNumber == 1) // Island 2
+        else if (sceneNumber == 2) // Island 2
         {
             xOffSet = (float) -7100.375;
             yOffSet = (float) 9689.953;
-            seed = 25;
+            seed = 18;
         }
-        else if (sceneNumber == 2) // Island 3
+        else if (sceneNumber == 3) // Island 3
         {
             xOffSet = (float) -7100.375;
             yOffSet = (float) 9689.953;
             seed = 15;
         }
-        else if (sceneNumber == 3) // Island 4
+        else if (sceneNumber == 4) // Island 4
         {
             xOffSet = (float) -7100.375;
             yOffSet = (float) 9689.953;

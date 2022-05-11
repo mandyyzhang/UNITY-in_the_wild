@@ -508,6 +508,7 @@ MonoBehaviour:
   canvasPopUp: {fileID: 698947813}
   selectionManager: {fileID: 1416456631}
   islandGeneration: {fileID: 1410042627}
+  collisionTrigger: {fileID: 0}
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0
@@ -1041,7 +1042,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click here to continue ...
+  m_text: Click to continue ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -1938,12 +1939,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb590f1c77d054c2a9340378dd283dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Selectable
   uiInventory: {fileID: 732116050}
   obtainedItem: 0
   treeShake: 0
   interactionText: {fileID: 1772908285}
   firstPersonCamera: {fileID: 1379559024}
+  apple: {fileID: 0}
 --- !u!4 &1416456633
 Transform:
   m_ObjectHideFlags: 0
