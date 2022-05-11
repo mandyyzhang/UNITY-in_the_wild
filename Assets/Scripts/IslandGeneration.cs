@@ -79,16 +79,16 @@ public class IslandGeneration : MonoBehaviour
             GenerateTrees(.2f, 1.0f); ////////////
         }
         else if (sceneNumber == 2) {  // Island 2
-            GenerateTrees(1.0f, 1.3f); ////////////
+            GenerateTrees(1.3f, 1.7f); ////////////
         }
         else if (sceneNumber == 3) {  // Island 3
             GenerateTrees(.8f, 1.0f); ////////////
         }
         else if (sceneNumber == 4) {  // Island 4
             GenerateTrees(1.7f, 1.9f); ////////////
-        } 
+        }
         else {
-            Debug.Log("Scene Number not accounted for, will not generate trees here."); 
+            Debug.Log("Scene Number not accounted for, will not generate trees here.");
         }
 
         GenerateNature(); ///////////
@@ -117,7 +117,7 @@ public class IslandGeneration : MonoBehaviour
         {
             xOffSet = (float) -7100.375;
             yOffSet = (float) 9689.953;
-            seed = 15;
+            seed = 25;
         }
         else if (sceneNumber == 2) // Island 3
         {
