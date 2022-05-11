@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: c051fe5a20f72814f9643eb10ebbd2fc, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: b141c8e4f6387ef45b13a68b10c88b7f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -1833,30 +1833,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surface: {fileID: 1065433862}
-  grassTile: {fileID: 3462116018741417442, guid: 085df6206c558274eabb5a4cc8f8fd13, type: 3}
+  grassTile: {fileID: 3462116018741417442, guid: 88dd4bdd019c447099f884502688cbac, type: 3}
   dirtTile: {fileID: 2244259126299080006, guid: 91295d460b9bd4441b6a994981559c5f, type: 3}
   port: {fileID: 4961385242022434706, guid: e62c9956ba9698f47af9fcf0c7b98636, type: 3}
   gem: {fileID: 1771963305165758434, guid: 6d16ce108c7544e9daaf88504b3ea319, type: 3}
   player: {fileID: 903827084}
   treePrefabs:
-  - {fileID: 4032642331417584291, guid: e133dac167ef59c40b7678ba58107c6a, type: 3}
-  - {fileID: 6846767348704259191, guid: 273b8f4150121d249ac7e2fd11da7005, type: 3}
-  - {fileID: 2636820298107493410, guid: a2bd798ea40c7e341aa61ad124d95342, type: 3}
-  - {fileID: 9154215057541871321, guid: 2554008d6447a2540b44e55f0c0b576e, type: 3}
+  - {fileID: 1000011914158716, guid: 78af3a7aad589fa49b8fb946c9e57362, type: 3}
+  - {fileID: 1000011147454354, guid: 01d2dd5255c308a4db25dbb77d9f65ea, type: 3}
+  - {fileID: 1000012936420096, guid: a6dbabfd6d3c8cb47b7243b0b8723af2, type: 3}
   naturePrefabs:
-  - {fileID: 1439904337943108576, guid: ef62619642b0df743b22dd5120c6ac4d, type: 3}
   - {fileID: 2304540294968618315, guid: b8217b9c1183a5144b666d1dd63980c4, type: 3}
-  - {fileID: 2954823824624447290, guid: 194e9111af0c33840a49d573f2b26952, type: 3}
-  - {fileID: 8954726919292774957, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
-  - {fileID: 7570405467501425085, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
-  - {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1, type: 3}
-  - {fileID: 3318689441606926373, guid: d3ee913ed32937344b0587e70dc777a2, type: 3}
-  - {fileID: 4400482160171448048, guid: 18bb023d75a113f4cb8d1452371f5c0e, type: 3}
+  - {fileID: 4577034113271871886, guid: 9f518a0fc49514b1799c694f70c581af, type: 3}
+  - {fileID: 4500668923149335752, guid: 86275644fdec24e5da0cbf1a24806982, type: 3}
   grassPrefabs:
-  - {fileID: 5690739679907192635, guid: 941d8f23193f6c441918ff17e0ffe886, type: 3}
-  - {fileID: 5838902624641161372, guid: 2bd9d901bf3d25d459e45ebfc60f180e, type: 3}
-  - {fileID: 8386341279695790499, guid: 0d6a3b732cfd1ce428452a5aea0137ec, type: 3}
-  - {fileID: 2850601745711547609, guid: 10f020e2d02ba894c91ebde8cf3ebbb6, type: 3}
+  - {fileID: 5690739679907192635, guid: 78effb97a39bf4a399b76cb1feb7400f, type: 3}
   goat: {fileID: 5861032336561583884, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
   alpaca: {fileID: 1244936432145580, guid: 17f32705f0b5c064d9d66ebca912989d, type: 3}
   chicken: {fileID: 1225105858667644, guid: 22ebc3f42e2c70d4caf06a1d1e892649, type: 3}
@@ -1868,10 +1859,10 @@ MonoBehaviour:
   terHeight: 10
   waterHeight: 5
   waterLevel: 0.4
-  treeNoiseScale: 0.9
-  treeDensity: 0.5
-  natureNoiseScale: 0.5
-  natureDensity: 0.9
+  treeNoiseScale: 0.8
+  treeDensity: 0.35
+  natureNoiseScale: 0.4
+  natureDensity: 0.3
   grassNoiseScale: 0.99
   grassDensity: 0.99
   gemsToSpawn: 5
