@@ -62,7 +62,7 @@ public class IslandGeneration : MonoBehaviour
     public int gemsToSpawn = 5;
 
     private int sceneNumber;
-    
+
     void Awake()
     {
         sceneNumber = SceneManager.GetActiveScene().buildIndex;
@@ -85,7 +85,7 @@ public class IslandGeneration : MonoBehaviour
             GenerateTrees(.5f, 1.0f); ////////////
         }
         else if (sceneNumber == 3) {  // Island 4
-            GenerateTrees(.8f, 1.0f); ////////////
+            GenerateTrees(1.0f, 1.4f); ////////////
         }
 
         GenerateNature(); ///////////
