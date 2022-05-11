@@ -17,14 +17,24 @@ public class SceneChanger : MonoBehaviour
 
     // Note: Check build settings to see which index the scene is at. 
 
-    // Referencing other scripts: 
+    // Referencing other scripts: ITS A MESS T.T
     private SelectionManager selectScript; 
-    private IslandGeneration island; 
-    private CollisionTrigger ct; 
+    private IslandGeneration island;
+
+     
     [SerializeField] private GameObject canvasPopUp; 
     [SerializeField] private GameObject selectionManager; 
-    [SerializeField] private GameObject islandGeneration;  
-    [SerializeField] private GameObject collisionTrigger; 
+    [SerializeField] private GameObject islandGeneration;
+
+    private CollisionTrigger ctTop; 
+    private CollisionTrigger ctBottom; 
+    private CollisionTrigger ctLeft; 
+    private CollisionTrigger ctRight;  
+
+    [SerializeField] private GameObject collisionTriggerTop; 
+    [SerializeField] private GameObject collisionTriggerBottom; 
+    [SerializeField] private GameObject collisionTriggerLeft; 
+    [SerializeField] private GameObject collisionTriggerRight; 
 
     //private variables 
     private int gemCount; 
@@ -47,7 +57,11 @@ public class SceneChanger : MonoBehaviour
         nextIslandPreview = canvasPopUp.GetComponent<CanvasGroup>(); 
         nextIslandPreview.alpha = 0; 
         nextIslandPic.enabled = false; 
-        ct = collisionTrigger.GetComponent<CollisionTrigger>(); 
+
+        ctTop = collisionTriggerTop.GetComponent<CollisionTrigger>(); 
+        ctBottom = collisionTriggerBottom.GetComponent<CollisionTrigger>(); 
+        ctLeft = collisionTriggerLeft.GetComponent<CollisionTrigger>(); 
+        ctRight = collisionTriggerRight.GetComponent<CollisionTrigger>(); 
     }
 
     // Update is called once per frame

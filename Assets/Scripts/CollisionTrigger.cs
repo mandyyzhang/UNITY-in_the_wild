@@ -9,8 +9,8 @@ public class CollisionTrigger : MonoBehaviour
     public bool collidedRight = false;
     public bool collidedBottom = false;
 
-    public Vector3 turnAroundRotation = new Vector3(0, 180, 0); 
-    public float pushForwardValue = 5.0f; 
+    //public Vector3 turnAroundRotation = new Vector3(0, 180, 0); 
+    public float pushForwardValue = 16.0f; 
 
     // referencing components in other objects here 
     //private FirstPersonController fpc;  
@@ -27,23 +27,23 @@ public class CollisionTrigger : MonoBehaviour
         #region Reject the player from falling off the world by push them back to where they came from 
 
         if (collidedTop) {
-            playerBody.transform.Rotate(turnAroundRotation);
-            playerBody.transform.Translate(transform.forward * pushForwardValue * Time.deltaTime);
+            //playerBody.transform.Rotate(turnAroundRotation);
+            playerBody.transform.Translate(transform.forward * -pushForwardValue * Time.deltaTime);
             collidedTop = false; 
         }
         if (collidedBottom) {
-            playerBody.transform.Rotate(turnAroundRotation);
-            playerBody.transform.Translate(transform.forward * pushForwardValue * Time.deltaTime);
+            //playerBody.transform.Rotate(turnAroundRotation);
+            playerBody.transform.Translate(transform.forward * -pushForwardValue * Time.deltaTime);
             collidedBottom = false; 
         }
         if (collidedRight) {
-            playerBody.transform.Rotate(turnAroundRotation);
-            playerBody.transform.Translate(transform.forward * pushForwardValue * Time.deltaTime);
+            //playerBody.transform.Rotate(turnAroundRotation);
+            playerBody.transform.Translate(transform.forward * -pushForwardValue * Time.deltaTime);
             collidedRight = false; 
         }
         if (collidedLeft) {
-            playerBody.transform.Rotate(turnAroundRotation);
-            playerBody.transform.Translate(transform.forward * pushForwardValue * Time.deltaTime);
+            //playerBody.transform.Rotate(turnAroundRotation);
+            playerBody.transform.Translate(transform.forward * -pushForwardValue * Time.deltaTime);
             collidedLeft = false; 
         }
 
