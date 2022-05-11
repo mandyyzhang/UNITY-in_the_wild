@@ -20,9 +20,11 @@ public class SceneChanger : MonoBehaviour
     // Referencing other scripts: 
     private SelectionManager selectScript; 
     private IslandGeneration island; 
+    private CollisionTrigger ct; 
     [SerializeField] private GameObject canvasPopUp; 
     [SerializeField] private GameObject selectionManager; 
     [SerializeField] private GameObject islandGeneration;  
+    [SerializeField] private GameObject collisionTrigger; 
 
     //private variables 
     private int gemCount; 
@@ -33,6 +35,8 @@ public class SceneChanger : MonoBehaviour
 
     private bool CanvasFadeIn = false; 
     private bool CanvasFadeOut = false; 
+
+    private bool collectedAllGems = true; 
     
 
     void Awake() {
@@ -43,6 +47,7 @@ public class SceneChanger : MonoBehaviour
         nextIslandPreview = canvasPopUp.GetComponent<CanvasGroup>(); 
         nextIslandPreview.alpha = 0; 
         nextIslandPic.enabled = false; 
+        ct = collisionTrigger.GetComponent<CollisionTrigger>(); 
     }
 
     // Update is called once per frame
@@ -79,6 +84,8 @@ public class SceneChanger : MonoBehaviour
             Debug.Log("Number of Gems in the Inventory = " + gemCount);
         }
         // for debugging only ^ 
+
+        #region Show Island 2 Preview 
         if (selectScript.obtainedItem) {
             gemCount = selectScript.inventory.GetNumberOfGems(); 
         }
@@ -108,6 +115,19 @@ public class SceneChanger : MonoBehaviour
             }
             nextIslandPreview.alpha -= Time.deltaTime; 
         }
+        #endregion
+
+        #region End of World Collision Trigger 
+        
+        /*
+        if (ct.collided && collectedAllGems) {
+            Debug.Log("Moving on to Island 2");
+            SceneManager.LoadScene(2);
+            // move player to a spot in the water facing the island. 
+        } 
+        */
+
+        #endregion 
 
         #endregion 
 
