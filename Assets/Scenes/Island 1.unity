@@ -231,6 +231,7 @@ MonoBehaviour:
   collidedBottom: 0
   pushForwardValue: 16
   player: {fileID: 903827084}
+  SceneManager: {fileID: 441509286}
 --- !u!65 &217533044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -850,6 +851,7 @@ MonoBehaviour:
   collisionTriggerBottom: {fileID: 217533042}
   collisionTriggerLeft: {fileID: 2099249083}
   collisionTriggerRight: {fileID: 675153322}
+  collectedAllGems: 1
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0
@@ -1051,6 +1053,7 @@ MonoBehaviour:
   collidedBottom: 0
   pushForwardValue: 16
   player: {fileID: 903827084}
+  SceneManager: {fileID: 441509286}
 --- !u!65 &675153324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3434,6 +3437,7 @@ MonoBehaviour:
   collidedBottom: 0
   pushForwardValue: 16
   player: {fileID: 903827084}
+  SceneManager: {fileID: 441509286}
 --- !u!1 &1914919196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3790,6 +3794,7 @@ MonoBehaviour:
   collidedBottom: 0
   pushForwardValue: 16
   player: {fileID: 903827084}
+  SceneManager: {fileID: 441509286}
 --- !u!65 &2099249085
 BoxCollider:
   m_ObjectHideFlags: 0

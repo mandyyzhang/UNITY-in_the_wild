@@ -17,31 +17,35 @@ public class CollisionTrigger : MonoBehaviour
     private Rigidbody playerBody; 
     [SerializeField] private GameObject player; 
 
+    private SceneChanger sc; 
+    [SerializeField] private GameObject SceneManager; 
+
     void Awake() {
         //fpc = player.GetComponent<FirstPersonController>(); 
-        playerBody = player.GetComponent<Rigidbody>(); 
+        playerBody = player.GetComponent<Rigidbody>();
+        sc = SceneManager.GetComponent<SceneChanger>();  
     }
 
     void Update() {
 
         #region Reject the player from falling off the world by push them back to where they came from 
 
-        if (collidedTop) {
+        if (collidedTop && !sc.collectedAllGems) {
             //playerBody.transform.Rotate(turnAroundRotation);
             playerBody.transform.Translate(transform.forward * -pushForwardValue * Time.deltaTime);
             collidedTop = false; 
         }
-        if (collidedBottom) {
+        if (collidedBottom && !sc.collectedAllGems) {
             //playerBody.transform.Rotate(turnAroundRotation);
             playerBody.transform.Translate(transform.forward * -pushForwardValue * Time.deltaTime);
             collidedBottom = false; 
         }
-        if (collidedRight) {
+        if (collidedRight && !sc.collectedAllGems) {
             //playerBody.transform.Rotate(turnAroundRotation);
             playerBody.transform.Translate(transform.forward * -pushForwardValue * Time.deltaTime);
             collidedRight = false; 
         }
-        if (collidedLeft) {
+        if (collidedLeft && !sc.collectedAllGems) {
             //playerBody.transform.Rotate(turnAroundRotation);
             playerBody.transform.Translate(transform.forward * -pushForwardValue * Time.deltaTime);
             collidedLeft = false; 

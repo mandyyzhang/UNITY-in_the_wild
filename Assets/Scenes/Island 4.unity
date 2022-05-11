@@ -5506,6 +5506,7 @@ MonoBehaviour:
   collisionTriggerBottom: {fileID: 2099552427}
   collisionTriggerLeft: {fileID: 1950306338}
   collisionTriggerRight: {fileID: 1490983485}
+  collectedAllGems: 1
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0
@@ -7150,6 +7151,7 @@ MonoBehaviour:
   collidedBottom: 0
   pushForwardValue: 5
   player: {fileID: 903827084}
+  SceneManager: {fileID: 441509286}
 --- !u!65 &1490983488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7734,6 +7736,7 @@ MonoBehaviour:
   collidedBottom: 0
   pushForwardValue: 5
   player: {fileID: 903827084}
+  SceneManager: {fileID: 441509286}
 --- !u!65 &1732098097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8378,6 +8381,7 @@ MonoBehaviour:
   collidedBottom: 0
   pushForwardValue: 5
   player: {fileID: 903827084}
+  SceneManager: {fileID: 441509286}
 --- !u!65 &1950306341
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8735,6 +8739,7 @@ MonoBehaviour:
   collidedBottom: 0
   pushForwardValue: 5
   player: {fileID: 903827084}
+  SceneManager: {fileID: 441509286}
 --- !u!65 &2099552430
 BoxCollider:
   m_ObjectHideFlags: 0

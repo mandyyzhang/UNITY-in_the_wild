@@ -46,7 +46,7 @@ public class SceneChanger : MonoBehaviour
     private bool CanvasFadeIn = false; 
     private bool CanvasFadeOut = false; 
 
-    private bool collectedAllGems = true; 
+    public bool collectedAllGems = true; 
     
 
     void Awake() {
@@ -131,15 +131,29 @@ public class SceneChanger : MonoBehaviour
         }
         #endregion
 
-        #region End of World Collision Trigger 
+        #region End of World Collision Trigger (when you collect all the gems on island 1, go to island 2)
         
-        /*
-        if (ct.collided && collectedAllGems) {
+        if (ctTop.collidedTop && collectedAllGems) {
             Debug.Log("Moving on to Island 2");
             SceneManager.LoadScene(2);
             // move player to a spot in the water facing the island. 
         } 
-        */
+        if (ctBottom.collidedBottom && collectedAllGems) {
+            Debug.Log("Moving on to Island 2");
+            SceneManager.LoadScene(2);
+            // move player to a spot in the water facing the island. 
+        } 
+        if (ctLeft.collidedLeft && collectedAllGems) {
+            Debug.Log("Moving on to Island 2");
+            SceneManager.LoadScene(2);
+            // move player to a spot in the water facing the island. 
+        } 
+        if (ctRight.collidedRight && collectedAllGems) {
+            Debug.Log("Moving on to Island 2");
+            SceneManager.LoadScene(2);
+            // move player to a spot in the water facing the island. 
+        } 
+        
 
         #endregion 
 
