@@ -503,6 +503,8 @@ MonoBehaviour:
   restart: 114
   island1: 49
   island2: 50
+  island3: 51
+  island4: 52
   canvasPopUp: {fileID: 698947813}
   selectionManager: {fileID: 1416456631}
   islandGeneration: {fileID: 1410042627}

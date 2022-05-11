@@ -46,21 +46,25 @@ public class SceneChanger : MonoBehaviour
             Debug.Log("Pressed R key to restart.");
             SceneManager.LoadScene(curr_scene.name);
         }
+        if (Input.GetMouseButtonDown(0)) {
+            // Debug.Log("Pressed 1 to go to island 1."); 
+            SceneManager.LoadScene(1); 
+        }
         if (Input.GetKeyDown(island1)) {
             Debug.Log("Pressed 1 to go to island 1."); 
-            SceneManager.LoadScene(0); 
+            SceneManager.LoadScene(1); 
         }
         if (Input.GetKeyDown(island2)) {
             Debug.Log("Pressed 2 to go island 2."); 
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         }
         if (Input.GetKeyDown(island3)) {
             Debug.Log("Pressed 3 to go island 3."); 
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
         if (Input.GetKeyDown(island4)) {
             Debug.Log("Pressed 4 to go island 4."); 
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(4);
         }
 
         #region Island 1 to Island 2 Transition 
