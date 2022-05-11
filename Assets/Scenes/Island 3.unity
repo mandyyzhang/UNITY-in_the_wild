@@ -503,9 +503,9 @@ MonoBehaviour:
   restart: 114
   island1: 49
   island2: 50
-  canvasPopUp: {fileID: 0}
-  selectionManager: {fileID: 0}
-  islandGeneration: {fileID: 0}
+  canvasPopUp: {fileID: 698947813}
+  selectionManager: {fileID: 1416456631}
+  islandGeneration: {fileID: 1410042627}
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0
