@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Wake Up Scene.unity
+    guid: 28cab955820fa0e45ab3112a4fa3d912
+  - enabled: 1
     path: Assets/Scenes/Island 1.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
