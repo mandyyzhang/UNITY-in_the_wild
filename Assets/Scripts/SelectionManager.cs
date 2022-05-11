@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
-    [SerializeField] private string selectableTag = "Selectable";
 
     // Inventory
     public Inventory inventory;
@@ -64,7 +63,6 @@ public class SelectionManager : MonoBehaviour
     private void DropItem()
     {
         Vector3 randomDir = Random.insideUnitCircle.normalized;
-        Debug.Log(treePos);
         Vector3 spawnPos = new Vector3(treePos.x, treePos.y + 1.5f, treePos.z);
         GameObject appleSpawn = Instantiate(apple, spawnPos + randomDir, Quaternion.identity);
         appleSpawn.GetComponent<Rigidbody>().AddForce(randomDir *5f, ForceMode.Impulse);
@@ -86,7 +84,6 @@ public class SelectionManager : MonoBehaviour
                 break;
                 // helpful error for us in the future
             case Interactable.InteractionType.Harvest:
-                // for future, drop the apple only, dont add to inventory directly
                 treeShake = true;
                 DropItem();
                 //inventory.AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1});
