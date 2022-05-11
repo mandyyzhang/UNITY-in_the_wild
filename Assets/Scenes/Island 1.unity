@@ -191,7 +191,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95118174da32da94c90642d66cc833fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collided: 0
+  collidedTop: 0
+  collidedLeft: 0
+  collidedRight: 0
+  collidedBottom: 0
+  turnAroundRotation: {x: 0, y: 180, z: 0}
+  pushForwardValue: 5
+  player: {fileID: 903827084}
 --- !u!65 &217533044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -212,7 +218,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217533042}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -813,7 +819,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95118174da32da94c90642d66cc833fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collided: 0
+  collidedTop: 0
+  collidedLeft: 0
+  collidedRight: 0
+  collidedBottom: 0
+  turnAroundRotation: {x: 0, y: 180, z: 0}
+  pushForwardValue: 5
+  player: {fileID: 903827084}
 --- !u!65 &675153324
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -834,7 +846,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675153322}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -2065,7 +2077,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb590f1c77d054c2a9340378dd283dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Selectable
   uiInventory: {fileID: 732116050}
   obtainedItem: 0
   treeShake: 0
@@ -2934,7 +2945,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863064576}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -3002,7 +3013,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95118174da32da94c90642d66cc833fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collided: 0
+  collidedTop: 0
+  collidedLeft: 0
+  collidedRight: 0
+  collidedBottom: 0
+  turnAroundRotation: {x: 0, y: 180, z: 0}
+  pushForwardValue: 5
+  player: {fileID: 903827084}
 --- !u!1 &1914919196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3319,7 +3336,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95118174da32da94c90642d66cc833fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collided: 0
+  collidedTop: 0
+  collidedLeft: 0
+  collidedRight: 0
+  collidedBottom: 0
+  turnAroundRotation: {x: 0, y: 180, z: 0}
+  pushForwardValue: 5
+  player: {fileID: 903827084}
 --- !u!65 &2099249085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3340,7 +3363,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099249083}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

@@ -421,27 +421,14 @@ public class FirstPersonController : MonoBehaviour
         {
             HeadBob();
         }
-
-        #region Audio 
-        /*
-        if (isWalking && isGrounded)
-        {
-            _timeSinceLastStepPlayed += Time.deltaTime;
-            if (isSprinting) { // if sprinting speed up walking 
-                if (_timeSinceLastStepPlayed > 0.2) {
-                    _timeSinceLastStepPlayed = 0; 
-                    movementSound.Play(); 
-                }
-            } 
-            else {
-                
-                if (_timeSinceLastStepPlayed > 0.4) {
-                    _timeSinceLastStepPlayed = 0;
-                    movementSound.Play();
-                }
-            }
+    
+        #region Press L to see player location in debug log 
+        
+        if (Input.GetKeyDown(KeyCode.L)) {
+            Debug.Log("For GameObject tag: " + gameObject.tag + " , location: " + gameObject.transform.position);
+            Debug.Log("For GameObject tag: " + gameObject.tag + " , rotation: " + gameObject.transform.rotation);
         }
-        */ 
+        
         #endregion 
     }
 
