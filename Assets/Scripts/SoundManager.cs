@@ -6,10 +6,10 @@ public class SoundManager : MonoBehaviour
 {
 
     // Need to access variables in first person controller 
-    FirstPersonController fpc; 
-    SelectionManager selectScript; 
-    [SerializeField] GameObject player; 
-    [SerializeField] GameObject selectionManager; 
+    private FirstPersonController fpc; 
+    private SelectionManager selectScript; 
+    [SerializeField] private GameObject player; 
+    [SerializeField] private GameObject selectionManager; 
 
     // variables from first e
 

@@ -46,9 +46,6 @@ public class SceneChanger : MonoBehaviour
             Debug.Log("Pressed R key to restart.");
             SceneManager.LoadScene(curr_scene.name);
         }
-        if (Input.GetMouseButtonDown(0)) {
-            SceneManager.LoadScene(1); 
-        }
         if (Input.GetKeyDown(island1)) {
             Debug.Log("Pressed 1 to go to island 1."); 
             SceneManager.LoadScene(1); 
