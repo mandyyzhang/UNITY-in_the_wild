@@ -9,6 +9,8 @@ public class SceneChanger : MonoBehaviour
     public KeyCode restart = KeyCode.R; 
     public KeyCode island1 = KeyCode.Alpha1; 
     public KeyCode island2 = KeyCode.Alpha2; 
+    public KeyCode island3 = KeyCode.Alpha3; 
+    public KeyCode island4 = KeyCode.Alpha4; 
 
     private Scene curr_scene; 
 
@@ -51,6 +53,14 @@ public class SceneChanger : MonoBehaviour
         if (Input.GetKeyDown(island2)) {
             Debug.Log("Pressed 2 to go island 2."); 
             SceneManager.LoadScene(1);
+        }
+        if (Input.GetKeyDown(island3)) {
+            Debug.Log("Pressed 3 to go island 3."); 
+            SceneManager.LoadScene(2);
+        }
+        if (Input.GetKeyDown(island4)) {
+            Debug.Log("Pressed 4 to go island 4."); 
+            SceneManager.LoadScene(3);
         }
 
         #region Island 1 to Island 2 Transition 
