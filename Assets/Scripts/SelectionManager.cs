@@ -16,6 +16,7 @@ public class SelectionManager : MonoBehaviour
     public Camera firstPersonCamera;
 
     private Vector3 treePos;
+    private Trees tree;
     public GameObject apple;
 
     private void Start()
@@ -37,6 +38,8 @@ public class SelectionManager : MonoBehaviour
                 var selection = hit.transform;
 
                 treePos = selection.transform.position;
+
+                tree = selection.GetComponent<Trees>();
 
                 Interactable interactable = selection.GetComponent<Interactable>();
 
@@ -62,10 +65,20 @@ public class SelectionManager : MonoBehaviour
 
     private void DropItem()
     {
-        Vector3 randomDir = Random.insideUnitCircle.normalized;
-        Vector3 spawnPos = new Vector3(treePos.x, treePos.y + 1.5f, treePos.z);
-        GameObject appleSpawn = Instantiate(apple, spawnPos + randomDir, Quaternion.identity);
-        appleSpawn.GetComponent<Rigidbody>().AddForce(randomDir *5f, ForceMode.Impulse);
+        //Debug.Log(appleCount);
+        if (tree.amount != 0)
+        {
+            Vector3 randomDir = Random.insideUnitCircle.normalized;
+            Vector3 spawnPos = new Vector3(treePos.x, treePos.y + 1.5f, treePos.z);
+            GameObject appleSpawn = Instantiate(apple, spawnPos + randomDir, Quaternion.identity);
+            appleSpawn.GetComponent<Rigidbody>().AddForce(randomDir *5f, ForceMode.Impulse);
+            tree.UpdateAppleCount();
+            Debug.Log(tree.amount);
+        } else {
+            Debug.Log("no more apples!!");
+        }
+        
+
     }
 
     private void HandleInteraction(Interactable interactable)
