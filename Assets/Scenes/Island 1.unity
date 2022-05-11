@@ -508,7 +508,6 @@ MonoBehaviour:
   canvasPopUp: {fileID: 698947813}
   selectionManager: {fileID: 1416456631}
   islandGeneration: {fileID: 1410042627}
-  nextIslandPic: {fileID: 698947816}
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0
@@ -947,7 +946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702a2079d938e496aa46eeb4ea1afd9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneManager: {fileID: 441509286}
 --- !u!223 &732116051
 Canvas:
   m_ObjectHideFlags: 0
@@ -1854,6 +1852,7 @@ MonoBehaviour:
   treeShake: 0
   interactionText: {fileID: 1772908285}
   firstPersonCamera: {fileID: 1379559024}
+  apple: {fileID: 6957269528956609991, guid: a617a394afe824fa0bea6302b3a083a0, type: 3}
 --- !u!4 &1416456633
 Transform:
   m_ObjectHideFlags: 0
