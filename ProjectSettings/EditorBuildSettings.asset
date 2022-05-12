@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Island 4.unity
     guid: 4eceab376216b442da1e7feac60bc176
+  - enabled: 1
+    path: Assets/Scenes/Ending Scene.unity
+    guid: 20de7f3937452ce4a9bf94e1808afd38
   m_configObjects: {}
