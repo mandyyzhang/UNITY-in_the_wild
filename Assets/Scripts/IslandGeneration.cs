@@ -36,6 +36,11 @@ public class IslandGeneration : MonoBehaviour
     public GameObject goat;
     public GameObject alpaca;
     public GameObject chicken;
+    public GameObject cow;
+    public GameObject duck;
+    public GameObject pig;
+    public GameObject rabbit;
+    public GameObject sheep;
 
     // list of positions where land is empty (no trees, no gems)
     // List<Vector3> emptyLand = new List<Vector3>();
@@ -398,20 +403,75 @@ public class IslandGeneration : MonoBehaviour
 
             for (int c = 0; c < 3; c++){
                 Vector3 spawnPos = landRegion();
-                GameObject animalToPlace = Instantiate(alpaca);
+                GameObject animalToPlace = Instantiate(alpaca, spawnPos, Quaternion.identity);
+                
                 animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+                animalToPlace.GetComponent<NavMeshAgent>().enabled = true;
             }
 
             for (int c = 0; c < 3; c++){
                 Vector3 spawnPos = landRegion();
-                GameObject animalToPlace = Instantiate(chicken);
+                GameObject animalToPlace = Instantiate(chicken, spawnPos, Quaternion.identity);
+                
                 animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+                animalToPlace.GetComponent<NavMeshAgent>().enabled = true;
+                
             }
         } else if (sceneNumber == 2) {
             for (int c = 0; c < 3; c++) {
                 Vector3 spawnPos = landRegion();
                 GameObject animalToPlace = Instantiate(goat);
+                
                 animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+                animalToPlace.GetComponent<NavMeshAgent>().enabled = true;
+                
+                
+            }
+            for (int c = 0; c < 3; c++) {
+                Vector3 spawnPos = landRegion();
+                GameObject animalToPlace = Instantiate(sheep);
+                
+                animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+                animalToPlace.GetComponent<NavMeshAgent>().enabled = true;
+                
+            }
+            
+        } else if (sceneNumber == 3) {
+            for (int c = 0; c < 3; c++) {
+                Vector3 spawnPos = landRegion();
+                GameObject animalToPlace = Instantiate(cow);
+                
+                animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+                animalToPlace.GetComponent<NavMeshAgent>().enabled = true;
+                
+                
+            }
+            for (int c = 0; c < 3; c++) {
+                Vector3 spawnPos = landRegion();
+                GameObject animalToPlace = Instantiate(pig);
+                
+                animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+                animalToPlace.GetComponent<NavMeshAgent>().enabled = true;
+                
+            }
+            
+        } else if (sceneNumber == 4) {
+            for (int c = 0; c < 3; c++) {
+                Vector3 spawnPos = landRegion();
+                GameObject animalToPlace = Instantiate(rabbit);
+                
+                animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+                animalToPlace.GetComponent<NavMeshAgent>().enabled = true;
+                
+                
+            }
+            for (int c = 0; c < 3; c++) {
+                Vector3 spawnPos = landRegion();
+                GameObject animalToPlace = Instantiate(duck);
+                
+                animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+                animalToPlace.GetComponent<NavMeshAgent>().enabled = true;
+                
             }
             
         }

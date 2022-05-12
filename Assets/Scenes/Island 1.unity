@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 152797817}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Collidable Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 217533045}
   - component: {fileID: 217533044}
   - component: {fileID: 217533043}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EdgeTriggerBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 316198452}
   - component: {fileID: 316198451}
   - component: {fileID: 316198450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 361254426}
   - component: {fileID: 361254425}
   - component: {fileID: 361254424}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 675153325}
   - component: {fileID: 675153324}
   - component: {fileID: 675153323}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EdgeTriggerRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1918,7 +1918,7 @@ GameObject:
   - component: {fileID: 1002336522}
   - component: {fileID: 1002336521}
   - component: {fileID: 1002336520}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2122,7 +2122,7 @@ GameObject:
   - component: {fileID: 1229668118}
   - component: {fileID: 1229668117}
   - component: {fileID: 1229668116}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WallRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2515,6 +2515,11 @@ MonoBehaviour:
   goat: {fileID: 5861032336561583884, guid: fdf90c3c4ecf64f51a06030cf0cf33b2, type: 3}
   alpaca: {fileID: 5074931800539251259, guid: 4037cb3fe77b44294b59fcf31ba018d0, type: 3}
   chicken: {fileID: 7064117607052890067, guid: df077bb98dc6f451fad0bee2b5a610b9, type: 3}
+  cow: {fileID: 1642069627431822899, guid: b14647d12a7634838aa9feafeac4c116, type: 3}
+  duck: {fileID: 505418436493652473, guid: 9b87de962ce9347aa9b42b7541a65829, type: 3}
+  pig: {fileID: 1208192137263375141, guid: a3bd1c8cd2ad34ad889570c442468d50, type: 3}
+  rabbit: {fileID: 4145826914526514796, guid: db212a523d3e6407eae3da5362e9f465, type: 3}
+  sheep: {fileID: 4713119432579250122, guid: df9caec6858ab46b5b2eb1af1430772a, type: 3}
   seed: 0
   xOffSet: 0
   yOffSet: 0
@@ -2872,6 +2877,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1601693967802005805, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1601693967802005805, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2333152634366561086, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2927,6 +2940,14 @@ PrefabInstance:
     - target: {fileID: 4161461992888711652, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
       propertyPath: m_Layer
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161461992888711652, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161461992888711652, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4509636117849372587, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
       propertyPath: m_LocalScale.x
@@ -3512,7 +3533,7 @@ GameObject:
   - component: {fileID: 1863064578}
   - component: {fileID: 1863064577}
   - component: {fileID: 1863064581}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EdgeTriggerTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3832,7 +3853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2038329389}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: NonCollidable Trigger Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3945,7 +3966,7 @@ GameObject:
   - component: {fileID: 2099249086}
   - component: {fileID: 2099249085}
   - component: {fileID: 2099249084}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EdgeTriggerLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}

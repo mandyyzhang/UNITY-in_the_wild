@@ -219,10 +219,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.14418933
-  m_Height: 0.2883787
+  m_Radius: 0.12690796
+  m_Height: 0.25381592
   m_Direction: 1
-  m_Center: {x: 0.0010749818, y: 0.09352142, z: 0.030098772}
+  m_Center: {x: 0.0010749818, y: 0.11080281, z: 0.03846072}
 --- !u!54 &1643621604937850328
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642069627431822899}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfaac801ae27943bf9ed319b83eed702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
+  agent: {fileID: 1643621604937850331}
   speed: 1
   walkRadius: 10
 --- !u!1 &1642101255200498911
