@@ -45,8 +45,9 @@ public class SceneChanger : MonoBehaviour
 
     private bool CanvasFadeIn = false; 
     private bool CanvasFadeOut = false; 
+    private string nextSceneName; 
 
-    public bool collectedAllGems = true; 
+    public bool collectedAllGems = false; 
     
 
     void Awake() {
@@ -62,6 +63,26 @@ public class SceneChanger : MonoBehaviour
         ctBottom = collisionTriggerBottom.GetComponent<CollisionTrigger>(); 
         ctLeft = collisionTriggerLeft.GetComponent<CollisionTrigger>(); 
         ctRight = collisionTriggerRight.GetComponent<CollisionTrigger>(); 
+    }
+
+    void Start() {
+        collectedAllGems = false; 
+        if (curr_scene.name == "Island 1") {
+            nextSceneName = "Island 2"; 
+        }
+        else if (curr_scene.name == "Island 2") {
+            nextSceneName = "Island 3"; 
+        }
+        else if (curr_scene.name == "Island 3") {
+            nextSceneName = "Island 4"; 
+        }
+        else if (curr_scene.name == "Island 4") {
+            // move to end of game scene (which we dont have so move back to island 1 for now)
+            nextSceneName = "Island 1"; 
+        }
+        else {
+            Debug.Log("nextSceneName not determined. Assign nextSceneName in SceneChanger");
+        }
     }
 
     // Update is called once per frame
@@ -89,9 +110,11 @@ public class SceneChanger : MonoBehaviour
             Debug.Log("Pressed 4 to go island 4."); 
             SceneManager.LoadScene(4);
         }
-
-        #region Island 1 to Island 2 Transition 
-
+        // FOR DEBUGGING ONLY: Press G to trigger collectedAllGems *Remember to comment out*
+        if (Input.GetKeyDown(KeyCode.G)) {
+            collectedAllGems = !collectedAllGems; 
+            Debug.Log("Currently collectedAllGems = " + collectedAllGems); 
+        }
         // for debugging only 
         if (Input.GetKeyDown(KeyCode.T)) {
             int gemCount = selectScript.inventory.GetNumberOfGems(); 
@@ -99,15 +122,25 @@ public class SceneChanger : MonoBehaviour
         }
         // for debugging only ^ 
 
-        #region Show Island 2 Preview 
+        #region Island to Island Transition (Triggered when all (5) gems collected)
+
+        #region Show Island 2 Preview & check if collected all gems
+        
+        // only calculate gemCount when we obtained an item
         if (selectScript.obtainedItem) {
             gemCount = selectScript.inventory.GetNumberOfGems(); 
         }
         
-        if (gemCount == island.gemsToSpawn && !displayedNextIsland) {
-            nextIslandPic.enabled = true;
-            CanvasFadeIn = true; 
-            displayedNextIsland = true;
+        if (gemCount == island.gemsToSpawn) {
+            
+            collectedAllGems = true; 
+
+            if (!displayedNextIsland) {
+                nextIslandPic.enabled = true;
+                CanvasFadeIn = true; 
+                displayedNextIsland = true;
+            }
+
             Debug.Log("Collected all " + gemCount + " gems");
         }
         
@@ -129,35 +162,34 @@ public class SceneChanger : MonoBehaviour
             }
             nextIslandPreview.alpha -= Time.deltaTime; 
         }
-        #endregion
+        #endregion // end of Show Island 2 Preview region 
 
-        #region End of World Collision Trigger (when you collect all the gems on island 1, go to island 2)
+        #region End of World Collision Trigger (when you collect all the gems on the current island, moves you to next island)
         
         if (ctTop.collidedTop && collectedAllGems) {
-            Debug.Log("Moving on to Island 2");
-            SceneManager.LoadScene(2);
+            Debug.Log("Moving on to " + nextSceneName);
+            SceneManager.LoadScene(nextSceneName);
             // move player to a spot in the water facing the island. 
         } 
         if (ctBottom.collidedBottom && collectedAllGems) {
-            Debug.Log("Moving on to Island 2");
-            SceneManager.LoadScene(2);
+            Debug.Log("Moving on to " + nextSceneName);
+            SceneManager.LoadScene(nextSceneName);
             // move player to a spot in the water facing the island. 
         } 
         if (ctLeft.collidedLeft && collectedAllGems) {
-            Debug.Log("Moving on to Island 2");
-            SceneManager.LoadScene(2);
+            Debug.Log("Moving on to " + nextSceneName);
+            SceneManager.LoadScene(nextSceneName);
             // move player to a spot in the water facing the island. 
         } 
         if (ctRight.collidedRight && collectedAllGems) {
-            Debug.Log("Moving on to Island 2");
-            SceneManager.LoadScene(2);
+            Debug.Log("Moving on to " + nextSceneName);
+            SceneManager.LoadScene(nextSceneName);
             // move player to a spot in the water facing the island. 
         } 
         
+        #endregion // end of End of World Collision Trigger region 
 
-        #endregion 
-
-        #endregion 
+        #endregion // end of Island to Island transition region 
 
     }
 

@@ -851,7 +851,7 @@ MonoBehaviour:
   collisionTriggerBottom: {fileID: 217533042}
   collisionTriggerLeft: {fileID: 2099249083}
   collisionTriggerRight: {fileID: 675153322}
-  collectedAllGems: 1
+  collectedAllGems: 0
 --- !u!4 &441509288
 Transform:
   m_ObjectHideFlags: 0
