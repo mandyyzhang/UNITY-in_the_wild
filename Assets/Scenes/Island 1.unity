@@ -1878,7 +1878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.44313726, g: 0.44313726, b: 0.44313726, a: 0.43137255}
+  m_Color: {r: 0.13333334, g: 0.13333334, b: 0.13333334, a: 0.65882355}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3338,6 +3338,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager
       objectReference: {fileID: 0}
+    - target: {fileID: 993883155266269543, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783386103302207379, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2783386103302207379, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
       propertyPath: dialogueBox
       value: 
@@ -4128,6 +4136,54 @@ PrefabInstance:
     - target: {fileID: 988131922906118294, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923200296115, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Color.a
+      value: 0.65882355
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923200296115, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Color.b
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923200296115, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Color.g
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923200296115, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Color.r
+      value: 0.13333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131924473097361, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131924473097361, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131924473097361, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131924473097361, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_FontData.m_FontStyle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
