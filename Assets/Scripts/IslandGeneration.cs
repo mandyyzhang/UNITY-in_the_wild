@@ -380,17 +380,28 @@ public class IslandGeneration : MonoBehaviour
         Vector3 playerPos = player.transform.position;
         Vector3 animalSpawnPos = new Vector3(playerPos.x+8, playerPos.y + 50, playerPos.z);
 
-        for (int c = 0; c < 3; c++){
-            Vector3 spawnPos = landRegion();
-            GameObject animalToPlace = Instantiate(alpaca, spawnPos, Quaternion.identity);
-            //animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
-        }
+        if (sceneNumber == 1) {
 
-        for (int c = 0; c < 3; c++){
-            Vector3 spawnPos = landRegion();
-            GameObject animalToPlace = Instantiate(chicken, spawnPos, Quaternion.identity);
-            //animalToPlace.transform.localScale = new Vector3(7.0f, 7.0f, 7.0f);
+            for (int c = 0; c < 3; c++){
+                Vector3 spawnPos = landRegion();
+                GameObject animalToPlace = Instantiate(alpaca);
+                animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+            }
+
+            for (int c = 0; c < 3; c++){
+                Vector3 spawnPos = landRegion();
+                GameObject animalToPlace = Instantiate(chicken);
+                animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+            }
+        } else if (sceneNumber == 2) {
+            for (int c = 0; c < 3; c++) {
+                Vector3 spawnPos = landRegion();
+                GameObject animalToPlace = Instantiate(goat);
+                animalToPlace.GetComponent<NavMeshAgent>().Warp(spawnPos);
+            }
+            
         }
+        
     }
 
 
