@@ -7133,7 +7133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surface: {fileID: 1065433862}
-  dialogueBox: {fileID: 993883155266269543, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
   grassTile: {fileID: 3462116018741417442, guid: 88dd4bdd019c447099f884502688cbac, type: 3}
   dirtTile: {fileID: 2244259126299080006, guid: 91295d460b9bd4441b6a994981559c5f, type: 3}
   port: {fileID: 4961385242022434706, guid: e62c9956ba9698f47af9fcf0c7b98636, type: 3}
@@ -7408,6 +7407,10 @@ PrefabInstance:
     - target: {fileID: 993883155266269543, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
       propertyPath: m_Name
       value: DialogueManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 993883155266269543, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2783386103302207379, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
       propertyPath: dialogueBox

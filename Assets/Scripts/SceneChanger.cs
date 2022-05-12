@@ -139,9 +139,9 @@ public class SceneChanger : MonoBehaviour
                 nextIslandPic.enabled = true;
                 CanvasFadeIn = true; 
                 displayedNextIsland = true;
+                Debug.Log("Collected all " + gemCount + " gems");
             }
-
-            Debug.Log("Collected all " + gemCount + " gems");
+            
         }
         
         if (nextIslandPic.enabled && Input.GetMouseButtonDown(0)) {
@@ -165,28 +165,14 @@ public class SceneChanger : MonoBehaviour
         #endregion // end of Show Island 2 Preview region 
 
         #region End of World Collision Trigger (when you collect all the gems on the current island, moves you to next island)
-        
-        if (ctTop.collidedTop && collectedAllGems) {
+
+        if (collectedAllGems && (ctTop.collidedTop || ctBottom.collidedBottom || 
+            ctLeft.collidedLeft || ctRight.collidedRight)) 
+        {
             Debug.Log("Moving on to " + nextSceneName);
             SceneManager.LoadScene(nextSceneName);
-            // move player to a spot in the water facing the island. 
-        } 
-        if (ctBottom.collidedBottom && collectedAllGems) {
-            Debug.Log("Moving on to " + nextSceneName);
-            SceneManager.LoadScene(nextSceneName);
-            // move player to a spot in the water facing the island. 
-        } 
-        if (ctLeft.collidedLeft && collectedAllGems) {
-            Debug.Log("Moving on to " + nextSceneName);
-            SceneManager.LoadScene(nextSceneName);
-            // move player to a spot in the water facing the island. 
-        } 
-        if (ctRight.collidedRight && collectedAllGems) {
-            Debug.Log("Moving on to " + nextSceneName);
-            SceneManager.LoadScene(nextSceneName);
-            // move player to a spot in the water facing the island. 
-        } 
-        
+        }
+
         #endregion // end of End of World Collision Trigger region 
 
         #endregion // end of Island to Island transition region 

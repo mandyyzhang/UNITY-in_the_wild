@@ -303,8 +303,10 @@ public class IslandGeneration : MonoBehaviour
 
     void SpawnPlayer()
     {
-        // if(sceneNumber == 0)
-        if(sceneNumber >= 0)
+        // randomly spawn player for island 1 but specifying a location & rotation for islands 2-4 spawning: 
+
+        if(sceneNumber == 1) // for island 1
+        // if(sceneNumber >= 0)
         {
             Vector3 spawnPos = landRegion();
             player.transform.position = spawnPos;
@@ -314,6 +316,18 @@ public class IslandGeneration : MonoBehaviour
             Vector3 goatPos = landRegion();
             //goat.transform.position = goatPos;
             //goat.GetComponent<NavMeshAgent>().Warp(goatPos);
+        }
+        else if (sceneNumber == 2) { // for island 2
+            player.transform.position = new Vector3(15, 2, -29); 
+            player.transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        }
+        else if (sceneNumber == 3) { // for island 3
+            player.transform.position = new Vector3(-10, 2, 74); 
+            player.transform.rotation = Quaternion.Euler(new Vector3(0, 90, 0));
+        }
+        else if (sceneNumber == 4) { // for island 4
+            player.transform.position = new Vector3(121, 2, 19); 
+            player.transform.rotation = Quaternion.Euler(new Vector3(30, -90, 0));
         }
         else
         {
