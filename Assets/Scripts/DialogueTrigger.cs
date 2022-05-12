@@ -6,9 +6,18 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
+    //Referencing other scripts here: 
+    private DialogueManager dm; 
+    [SerializeField] private GameObject dialogueManager; 
+
+    void Awake() {
+        dm = dialogueManager.GetComponent<DialogueManager>(); 
+    }
+
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue();
+        // FindObjectOfType<DialogueManager>().StartDialogue();
+        dm.StartDialogue(); 
     }
 
 
@@ -16,7 +25,8 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Return))
         {
-            FindObjectOfType<DialogueManager>().DisplayNextSentence();
+            // FindObjectOfType<DialogueManager>().DisplayNextSentence();
+            dm.DisplayNextSentence(); 
         }
     }
 }

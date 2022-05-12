@@ -603,6 +603,7 @@ MonoBehaviour:
   canvasPopUp: {fileID: 698947813}
   selectionManager: {fileID: 1416456631}
   islandGeneration: {fileID: 1410042627}
+  firstPersonController: {fileID: 903827084}
   collisionTriggerTop: {fileID: 697541291}
   collisionTriggerBottom: {fileID: 1566372038}
   collisionTriggerLeft: {fileID: 1773350948}
@@ -1003,6 +1004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d0e7374b299a704d8cc86b16cf22ee2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstPersonController: {fileID: 903827084}
+  enableDebug: 1
 --- !u!225 &698947819
 CanvasGroup:
   m_ObjectHideFlags: 0

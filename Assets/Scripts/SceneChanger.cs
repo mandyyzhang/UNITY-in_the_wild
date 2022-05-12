@@ -20,11 +20,12 @@ public class SceneChanger : MonoBehaviour
     // Referencing other scripts: ITS A MESS T.T
     private SelectionManager selectScript; 
     private IslandGeneration island;
-
+    private FirstPersonController fpc; 
      
     [SerializeField] private GameObject canvasPopUp; 
     [SerializeField] private GameObject selectionManager; 
     [SerializeField] private GameObject islandGeneration;
+    [SerializeField] private GameObject firstPersonController; 
 
     private CollisionTrigger ctTop; 
     private CollisionTrigger ctBottom; 
@@ -52,6 +53,7 @@ public class SceneChanger : MonoBehaviour
 
     void Awake() {
         curr_scene = SceneManager.GetActiveScene(); 
+        fpc = firstPersonController.GetComponent<FirstPersonController>(); 
         selectScript = selectionManager.GetComponent<SelectionManager>(); 
         island = islandGeneration.GetComponent<IslandGeneration>();  
         nextIslandPic = canvasPopUp.GetComponent<Canvas>();
@@ -138,6 +140,7 @@ public class SceneChanger : MonoBehaviour
             if (!displayedNextIsland) {
                 nextIslandPic.enabled = true;
                 CanvasFadeIn = true; 
+                fpc.pauseControls = true;
                 displayedNextIsland = true;
                 Debug.Log("Collected all " + gemCount + " gems");
             }
@@ -159,6 +162,7 @@ public class SceneChanger : MonoBehaviour
             if (nextIslandPreview.alpha <= 0) {
                 CanvasFadeOut = false; 
                 nextIslandPic.enabled = false;  
+                fpc.pauseControls = false;
             }
             nextIslandPreview.alpha -= Time.deltaTime; 
         }

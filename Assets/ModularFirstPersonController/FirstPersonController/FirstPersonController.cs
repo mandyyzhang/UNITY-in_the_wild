@@ -145,6 +145,9 @@ public class FirstPersonController : MonoBehaviour
 
     #endregion
 
+    // used when GUI stuff popup 
+    public bool pauseControls = false; 
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -218,9 +221,21 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
-        cameraCanMove = playerCamera.enabled; 
-        enableJump = playerCamera.enabled; 
-
+        if (playerCamera.enabled && !pauseControls) {
+            cameraCanMove = true; 
+            enableJump = true; 
+            playerCanMove = true; 
+        }
+        else {
+            cameraCanMove = false; 
+            enableJump = false; 
+            playerCanMove = false; 
+        }
+        /*
+        cameraCanMove = (playerCamera.enabled && !pauseControls); 
+        enableJump = (playerCamera.enabled && !pauseControls);
+        playerCanMove = (playerCamera.enabled && !pauseControls);  
+        */ 
         #region cursor 
 
         if (Input.GetKeyDown(cursorControl)) {
@@ -434,7 +449,18 @@ public class FirstPersonController : MonoBehaviour
 
     void FixedUpdate()
     {
-        playerCanMove = playerCamera.enabled; 
+        // playerCanMove = playerCamera.enabled; 
+
+        if (playerCamera.enabled && !pauseControls) {
+            cameraCanMove = true; 
+            enableJump = true; 
+            playerCanMove = true; 
+        }
+        else {
+            cameraCanMove = false; 
+            enableJump = false; 
+            playerCanMove = false; 
+        }
 
         #region Movement
 
