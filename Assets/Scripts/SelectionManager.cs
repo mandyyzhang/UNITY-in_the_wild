@@ -88,7 +88,10 @@ public class SelectionManager : MonoBehaviour
                 if (interactable.gameObject.GetComponent<WorldItem>().itemType == "glass shard")
                 {
                     inventory.AddItem(new Item { itemType = Item.ItemType.GlassShards, amount = 1});
-                    FindObjectOfType<DialogueManager>().StartDialogue();
+
+                    // SHOW ADDED TO INVENTORY DIALOGUE
+                    FindObjectOfType<DialogueManager>().displayDialogue(0);
+
                 } else if (interactable.gameObject.GetComponent<WorldItem>().itemType == "apple")
                 {
                     inventory.AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1});

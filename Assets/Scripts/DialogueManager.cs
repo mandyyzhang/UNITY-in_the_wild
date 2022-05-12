@@ -22,10 +22,20 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.Return))
+        //if (Input.GetKey(KeyCode.Return))
+        if (Input.GetMouseButton(1))
         {
             DisplayNextSentence();
         }
+    }
+
+    public void displayDialogue(int index)
+    {
+        dialogueBox.SetActive(true);
+
+        sentences.Clear();
+        dialogueText.text = dialogue.sentences[index];
+
     }
 
     public void StartDialogue()
