@@ -18,6 +18,14 @@ public class SelectionManager : MonoBehaviour
     private Trees tree;
     public GameObject apple;
 
+    // dialogue stuff 
+    private DialogueManager dm; 
+    [SerializeField] private GameObject dialogueManager; 
+
+    private void Awake() {
+        dm = dialogueManager.GetComponent<DialogueManager>(); 
+    }
+
     private void Start()
     {
         inventory = new Inventory();
@@ -90,7 +98,8 @@ public class SelectionManager : MonoBehaviour
                     inventory.AddItem(new Item { itemType = Item.ItemType.GlassShards, amount = 1});
 
                     // SHOW ADDED TO INVENTORY DIALOGUE
-                    FindObjectOfType<DialogueManager>().displayDialogue(0);
+                    // FindObjectOfType<DialogueManager>().displayDialogue(0);
+                    dm.displayDialogue(0); // display dialogue at index 0 in sentences 
 
                 } else if (interactable.gameObject.GetComponent<WorldItem>().itemType == "apple")
                 {

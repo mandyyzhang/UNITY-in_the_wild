@@ -2587,6 +2587,7 @@ MonoBehaviour:
   interactionText: {fileID: 1772908285}
   firstPersonCamera: {fileID: 1379559024}
   apple: {fileID: 6957269528956609991, guid: a617a394afe824fa0bea6302b3a083a0, type: 3}
+  dialogueManager: {fileID: 1806547213}
 --- !u!4 &1416456633
 Transform:
   m_ObjectHideFlags: 0
@@ -3408,6 +3409,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
+--- !u!1 &1806547213 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 993883155266269543, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
+  m_PrefabInstance: {fileID: 1806547212}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1813566491
 GameObject:
   m_ObjectHideFlags: 0

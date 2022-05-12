@@ -1932,6 +1932,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
+--- !u!1 &1064806776 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 993883155266269543, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
+  m_PrefabInstance: {fileID: 1064806775}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1065433861
 GameObject:
   m_ObjectHideFlags: 0
@@ -2706,6 +2711,7 @@ MonoBehaviour:
   interactionText: {fileID: 1772908285}
   firstPersonCamera: {fileID: 1379559024}
   apple: {fileID: 0}
+  dialogueManager: {fileID: 1064806776}
 --- !u!4 &1416456633
 Transform:
   m_ObjectHideFlags: 0
