@@ -13,6 +13,15 @@ public class DialogueManager : MonoBehaviour
 
     public Dialogue dialogue;
 
+    // Reference the first person controller here 
+    // & make it so that when there is dialogue there is no player movement
+    private FirstPersonController fpc; 
+    [SerializeField] private GameObject firstPersonController; 
+
+    void Awake() {
+        fpc = firstPersonController.GetComponent<FirstPersonController>(); 
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +32,7 @@ public class DialogueManager : MonoBehaviour
     void Update()
     {
         //if (Input.GetKey(KeyCode.Return))
-        if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1)) // mouse right click to continue
         {
             DisplayNextSentence();
         }
@@ -31,6 +40,7 @@ public class DialogueManager : MonoBehaviour
 
     public void displayDialogue(int index)
     {
+        fpc.pauseControls = true; 
         dialogueBox.SetActive(true);
 
         sentences.Clear();
@@ -69,6 +79,7 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("end of convo");
         dialogueBox.SetActive(false);
+        fpc.pauseControls = false; 
     }
 
 
