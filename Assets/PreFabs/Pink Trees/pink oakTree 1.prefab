@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4912536897705504
 Transform:
@@ -113,7 +113,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3828226130110520889
 Transform:
@@ -155,6 +155,10 @@ PrefabInstance:
     - target: {fileID: 1830688534800398, guid: 9dca676f2ff988a45a505d56f3bd0bb6, type: 3}
       propertyPath: m_Name
       value: Petals Prefab 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1830688534800398, guid: 9dca676f2ff988a45a505d56f3bd0bb6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4919222737381444, guid: 9dca676f2ff988a45a505d56f3bd0bb6, type: 3}
       propertyPath: m_RootOrder
@@ -306,6 +310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: petal_pile (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
 --- !u!4 &5850023165707807064 stripped
@@ -379,6 +387,10 @@ PrefabInstance:
     - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
       propertyPath: m_Name
       value: petal_pile (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
@@ -454,6 +466,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: petal_pile (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
 --- !u!4 &6656235987978316415 stripped
@@ -527,6 +543,10 @@ PrefabInstance:
     - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
       propertyPath: m_Name
       value: petal_pile (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
@@ -602,6 +622,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: petal_pile (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
 --- !u!4 &7735803471427683889 stripped
@@ -675,6 +699,10 @@ PrefabInstance:
     - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
       propertyPath: m_Name
       value: petal_pile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
@@ -750,6 +778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: petal_pile (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
 --- !u!4 &704351630774068514 stripped
@@ -823,6 +855,10 @@ PrefabInstance:
     - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
       propertyPath: m_Name
       value: petal_pile (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
@@ -898,6 +934,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: petal_pile (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
 --- !u!4 &1768037552028304137 stripped
@@ -971,6 +1011,10 @@ PrefabInstance:
     - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
       propertyPath: m_Name
       value: petal_pile (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
@@ -1046,6 +1090,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: petal_pile (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
 --- !u!4 &3168920244762303372 stripped
@@ -1119,6 +1167,10 @@ PrefabInstance:
     - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
       propertyPath: m_Name
       value: petal_pile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
@@ -1194,6 +1246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: petal_pile (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
 --- !u!4 &3861210159614524527 stripped
@@ -1267,6 +1323,10 @@ PrefabInstance:
     - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
       propertyPath: m_Name
       value: petal_pile (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
@@ -1342,6 +1402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: petal_pile (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
 --- !u!4 &3705660813871063861 stripped
@@ -1415,6 +1479,10 @@ PrefabInstance:
     - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
       propertyPath: m_Name
       value: petal_pile (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5690739679907192635, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6193dd392df9743f4b029c51ba7dce8f, type: 3}
