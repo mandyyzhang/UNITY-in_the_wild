@@ -21,11 +21,13 @@ public class SceneChanger : MonoBehaviour
     private SelectionManager selectScript; 
     private IslandGeneration island;
     private FirstPersonController fpc; 
+    private DialogueManager dm; 
      
     [SerializeField] private GameObject canvasPopUp; 
     [SerializeField] private GameObject selectionManager; 
     [SerializeField] private GameObject islandGeneration;
     [SerializeField] private GameObject firstPersonController; 
+    [SerializeField] private GameObject dialogueManager; 
 
     private CollisionTrigger ctTop; 
     private CollisionTrigger ctBottom; 
@@ -56,6 +58,7 @@ public class SceneChanger : MonoBehaviour
         fpc = firstPersonController.GetComponent<FirstPersonController>(); 
         selectScript = selectionManager.GetComponent<SelectionManager>(); 
         island = islandGeneration.GetComponent<IslandGeneration>();  
+        dm = dialogueManager.GetComponent<DialogueManager>(); 
         nextIslandPic = canvasPopUp.GetComponent<Canvas>();
         nextIslandPreview = canvasPopUp.GetComponent<CanvasGroup>(); 
         nextIslandPreview.alpha = 0; 
@@ -162,6 +165,7 @@ public class SceneChanger : MonoBehaviour
             if (nextIslandPreview.alpha <= 0) {
                 CanvasFadeOut = false; 
                 nextIslandPic.enabled = false;  
+                dm.displayDialogue(1); // show dialogue for last gem only after next island preview 
                 fpc.pauseControls = false;
             }
             nextIslandPreview.alpha -= Time.deltaTime; 

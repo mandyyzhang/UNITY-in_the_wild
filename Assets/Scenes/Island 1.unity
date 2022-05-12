@@ -896,6 +896,7 @@ MonoBehaviour:
   selectionManager: {fileID: 1416456631}
   islandGeneration: {fileID: 1410042627}
   firstPersonController: {fileID: 903827084}
+  dialogueManager: {fileID: 1806547213}
   collisionTriggerTop: {fileID: 1863064576}
   collisionTriggerBottom: {fileID: 217533042}
   collisionTriggerLeft: {fileID: 2099249083}
@@ -3482,11 +3483,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2783386103302207379, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
       propertyPath: dialogue.sentences.Array.data[0]
-      value: Gem added to inventory!
+      value: Ooh something shiny! I think I hear more...
       objectReference: {fileID: 0}
     - target: {fileID: 2783386103302207379, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
-      value: llama gives you a kissy!
+      value: 'Phew! Seems like that was the last one... but something is shining
+        on the island across the water...
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783386103302207379, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7328273704489305929, guid: e03d4456b4521cf4496d4de5e8a1f652, type: 3}
       propertyPath: m_RootOrder
@@ -4280,6 +4288,16 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.13333334
       objectReference: {fileID: 0}
+    - target: {fileID: 988131923200296117, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Text
+      value: 'New Text that is very long. Text. Text. Text. Text. Text. Text. Text.
+        Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text. Text.
+        Text. Text. '
+      objectReference: {fileID: 0}
     - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -4293,8 +4311,54 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
       propertyPath: m_FontData.m_FontStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_FontData.m_AlignByGeometry
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_FontData.m_VerticalOverflow
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045581, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045582, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045582, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131923690045582, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131924473097361, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_Text
+      value: 'Right click to continue >
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 988131924473097361, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
       propertyPath: m_Color.b
@@ -4311,6 +4375,14 @@ PrefabInstance:
     - target: {fileID: 988131924473097361, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
       propertyPath: m_FontData.m_FontStyle
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131924473097362, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 141.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 988131924473097362, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -103.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4bf78a7586d684e9b037be452a405f, type: 3}
