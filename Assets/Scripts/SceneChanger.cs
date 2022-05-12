@@ -83,7 +83,7 @@ public class SceneChanger : MonoBehaviour
         }
         else if (curr_scene.name == "Island 4") {
             // move to end of game scene (which we dont have so move back to island 1 for now)
-            nextSceneName = "Island 1"; 
+            nextSceneName = "Ending Scene"; 
         }
         else {
             Debug.Log("nextSceneName not determined. Assign nextSceneName in SceneChanger");
@@ -138,9 +138,13 @@ public class SceneChanger : MonoBehaviour
         
         if (gemCount == island.gemsToSpawn) {
             
-            collectedAllGems = true; 
+            collectedAllGems = true;
 
-            if (!displayedNextIsland) {
+            if (curr_scene.name == "Island 4") {
+                SceneManager.LoadScene(nextSceneName);
+            } 
+
+            if (!displayedNextIsland && curr_scene.name != "Island 4") {
                 nextIslandPic.enabled = true;
                 CanvasFadeIn = true; 
                 fpc.pauseControls = true;
