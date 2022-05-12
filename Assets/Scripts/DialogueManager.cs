@@ -8,16 +8,29 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public Text dialogueText;
+    public GameObject dialogueBox; 
     private Queue<string> sentences;
+
+    public Dialogue dialogue;
 
     // Start is called before the first frame update
     void Start()
     {
+        dialogueBox.SetActive(false);
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    void Update()
     {
+        if (Input.GetKey(KeyCode.Return))
+        {
+            DisplayNextSentence();
+        }
+    }
+
+    public void StartDialogue()
+    {
+        dialogueBox.SetActive(true);
         Debug.Log("starting convo");
 
         sentences.Clear();
@@ -45,6 +58,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         Debug.Log("end of convo");
+        dialogueBox.SetActive(false);
     }
 
 

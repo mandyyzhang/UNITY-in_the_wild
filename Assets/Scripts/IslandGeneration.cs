@@ -13,8 +13,6 @@ public class IslandGeneration : MonoBehaviour
 {
     public NavMeshSurface surface;
 
-    public GameObject dialogueBox;
-
     // the world
     int sizeX = 55;
     int sizeY = 55;
@@ -73,9 +71,6 @@ public class IslandGeneration : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        dialogueBox.SetActive(false);
-
         player.SetActive(false);
         SetSeedAndOffsets(); // set the seeds and offsets for each island (so we can get the same map each time for each island)
         GenerateTerrain();

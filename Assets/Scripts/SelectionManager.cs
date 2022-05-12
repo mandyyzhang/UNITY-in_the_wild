@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SelectionManager : MonoBehaviour
 {
-
     // Inventory
     public Inventory inventory;
     [SerializeField] private UI_Inventory uiInventory;
@@ -89,6 +88,7 @@ public class SelectionManager : MonoBehaviour
                 if (interactable.gameObject.GetComponent<WorldItem>().itemType == "glass shard")
                 {
                     inventory.AddItem(new Item { itemType = Item.ItemType.GlassShards, amount = 1});
+                    FindObjectOfType<DialogueManager>().StartDialogue();
                 } else if (interactable.gameObject.GetComponent<WorldItem>().itemType == "apple")
                 {
                     inventory.AddItem(new Item { itemType = Item.ItemType.Apple, amount = 1});
