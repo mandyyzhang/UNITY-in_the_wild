@@ -99,7 +99,10 @@ public class SelectionManager : MonoBehaviour
 
                     // SHOW ADDED TO INVENTORY DIALOGUE
                     // FindObjectOfType<DialogueManager>().displayDialogue(0);
-                    dm.displayDialogue(0); // display dialogue at index 0 in sentences 
+                    if (inventory.GetNumberOfGems() < 5) { 
+                        dm.displayDialogue(0); // display dialogue at index 0 in sentences 
+                    }
+                    // when all 5 gems collected, show next island preview, then show dialogue for last gem (code in scene changer)
 
                 } else if (interactable.gameObject.GetComponent<WorldItem>().itemType == "apple")
                 {

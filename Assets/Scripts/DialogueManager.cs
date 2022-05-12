@@ -20,12 +20,10 @@ public class DialogueManager : MonoBehaviour
 
     void Awake() {
         fpc = firstPersonController.GetComponent<FirstPersonController>(); 
+        dialogueBox.SetActive(false);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        dialogueBox.SetActive(false);
+    void Start() {
         sentences = new Queue<string>();
     }
 
